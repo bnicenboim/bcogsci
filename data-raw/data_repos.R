@@ -42,14 +42,15 @@ dat$intrusion <- dat$rcat==2
 dat$new <- dat$rcat==3
 
 df_recall_complete <- as_tibble(dat) %>%
-  mutate(test = ifelse(rsize>0, "n-AFC","recall")) %>%
-  rename(subj =id, set_size = setsize, response_category = rcat,
+  rename(subj =id, set_size = setsize,
          response_size_list =rsizeList,
-         response_size_new_words = rsizeNPL) #NPL = not-presented lures
+         response_size_new_words = rsizeNPL) %>% #NPL = not-presented lures
+  mutate(response_category = case_when( rcat ==1 ~ "correct",
+                                        rcat ==2 ~ "intrusion",
+                                        rcat ==3 ~ "new")) %>%
+    select(-rsize, -rcat, -new, -intrusion)
 
 df_recall <- df_recall_complete %>%
-  # We ignore the type of incorrect responses (the focus of the paper)
-  mutate(correct = if_else(response_category ==1, 1, 0)) %>%
   # and we only use the data from the free recall task:
   # (when there was no list of possible responses)
   filter(response_size_list + response_size_new_words == 0) %>%

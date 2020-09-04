@@ -100,10 +100,11 @@
 #' \insertAllCited{}
 "df_pupil_complete"
 
-#' Free recall data for one  participant of  \insertCite{oberauerWorkingMemoryCapacity2019;textual}{bcogsci} typing the probed word.
+#' Free recall data for one  participant of Experiment 1 of \insertCite{oberauerWorkingMemoryCapacity2019;textual}{bcogsci}.
 #'
-#' Subset of the data of one participant (subj = 10) from
-#' \insertCite{oberauerWorkingMemoryCapacity2019;textual}{bcogsci} who was
+#' Subset of the data of one participant (subj = 10) from Experiment 1 of
+#' \insertCite{oberauerWorkingMemoryCapacity2019;textual}{bcogsci}.
+#' The participant was
 #' presented word lists of varying lengths, and then was asked to recall a word
 #' given its position on the list, and type the probed word.
 #' (Trials with multiple forced choices were removed).
@@ -123,3 +124,30 @@
 #' @references
 #' \insertAllCited{}
 "df_recall"
+
+
+#' Recall data for participants of Experiment 1 of \insertCite{oberauerWorkingMemoryCapacity2019;textual}{bcogsci}.
+#'
+#' Complete data of participants from Experiment 1 of
+#' \insertCite{oberauerWorkingMemoryCapacity2019;textual}{bcogsci}. Participants
+#' were presented word lists of varying lengths, and then was asked to recall a
+#'  word given its position on the list.
+#'
+#' Original data can be
+#' found in PairsRSS1_all.dat in https://osf.io/qy5sd/.
+#'
+#' @format A data frame with 92 rows and 7 variables:
+#' \describe{
+#'   \item{subj}{Subject id.}
+#'   \item{session}{Session number.}
+#'   \item{block}{Block number.}
+#'   \item{trial}{Trial number.}
+#'   \item{set_size}{Set size: 2, 4, 6, or 8 elements.}
+#'   \item{response_size_list}{Number of options in the multiple choice task, 0 indicates free recall (by typing).}
+#'   \item{response_size_new_words}{Number of lures (non presented words) in the multiple choice task.}
+#'   \item{response_category}{Type of answer: either correct, intrusion, or new.}
+#'   \item{correct}{Correct or not.}
+#' }
+#' @references
+#' \insertAllCited{}
+"df_recall_complete"
