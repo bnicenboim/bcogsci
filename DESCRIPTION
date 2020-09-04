@@ -1,0 +1,35 @@
+Package: bcogsci
+Title: Data and models for the book "An Introduction to Bayesian Data Analysis for Cognitive Science"
+Version: 0.0.0.9000
+Authors@R: 
+    c(person(given = "Bruno",
+           family = "Nicenboim",
+           role = c("aut", "cre"),
+           email = "b.nicenboim@tilburguniversity.edu",
+           comment = c(ORCID = "0000-0002-5176-3943")),
+      person(given = "Daniel",
+           family = "Schad",
+           role = c("aut"),
+           email = "d.schad@tilburguniversity.edu",
+           comment = c(ORCID = "ORCID-ID")),
+           person(given = "Shravan",
+           family = "Vasishth",
+           role = c("aut"),
+           email = "vasishth@uni-potsdam.de",
+           comment = c(ORCID = "ORCID-ID"))
+           )
+Description: Datasets and models included in the book "An Introduction to Bayesian Data Analysis for Cognitive Science".
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    Rdpack
+Suggests:
+    devtools,
+    usethis,
+    dplyr,
+    Rdpack
+RdMacros: Rdpack
+RoxygenNote: 7.0.2
+Depends: 
+    R (>= 3.0)
