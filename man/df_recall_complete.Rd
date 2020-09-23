@@ -4,7 +4,8 @@
 \name{df_recall_complete}
 \alias{df_recall_complete}
 \title{Recall data for participants of Experiment 1 of \insertCite{oberauerWorkingMemoryCapacity2019;textual}{bcogsci}.}
-\format{A data frame with 92 rows and 7 variables:
+\format{
+A data frame with 92 rows and 7 variables:
 \describe{
   \item{subj}{Subject id.}
   \item{session}{Session number.}
@@ -15,7 +16,8 @@
   \item{response_size_new_words}{Number of lures (non presented words) in the multiple choice task.}
   \item{response_category}{Type of answer: either correct, intrusion, or new.}
   \item{correct}{Correct or not.}
-}}
+}
+}
 \usage{
 df_recall_complete
 }

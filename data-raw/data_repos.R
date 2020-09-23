@@ -1,6 +1,6 @@
-
+library(dplyr)
 library(httr)
-
+library(readxl)
 ### pupil data
 
 GET("https://osf.io/z43dz//?action=download",
@@ -26,6 +26,7 @@ df_pupil_complete <- df_pupil_full_control %>%
   filter(!is.na(subj))
 
 df_pupil   <- filter(df_pupil_complete, subj==701)
+
 #### Working memory data
 
 GET("https://osf.io/6r9ka//?action=download",
@@ -60,11 +61,66 @@ df_recall <- df_recall_complete %>%
   select(subj, set_size, correct, trial, session, block, tested)
 
 
+### N400 data
+
+GET("https://osf.io/q7dsk//?action=download",
+    write_disk("data-raw/data_repos/public_noun_data.txt", overwrite = TRUE),
+    progress()
+    )
+GET("https://osf.io/acu4r///?action=download",
+    write_disk("data-raw/data_repos/Stimuli.zip", overwrite = TRUE),
+    progress()
+    )
+
+
+
+df_eeg_complete <- read.csv("data-raw/data_repos/public_noun_data.txt", sep = "\t") %>%
+  as_tibble() %>%
+  mutate(item = item - 100) %>%
+  select(- segment,
+         subj = subject)
+
+
+cloze_xlsx <- unzip("data-raw/data_repos/Stimuli.zip",
+                    files = "Stimuli/Sentence Materials/REPLICATION_ITEMS.xlsx", exdir = tempdir())
+
+cloze_n <- read_xlsx(cloze_xlsx) %>%
+    {
+        bind_rows(
+            dplyr::select(., item = `Item Number`,
+                          sentence = `Sentence context`,
+                                                       article = `Expected...3`,
+                                                       cloze = `Norming...8`,
+                                                       noun = `Expected...7`,
+                                                       end = `Sentence Ending`),
+            dplyr::select(., item = `Item Number`,
+                          sentence = `Sentence context`,
+                                                       article = `Unexpected...5`,
+                                                       cloze =  `Norming...10`,
+                                                       noun = `Unexpected...9`,
+                                                       end = `Sentence Ending`))}
+
+df_eeg_complete <-  df_eeg_complete %>%
+  left_join(cloze_n) %>% mutate(
+         cloze = cloze /100,
+         cloze_ans = round(cloze * 44),
+         N = 44)
+
+
+df_eeg <- df_eeg_complete %>%
+ filter(lab=="edin") %>%
+  # choose only the relevant columns:
+  select(subj, cloze, item, n400, cloze_ans, N) %>%
+  # we simplify the subjects id
+  mutate(subj = as.factor(subj) %>% as.numeric())
+
 usethis::use_data(df_pupil,
                   df_pupil_complete,
                   df_pupil_pilot,
                   df_recall_complete,
                   df_recall,
+                  df_eeg_complete,
+                  df_eeg,
                   overwrite = TRUE)
 
 

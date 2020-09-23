@@ -151,3 +151,82 @@
 #' @references
 #' \insertAllCited{}
 "df_recall_complete"
+
+
+#' EEG averages in the N400 spatio-temporal window at the noun region of  \insertCite{nieuwlandLargescaleReplicationStudy2018;textual}{bcogsci}.
+#'
+#' EEG averages in the N400 spatio-temporal window at the noun region together with
+#' the noun Cloze probability for all the participants  of
+#' \insertCite{nieuwlandLargescaleReplicationStudy2018;textual}{bcogsci}. Participants
+#' were presented with sentences word by word, and the EEG signal was recorded.
+#'
+#' \insertCite{nieuwlandLargescaleReplicationStudy2018;textual}{bcogsci} presented a
+#' replication attempt of an original experiment of
+#' \insertCite{delongProbabilisticWordPreactivation2005;textual}{bcogsci}
+#' with sentences like the following
+#'
+#'  a. The day was breezy so the boy went outside to fly a kite.
+#'  b. The day was breezy so the boy went outside to fly an airplane.
+#'
+#' The papers focus on the article (an, an), this dataset has the EEG averages
+#' and cloze probability of the *nouns* (kite/airplane)
+#'
+#' Original data and stimuli can be
+#' found in public_noun_data.txt (https://osf.io/q7dsk/) and
+#' Stimuli.zip (https://osf.io/acu4r/)
+#'
+#' @format A data frame with 26,176 rows and 11 variables:
+#' \describe{
+#'   \item{subj}{Subject id.}
+#'   \item{cloze}{Cloze probability (from 0 to 1)}
+#'   \item{lab}{Lab name}
+#'   \item{item}{Item number}
+#'   \item{n400}{Average N400 signal at the noun.}
+#'   \item{sentence}{Sentence up to the article.}
+#'   \item{article}{Article (either a or an)}
+#'   \item{noun}{Critical region, noun.}
+#'   \item{end}{End of the sentence}
+#'   \item{cloze_ans}{Number of answers for the noun (Cloze prob. multiplied by 44)}
+#'   \item{N}{Number of answers, 44}
+#' }
+#'
+#' @references
+#' \insertAllCited{}
+"df_eeg_complete"
+
+
+#' EEG averages in the N400 spatio-temporal window at the noun region of  \insertCite{nieuwlandLargescaleReplicationStudy2018;textual}{bcogsci} for one lab.
+#'
+#' EEG averages in the N400 spatio-temporal window at the noun region together with
+#' the noun Cloze probability for the participants  of the Edinburgh's lab in
+#' \insertCite{nieuwlandLargescaleReplicationStudy2018;textual}{bcogsci}. Participants
+#' were presented with sentences word by word, and the EEG signal was recorded.
+#'
+#' \insertCite{nieuwlandLargescaleReplicationStudy2018;textual}{bcogsci} presented a
+#' replication attempt of an original experiment of
+#' \insertCite{delongProbabilisticWordPreactivation2005;textual}{bcogsci}
+#' with sentences like the following
+#'
+#'  a. The day was breezy so the boy went outside to fly a kite.
+#'  b. The day was breezy so the boy went outside to fly an airplane.
+#'
+#' The papers focus on the article (an, an), this dataset has the EEG averages
+#' and cloze probability of the *nouns* (kite/airplane)
+#'
+#' Complete dataset can be found in [df_eeg_recall]. Original data and stimuli can be
+#' found in public_noun_data.txt (https://osf.io/q7dsk/) and
+#' Stimuli.zip (https://osf.io/acu4r/)
+#'
+#' @format A data frame with 2,863 rows and 6 variables:
+#' \describe{
+#'   \item{subj}{Subject id.}
+#'   \item{cloze}{Cloze probability (from 0 to 1)}
+#'   \item{item}{Item number}
+#'   \item{n400}{Average N400 signal at the noun.}
+#'   \item{cloze_ans}{Number of answers for the noun (Cloze prob. multiplied by 44)}
+#'   \item{N}{Number of answers, 44}
+#' }
+#'
+#' @references
+#' \insertAllCited{}
+"df_eeg"

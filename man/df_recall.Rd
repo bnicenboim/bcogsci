@@ -4,7 +4,8 @@
 \name{df_recall}
 \alias{df_recall}
 \title{Free recall data for one  participant of Experiment 1 of \insertCite{oberauerWorkingMemoryCapacity2019;textual}{bcogsci}.}
-\format{A data frame with 92 rows and 7 variables:
+\format{
+A data frame with 92 rows and 7 variables:
 \describe{
   \item{subj}{Subject id.}
   \item{set_size}{Set size: 2, 4, 6, or 8 elements.}
@@ -12,7 +13,8 @@
   \item{trial}{Trial number.}
   \item{block}{Block number.}
   \item{session}{Session number.}
-}}
+}
+}
 \usage{
 df_recall
 }

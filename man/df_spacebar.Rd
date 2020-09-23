@@ -4,11 +4,13 @@
 \name{df_spacebar}
 \alias{df_spacebar}
 \title{Reaction times in milliseconds from a participant repeatedly pressing the space bar.}
-\format{A data frame with 361 rows and 2 variables:
+\format{
+A data frame with 361 rows and 2 variables:
 \describe{
   \item{rt}{Reaction time in milliseconds}
   \item{trial}{Trial number}
-}}
+}
+}
 \source{
 \url{}
 }

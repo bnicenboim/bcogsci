@@ -4,12 +4,14 @@
 \name{df_pupil_pilot}
 \alias{df_pupil_pilot}
 \title{Average pupil size for one participant sampled every 10ms of the control experiment of \insertCite{wahnPupilSizesScale2016;textual}{bcogsci}.}
-\format{A data frame with 9 rows and 3 variables:
+\format{
+A data frame with 9 rows and 3 variables:
 \describe{
   \item{time}{Time in milliseconds}
   \item{p_size}{Pupil size}
   \item{load}{Load condition}
-}}
+}
+}
 \usage{
 df_pupil_pilot
 }

@@ -4,13 +4,15 @@
 \name{df_pupil_complete}
 \alias{df_pupil_complete}
 \title{Average pupil size for all the participant of the control experiment of \insertCite{wahnPupilSizesScale2016;textual}{bcogsci}.}
-\format{A data frame with 2,228 rows and 4 variables:
+\format{
+A data frame with 2,228 rows and 4 variables:
 \describe{
   \item{subj}{Subject id.}
   \item{trial}{Trial number.}
   \item{p_size}{Pupil size.}
   \item{load}{Load condition.}
-}}
+}
+}
 \usage{
 df_pupil_complete
 }
