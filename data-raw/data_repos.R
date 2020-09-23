@@ -45,7 +45,8 @@ df_recall_complete <- as_tibble(dat) %>%
   rename(subj =id, set_size = setsize,
          response_size_list =rsizeList,
          response_size_new_words = rsizeNPL) %>% #NPL = not-presented lures
-  mutate(response_category = case_when( rcat ==1 ~ "correct",
+  mutate(correct = as.integer(correct),
+    response_category = case_when( rcat ==1 ~ "correct",
                                         rcat ==2 ~ "intrusion",
                                         rcat ==3 ~ "new")) %>%
     select(-rsize, -rcat, -new, -intrusion)
