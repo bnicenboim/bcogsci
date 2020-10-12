@@ -36,7 +36,7 @@ with sentences like the following
 The papers focus on the article (an, an), this dataset has the EEG averages
 and cloze probability of the *nouns* (kite/airplane)
 
-Complete dataset can be found in [df_eeg_recall]. Original data and stimuli can be
+Complete dataset can be found in [df_eeg_complete]. Original data and stimuli can be
 found in public_noun_data.txt (https://osf.io/q7dsk/) and
 Stimuli.zip (https://osf.io/acu4r/)
 }

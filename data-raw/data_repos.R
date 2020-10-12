@@ -1,6 +1,8 @@
 library(dplyr)
 library(httr)
 library(readxl)
+library(bcogsci)
+library(stringr)
 ### pupil data
 
 GET("https://osf.io/z43dz//?action=download",
@@ -114,6 +116,37 @@ df_eeg <- df_eeg_complete %>%
   # we simplify the subjects id
   mutate(subj = as.factor(subj) %>% as.numeric())
 
+### STROOP data
+
+GET("https://osf.io/n8xa7//?action=download",
+    write_disk("data-raw/data_repos/StroopCleanSet.zip", overwrite = TRUE),
+    progress()
+    )
+
+stroop_csv <- unzip("data-raw/data_repos/StroopCleanSet.zip",
+                    files = "StroopCleanSet.csv", exdir = "data-raw/data_repos")
+
+df_stroop_complete <- read.csv("data-raw/data_repos/StroopCleanSet.csv", header = TRUE)  %>%
+  # rename unintuitive column names:
+  rename(correct= trial_error,
+         RT = trial_latency,
+         condition = congruent) %>%
+  mutate(subj = session_id %>%
+           as.factor() %>%
+           as.numeric(),
+         word = str_match(trial_name,"(.*?)\\|")[,2] %>%
+           str_to_lower,
+         color = str_match(block_name,"(.*?)\\|")[,2] %>%
+           str_to_lower,
+         ) %>%
+  as_tibble() %>%
+  select(subj, trial = trial_number, condition, word, color, response = trial_response, correct, RT)
+
+
+df_stroop <- df_stroop_complete %>%
+  filter(correct == 1, subj <= 50) %>%
+  select(subj, trial, condition, RT)
+
 usethis::use_data(df_pupil,
                   df_pupil_complete,
                   df_pupil_pilot,
@@ -121,6 +154,8 @@ usethis::use_data(df_pupil,
                   df_recall,
                   df_eeg_complete,
                   df_eeg,
+                  df_stroop,
+                  df_stroop_complete,
                   overwrite = TRUE)
 
 

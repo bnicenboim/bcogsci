@@ -1,3 +1,6 @@
 .Rproj.user
 data-raw/data_repos/*.*
 .Rhistory
+.auctex-auto/REFERENCES.el
+inst/.auctex-auto/
+

@@ -24,6 +24,7 @@
 #'
 #'  Full dataset can be found in the file `PLOS_raw_pupildata_controlexperiment.csv` https://osf.io/qtzjb/
 #'
+#'
 #' @format A data frame with 9 rows and 3 variables:
 #' \describe{
 #'   \item{time}{Time in milliseconds}
@@ -33,6 +34,7 @@
 #' @references
 #' \insertAllCited{}
 "df_pupil_pilot"
+
 
 
 #' Average pupil size for one participant of the control experiment of \insertCite{wahnPupilSizesScale2016;textual}{bcogsci}.
@@ -126,6 +128,8 @@
 "df_recall"
 
 
+
+
 #' Recall data for participants of Experiment 1 of \insertCite{oberauerWorkingMemoryCapacity2019;textual}{bcogsci}.
 #'
 #' Complete data of participants from Experiment 1 of
@@ -194,7 +198,7 @@
 #' \insertAllCited{}
 "df_eeg_complete"
 
-
+#
 #' EEG averages in the N400 spatio-temporal window at the noun region of  \insertCite{nieuwlandLargescaleReplicationStudy2018;textual}{bcogsci} for one lab.
 #'
 #' EEG averages in the N400 spatio-temporal window at the noun region together with
@@ -213,7 +217,7 @@
 #' The papers focus on the article (an, an), this dataset has the EEG averages
 #' and cloze probability of the *nouns* (kite/airplane)
 #'
-#' Complete dataset can be found in [df_eeg_recall]. Original data and stimuli can be
+#' Complete dataset can be found in [df_eeg_complete]. Original data and stimuli can be
 #' found in public_noun_data.txt (https://osf.io/q7dsk/) and
 #' Stimuli.zip (https://osf.io/acu4r/)
 #'
@@ -230,3 +234,50 @@
 #' @references
 #' \insertAllCited{}
 "df_eeg"
+
+
+#' Reaction times and accuracy for the Stroop task in \insertCite{ManyLabs3;textual}{bcogsci}.
+#'
+#'  Reaction times and accuracy  together with condition type and color
+#' for the trials of all the participants  of the Stroop task \insertCite{stroop1935studies}{bcogsci} in
+#' \insertCite{ManyLabs3;textual}{bcogsci}. For this variant of the Stroop task, participants were presented with one word at the center of the screen, which was either "red", "blue", and "green" (*word*) written in either red, blue, or green font (*color*). In one third of the trials the *word* matched the *color* of the text ("congruent" condition) and in the rest of the trials it did not match ("incongruent" condition). Participants were instructed to only pay attention to the color, and press `1` if the color of the word was red, `2` if it was blue, and `3` if it was green.  The Stroop effect, that is, the difficulty in identifying the color when it mismatches the word in the incongruent condition (e.g., green in color blue) in comparison to a baseline condition, here, the congruent condition (e.g., green in color green) is extremely robust across variations of the task.
+#'
+#'
+#' The complete procedure can be found in https://osf.io/5ykuj/ and the dataset can be found in https://osf.io/n8xa7/.
+#'
+#' @format A data frame with  rows and  variables:
+#' \describe{
+#'   \item{subj}{Subject id.}
+#'   \item{trial}{Trial number.}
+#'   \item{condition}{"Congruent" if color and word match, "Incongruent" otherwise.}
+#'   \item{word}{Word presented at the screen.}
+#'   \item{color}{Color of the word presented at the screen.}
+#'   \item{response}{Color responded by the participant}
+#'   \item{correct}{Whether the participant answered correctly or not (color==response)}
+#'   \item{RT}{Reaction time}
+#' }
+#'
+#' @references
+#' \insertAllCited{}
+"df_stroop_complete"
+
+
+#' Reaction times for the correct answers of 50 participants of the Stroop task in  \insertCite{ManyLabs3;textual}{bcogsci}.
+#'
+#'  Reaction times for the correct answers of 50 participants of the Stroop task  \insertCite{stroop1935studies}{bcogsci} of
+#' \insertCite{ManyLabs3;textual}{bcogsci}. For this variant of the Stroop task, participants were presented with one word at the center of the screen, which was either "red", "blue", and "green" (*word*) written in either red, blue, or green font (*color*). In one third of the trials the *word* matched the *color* of the text ("congruent" condition) and in the rest of the trials it did not match ("incongruent" condition). Participants were instructed to only pay attention to the color, and press `1` if the color of the word was red, `2` if it was blue, and `3` if it was green.  The Stroop effect, that is, the difficulty in identifying the color when it mismatches the word in the incongruent condition (e.g., green in color blue) in comparison to a baseline condition, here, the congruent condition (e.g., green in color green) is extremely robust across variations of the task.
+#'
+#'
+#'  Complete dataset can be found in [df_stroop_complete]. The complete procedure can be found in https://osf.io/5ykuj/ and the original dataset can be found in https://osf.io/n8xa7/.
+#'
+#' @format A data frame with  rows and  variables:
+#' \describe{
+#'   \item{subj}{Subject id.}
+#'   \item{trial}{Trial number.}
+#'   \item{condition}{"Congruent" if color and word match, "Incongruent" otherwise.}
+#'   \item{RT}{Reaction time}
+#' }
+#'
+#' @references
+#' \insertAllCited{}
+"df_stroop"
