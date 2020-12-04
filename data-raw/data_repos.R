@@ -147,6 +147,37 @@ df_stroop <- df_stroop_complete %>%
   filter(correct == 1, subj <= 50) %>%
   select(subj, trial, condition, RT)
 
+
+## Meta analysis:
+##
+##
+
+GET("https://osf.io/du3qp///?action=download",
+    write_disk("data-raw/data_repos/MetaAnalysisData.csv", overwrite = TRUE),
+    progress()
+)
+
+df_sbi_complete <- read.csv("data-raw/data_repos/MetaAnalysisData.csv", sep = ";", header = TRUE) %>%
+  select(publication = Publication,
+         language = Lang,
+         method_measure = Method_Measure,
+         cue = Cue,
+         int_type = IntType,
+         distr_pos = DistrPos,
+         effect = Effect,
+         SE,
+         target_type = TargetType,
+         dep_type = DepType,
+         verb_type = VerbType,
+         prominence1 = Prominence1,
+         prominence2 = Prominence2) %>%
+  as_tibble()
+
+
+df_sbi <- df_sbi_complete %>%
+  filter(target_type == "Match", dep_type == "nonagreement") %>%
+  select(publication, effect, SE)
+
 usethis::use_data(df_pupil,
                   df_pupil_complete,
                   df_pupil_pilot,
@@ -156,6 +187,8 @@ usethis::use_data(df_pupil,
                   df_eeg,
                   df_stroop,
                   df_stroop_complete,
+                  df_sbi_complete,
+                  df_sbi,
                   overwrite = TRUE)
 
 

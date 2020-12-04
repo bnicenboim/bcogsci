@@ -270,7 +270,7 @@
 #'
 #'  Complete dataset can be found in [df_stroop_complete]. The complete procedure can be found in https://osf.io/5ykuj/ and the original dataset can be found in https://osf.io/n8xa7/.
 #'
-#' @format A data frame with  rows and  variables:
+#' @format A data frame with 3058 rows and 4 variables:
 #' \describe{
 #'   \item{subj}{Subject id.}
 #'   \item{trial}{Trial number.}
@@ -281,3 +281,49 @@
 #' @references
 #' \insertAllCited{}
 "df_stroop"
+
+
+#' Mean reading times of interference/facilitation effects in the experiments of the meta analysis of \insertCite{JaegerEngelmannVasishth2017;textual}{bcogsci}.
+#'
+#' Mean reading times of interference effects in subject-verb dependencies and reflexive/reciprocal-antecedent dependencies in the experiments of the meta analysis of \insertCite{JaegerEngelmannVasishth2017;textual}{bcogsci}. According to similarity-based interference accounts when two nouns are more similar to each other, there is greater processing difficulty (i.e., longer reading times at a critical region). The data contains 77 estimates from twelve experiments.
+#'
+#' The is dataset is a slightly modified version (namely, column names were changed) of the dataset that can be found in https://osf.io/du3qp. The complete description of the experiments included in the dataset can be found in https://osf.io/4ehyw/.
+#'
+#' @format A data frame with 3058 rows and 4 variables:
+#' \describe{
+#'  \item{publication}{}
+#'  \item{language}{EN = English, CN = Chinese, HI = Hindi, FR = French, SP = Spanish, AR = Arabic}
+#'  \item{method_measure}{Either SPR_RT = Reading times from self-paced reading, or ET_FPRT, first pass reading times from eye-tracking while reading}
+#'  \item{cue}{}
+#'  \item{int_type}{Type of interference, either pro = proactive, or retro = retroactive}
+#'  \item{distr_pos}{Indicates where the distractors are in the sentence}
+#' \item{effect}{Estimated mean effect in milliseconds}
+#' \item{SE}{Standard error of the effect}
+#' \item{target_type}{Match or Mismatch}
+#' \item{dep_type}{Type of the dependency investigated: relf = reflexive-antecedent, reci =  reciprocal-antecedent, agreement = subject-verb/agreement attraction, nonagreement = subject-verb}
+#' \item{verb_type}{}
+#' \item{prominence1}{}
+#' \item{prominence2}{}
+#' }
+#'
+#' @references
+#' \insertAllCited{}
+"df_sbi_complete"
+
+
+#' Mean reading times of interference effects in subject-verb dependencies in the experiments of the meta analysis of \insertCite{JaegerEngelmannVasishth2017;textual}{bcogsci}.
+#'
+#' Mean reading times of interference effects in subject-verb dependencies in the experiments of the meta analysis of \insertCite{JaegerEngelmannVasishth2017;textual}{bcogsci}. According to similarity-based interference accounts when two nouns are more similar to each other, there is greater processing difficulty (i.e., longer reading times at a critical region). The data contains 12 estimates.
+#'
+#' Complete dataset can be found in [df_sbi_complete].
+#'
+#' @format A data frame with 12 rows and 3 variables:
+#' \describe{
+#' \item{publication}{}
+#' \item{effect}{Estimated mean effect in milliseconds}
+#' \item{SE}{Standard error of the effect}
+#' }
+#'
+#' @references
+#' \insertAllCited{}
+"df_sbi"

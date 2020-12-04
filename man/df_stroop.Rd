@@ -5,7 +5,7 @@
 \alias{df_stroop}
 \title{Reaction times for the correct answers of 50 participants of the Stroop task in  \insertCite{ManyLabs3;textual}{bcogsci}.}
 \format{
-A data frame with  rows and  variables:
+A data frame with 3058 rows and 4 variables:
 \describe{
   \item{subj}{Subject id.}
   \item{trial}{Trial number.}
