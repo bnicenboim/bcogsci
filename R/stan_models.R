@@ -33,3 +33,28 @@ NULL
 #' file.show(normal2)
 #' @name stan-normal2
 NULL
+
+
+#' Stan model for fitting a linear regression to the pupil size data.
+#'
+#' Stan model for fitting a linear regression to the pupil size data.
+#'
+#' @examples
+#' # The file can be located as follows:
+#' normal <- system.file("stan_models", "pupil_model.stan", package = "bcogsci")
+#' # See the models code:
+#' file.show(pupil_model)
+#' @name stan-pupil_model
+NULL
+
+#' Stan model for fitting a linear regression to the pupil size data and generating predictive distributions.
+#'
+#' Stan model for fitting a linear regression to the pupil size data and generating predictive distributions.
+#'
+#' @examples
+#' # The file can be located as follows:
+#' normal <- system.file("stan_models", "pupil_gen.stan", package = "bcogsci")
+#' # See the models code:
+#' file.show(pupil_gen)
+#' @name stan-pupil_gen
+NULL
