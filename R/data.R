@@ -336,9 +336,12 @@
 #' The data were simulated using the following R-code:
 #'
 #' set.seed(123)
+#'
 #' d <- mvrnorm(n=5, mu=c(0.8, 0.4), Sigma=diag(2)*0.2^2, empirical=TRUE)
+#'
 #' df_contrasts1 <- d %>% as.data.frame() %>% gather(key="F", value="DV") %>%
 #'   mutate(id=1:nrow(.), F=factor(F))
+#'
 #' levels(df_contrasts1$F) <- c("F1", "F2")
 #'
 #' @format A data frame with 10 rows and 3 variables:
@@ -361,12 +364,16 @@
 #' The data were simulated using the following R-code:
 #'
 #' set.seed(123)
-#' d2 <- mvrnorm(n=4, mu=c(500, 450, 400), 
+#'
+#' d2 <- mvrnorm(n=4, mu=c(500, 450, 400),
 #'               Sigma=diag(3)*20^2, empirical=TRUE)
-#' df_contrasts2 <- d2 %>% as.data.frame() %>% 
+#'
+#' df_contrasts2 <- d2 %>% as.data.frame() %>%
 #'   gather(key="F", value="DV") %>%
 #'   mutate(id=1:nrow(.), F=factor(F))
+#'
 #' levels(df_contrasts2$F) <- c("low", "medium", "high")
+#'
 #' df_contrasts2$DV <- round(df_contrasts2$DV)
 #'
 #' @format A data frame with 12 rows and 3 variables:
@@ -389,9 +396,12 @@
 #' The data were simulated using the following R-code:
 #'
 #' set.seed(123)
+#'
 #' d3 <- mvrnorm(n=5, mu=c(10, 20, 10, 40), Sigma=diag(4)*10^2, empirical=TRUE)
+#'
 #' df_contrasts3 <- d3 %>% as.data.frame() %>% gather(key="F", value="DV") %>%
 #'   mutate(id=1:nrow(.), F=factor(F))
+#'
 #' levels(df_contrasts3$F) <- c("F1", "F2", "F3", "F4")
 #'
 #' @format A data frame with 12 rows and 3 variables:
@@ -413,10 +423,14 @@
 #' The data were simulated using the following R-code:
 #'
 #' set.seed(123)
+#'
 #' d4 <- mvrnorm(n=5, mu=c(10, 20, 10, 40), Sigma=diag(4)*10^2, empirical=TRUE)
+#'
 #' df_contrasts4 <- d4 %>% as.data.frame() %>% gather(key="A", value="DV") %>%
 #'   mutate(id=1:nrow(.), B=factor(A), A=factor(A))
+#'
 #' levels(df_contrasts4$A) <- c("A1","A1","A2","A2")
+#'
 #' levels(df_contrasts4$B) <- c("B1","B2","B1","B2")
 #'
 #' @format A data frame with 12 rows and 3 variables:
