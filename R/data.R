@@ -356,10 +356,10 @@
 "df_contrasts1"
 
 
-#' Simulated data with response times from a lexical decision task as a function of a 3-level between-subject factor "word frequency".
+#' Simulated data with response times from a lexical decision task as a function of a 3-level between-subject factor "word class".
 #'
-#' The simulated data contains data from word frequency levels "low", "medium", and "high". Word frequency is manipulated between subjects here (usually it is a within-subject manipulation).
-#' The condition means are exactly 500, 450, and 400 milliseconds for low, medium, and high frequency words.
+#' The simulated data contains data from word classes "nouns", "verbs", and "adjectives". Word class is manipulated between subjects here (usually it is a within-subject manipulation).
+#' The condition means are exactly 500, 450, and 400 milliseconds for nouns, verbs, and adjectives words.
 #'
 #' The data were simulated using the following R-code:
 #'
@@ -372,13 +372,13 @@
 #'   gather(key="F", value="DV") %>%
 #'   mutate(id=1:nrow(.), F=factor(F))
 #'
-#' levels(df_contrasts2$F) <- c("low", "medium", "high")
+#' levels(df_contrasts2$F) <- c("nouns", "verbs", "adjectives")
 #'
 #' df_contrasts2$DV <- round(df_contrasts2$DV)
 #'
 #' @format A data frame with 12 rows and 3 variables:
 #' \describe{
-#' \item{F}{Between subject factor word frequency with factor levels "low", "medium", and "high"}
+#' \item{F}{Between subject factor word class with factor levels "nouns", "verbs", and "adjectives"}
 #' \item{DV}{Dependent variable, response time in milliseconds}
 #' \item{id}{Subject index}
 #' }
