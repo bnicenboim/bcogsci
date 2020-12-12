@@ -444,3 +444,103 @@
 #' @references
 #' \insertAllCited{}
 "df_contrasts4"
+
+
+#' Simulated data with response times with a 2-level between subject factor and IQ as covariate: no interaction.
+#'
+#' In the data, the influence of IQ on response time is exactly the same in both conditions F1 and F2. However, the mean response time and mean IQ differs between conditions F1 and F2.
+#'
+#' The data were simulated using the following R-code:
+#'
+#' set.seed(123)
+#'
+#' N <- 30
+#'
+#' mu1 <- c(225, 85)
+#'
+#' mu2 <- c(200,115)
+#'
+#' sd1 <- 40
+#'
+#' sd2 <- 15
+#'
+#' r1 <- r2 <- -0.4
+#'
+#' sigma1 <- matrix(c(sd1^2,r1*sd1*sd2,r1*sd1*sd2,sd2^2),nrow=2)
+#'
+#' sigma2 <- matrix(c(sd1^2,r2*sd1*sd2,r2*sd1*sd2,sd2^2),nrow=2)
+#'
+#' d5a <- mvrnorm(n=N, mu=mu1, Sigma=sigma1, empirical=TRUE)
+#'
+#' d5b <- mvrnorm(n=N, mu=mu2, Sigma=sigma2, empirical=TRUE)
+#'
+#' df_contrasts5 <- rbind(data.frame(F="F1", d5a), data.frame(F="F2", d5b))
+#'
+#' names(df_contrasts5)[2:3] <- c("RT","IQ")
+#'
+#' df_contrasts5$id <- 1:nrow(df_contrasts5)
+#'
+#' df_contrasts5$F  <- factor(df_contrasts5$F)
+#'
+#' @format A data frame with 60 rows and 4 variables:
+#' \describe{
+#' \item{F}{Between subject factor with factor two levels (F1, F2)}
+#' \item{RT}{Dependent variable response time (RT)}
+#' \item{IQ}{Between-subject covariate (IQ)}
+#' \item{id}{Subject index}
+#' }
+#'
+#' @references
+#' \insertAllCited{}
+"df_contrasts5"
+
+
+#' Simulated data with response times with a 2-level between subject factor and IQ as covariate: interaction present.
+#'
+#' In the data, the influence of IQ on response time differs between conditions F1 and F2.
+#'
+#' The data were simulated using the following R-code:
+#'
+#' set.seed(123)
+#'
+#' N <- 30
+#'
+#' mu1 <- c(200,100)
+#'
+#' mu2 <- c(220,100)
+#'
+#' sd1 <- 40
+#'
+#' sd2 <- 15
+#'
+#' r1 <-  0.0
+#'
+#' r2 <- -0.6
+#'
+#' sigma1 <- matrix(c(sd1^2,r1*sd1*sd2,r1*sd1*sd2,sd2^2),nrow=2)
+#'
+#' sigma2 <- matrix(c(sd1^2,r2*sd1*sd2,r2*sd1*sd2,sd2^2),nrow=2)
+#'
+#' d6a <- mvrnorm(n=N, mu=mu1, Sigma=sigma1, empirical=TRUE)
+#'
+#' d6b <- mvrnorm(n=N, mu=mu2, Sigma=sigma2, empirical=TRUE)
+#'
+#' df_contrasts6 <- rbind(data.frame(F="F1", d6a), data.frame(F="F2", d6b))
+#'
+#' names(df_contrasts6)[2:3] <- c("RT","IQ")
+#'
+#' df_contrasts6$id <- 1:nrow(df_contrasts6)
+#'
+#' df_contrasts6$F  <- factor(df_contrasts6$F)
+#'
+#' @format A data frame with 60 rows and 4 variables:
+#' \describe{
+#' \item{F}{Between subject factor with factor two levels (F1, F2)}
+#' \item{RT}{Dependent variable response time (RT)}
+#' \item{IQ}{Between-subject covariate (IQ)}
+#' \item{id}{Subject index}
+#' }
+#'
+#' @references
+#' \insertAllCited{}
+"df_contrasts6"

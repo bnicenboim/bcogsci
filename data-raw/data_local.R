@@ -16,4 +16,10 @@ df_contrasts3 <- read.csv("data-raw/datasets/contrasts3.csv") %>%
 df_contrasts4 <- read.csv("data-raw/datasets/contrasts4.csv") %>%
   as_tibble() %>% mutate(A = factor(A), B = factor(B))
 
-usethis::use_data(df_spacebar, df_contrasts1, df_contrasts2, df_contrasts3, df_contrasts4, overwrite = TRUE)
+df_contrasts5 <- read.csv("data-raw/datasets/contrasts5.csv") %>%
+  as_tibble() %>% mutate(F = factor(F), id = factor(id))
+
+df_contrasts6 <- read.csv("data-raw/datasets/contrasts6.csv") %>%
+  as_tibble() %>% mutate(F = factor(F), id = factor(id))
+
+usethis::use_data(df_spacebar, df_contrasts1, df_contrasts2, df_contrasts3, df_contrasts4, df_contrasts5, df_contrasts6, overwrite = TRUE)
