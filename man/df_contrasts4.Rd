@@ -7,8 +7,8 @@
 \format{
 A data frame with 12 rows and 3 variables:
 \describe{
-\item{A}{Between subject factor with factor two levels (A1, A2)}
-\item{B}{Between subject factor with factor two levels (B1, B2)}
+\item{A}{Between subject factor with two levels (A1, A2)}
+\item{B}{Between subject factor with two levels (B1, B2)}
 \item{DV}{Dependent variable}
 \item{id}{Subject index}
 }
