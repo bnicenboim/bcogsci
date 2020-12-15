@@ -583,3 +583,37 @@
 #' @references
 #' \insertAllCited{}
 "df_contrasts7"
+
+
+
+
+#' Simulated data with a binomial response with one between subject factor with 2 levels.
+#'
+#' The dependent variable could be successful task performance in two groups.
+#'
+#' The data were simulated using the following R-code:
+#'
+#' set.seed(123)
+#'
+#' N <- 50
+#'
+#' df_BF <- data.frame(F=factor(rep(c("F1","F2"),each=N)))
+#'
+#' df_BF$pDV <- c( c(rep(0,N*0.02),rep(1,N*0.98))[sample(N)],
+#'
+#'                 c(rep(0,N*0.3 ),rep(1,N*0.7 ))[sample(N)] )
+#'
+#' df_BF$id <- 1:(N*2)
+#'
+#' df_BF <- tibble(df_BF)
+#'
+#' @format A data frame with 100 rows and 3 variables:
+#' \describe{
+#' \item{F}{Between subject factor with two levels (F1, F2)}
+#' \item{pDV}{Dependent variable: successful task performance (0 = no success versus 1 = success)}
+#' \item{id}{Subject index}
+#' }
+#'
+#' @references
+#' \insertAllCited{}
+"df_BF"

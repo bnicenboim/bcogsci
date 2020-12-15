@@ -13,7 +13,7 @@ Datasets and models included in the book "An Introduction to Bayesian Data Analy
 
 Authors:
 \itemize{
-  \item Daniel Schad \email{danieljschad@gmail.com} (\href{https://orcid.org/ORCID-ID}{ORCID})
+  \item Daniel Schad \email{d.schad@tilburguniversity.edu} (\href{https://orcid.org/ORCID-ID}{ORCID})
   \item Shravan Vasishth \email{vasishth@uni-potsdam.de} (\href{https://orcid.org/ORCID-ID}{ORCID})
 }
 
