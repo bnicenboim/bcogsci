@@ -310,6 +310,59 @@
 #' \insertAllCited{}
 "df_sbi_complete"
 
+#' Reading times of the self-paced reading experiment 1 conducted by  \insertCite{grodnergibson2005;textual}{bcogsci}.
+#'
+#' Reading times of every region of Experiment 1 of \insertCite{grodnergibson2005;textual}{bcogsci}.
+#'
+#' The experiment examined sentences with object-RC (relative clauses) vs sentences with subject-RC, such as the following (regions are indicated with |):
+#'
+#' - (SRC) The reporter | who | the photographer | sent | to the editor | hoped for a story.
+#' - (ORC) The reporter | who | sent | the photographer | to the editor | hoped for a story.
+#'
+#' The is dataset is a slightly modified version (namely, column names were changed, and a an error in word position column was fixed) of the original dataset. The complete description of the experiments included in the dataset can be found in \insertCite{grodnergibson2005;textual}{bcogsci}.
+#'
+#' @format A data frame with 10,331 rows and 8 variables:
+#' \describe{
+#'  \item{subj}{}
+#'  \item{item}{}
+#' \item{condition}{ Either object-RC (objgap) or subject-RC (subjgap).}
+#' \item{word_position}{Word number in the sentence.}
+#' \item{region_position}{Region position (see example above)}
+#' \item{RT}{Reading times in milliseconds}
+#' \item{residRT}{Residual reading times computed by subtracting variance due to length from unadjusted reading times (using the procedure described by Frazier & Clifton, 1986).}
+#' \item{qcorrect}{Whether the comprehension question was answered correctly or not.}
+#' }
+#'
+#' @references
+#' \insertAllCited{}
+"df_gg05_complete"
+
+#' Reading times at the critical regions of the self-paced reading experiment 1 conducted by  \insertCite{grodnergibson2005;textual}{bcogsci}.
+#'
+#' Reading times at the critical regions of sentences of Experiment 1 of \insertCite{grodnergibson2005;textual}{bcogsci}.
+#'
+#'
+#' The experiment examined sentences with object-RC (relative clauses) vs sentences with subject-RC, such as the following (the critical region is indicated in bold).
+#'
+#' - (SRC) The reporter who the photographer *sent* to the editor hoped for a story.
+#' - (ORC) The reporter who *sent* the photographer to the editor hoped for a story.
+#'
+#' Complete dataset can be found in [df_gg05_complete]
+#'
+#' @format A data frame with 673 rows and 6 variables:
+#' \describe{
+#'  \item{subj}{}
+#'  \item{item}{}
+#' \item{condition}{ Either object-RC (objgap) or subject-RC (subjgap).}
+#' \item{RT}{Reading times in milliseconds}
+#' \item{residRT}{Residual reading times computed by subtracting variance due to length from unadjusted reading times (using the procedure described by Frazier & Clifton, 1986).}
+#' \item{qcorrect}{Whether the comprehension question was answered correctly or not.}
+#' }
+#'
+#' @references
+#' \insertAllCited{}
+"df_gg05_rc"
+
 
 #' Mean reading times of interference effects in subject-verb dependencies in the experiments of the meta analysis of \insertCite{JaegerEngelmannVasishth2017;textual}{bcogsci}.
 #'
@@ -617,3 +670,58 @@
 #' @references
 #' \insertAllCited{}
 "df_BF"
+
+#' Responses for the conjunction fallacy or Linda problem Experiment \insertCite{TverskyKahneman1983}{bcogsci}
+#'
+#' Responses from the replication of \insertCite{Paolaccietal;textual}{bcogsci} of the conjunction fallacy experiment or Linda problem \insertCite{TverskyKahneman1983}{bcogsci}. The dataset is adapted (and simplified) from https://osf.io/wzsf5/
+#'
+#' \insertCite{Paolaccietal;textual}{bcogsci} examined whether the results of some classic experiments differ between a university pool population and participants recruited from Mechanical Turk among them the conjunction fallacy.
+#'
+#' The conjunction fallacy shows that people often fail to regard a combination of events as less probable than a single event in the combination. In the experiment a text as the following appears followed
+#'
+#' *Linda is 31 years old, single, outspoken, and very bright. She majored in philosophy. As a student, she was deeply concerned with issues of discrimination and social justice, and also participated in anti-nuclear demonstrations.*
+#'
+#' *Which is more probable?*
+#'
+#' a. *Linda is a bank teller.*
+#' b. *Linda is a bank teller and is active in the feminist movement.*
+#'
+#' The majority of those asked chose option b. Even if it's less probable since Pr(a & b) is smaller or equal than Pr(b).
+#'
+#' In this dataset `0` indicates option "a" and `1` option `b`.
+#'
+#'
+#' @format A data frame with 268 rows and 2 variables:
+#' \describe{
+#' \item{source}{Whether the data is from the university or Mechanical Turk.}
+#' \item{answer}{0 indicates option a, 1 indicates option b}
+#' }
+#'
+#' @references
+#' \insertAllCited{}
+"df_fallacy"
+
+#' Data of a global motion detection task from \insertCite{Dutilh2019quality;textual}{bcogsci}
+#'
+#' The dataset from \insertCite{Dutilh2019quality;textual}{bcogsci} contains the trials of each of the 20 subjects participating in a global motion detection task. There were two level of coherence yielding hard and easy trials (`diff`), and the trials where done under instructions that emphasized either accuracy or speed (`emphasis`).
+#'
+#' This is a slightly modified version of the original dataset that can be found   in https://osf.io/utkjf/.
+#'
+#' @format A data frame with 56,097 rows and 12 variables:
+#' \describe{
+#' \item{subj}{}
+#' \item{diff}{Difficulty of the trial (easy or hard).}
+#' \item{emphasis}{Whether the instructions emphasize 'speed' or 'accuracy'.}
+#' \item{rt}{Response time in milliseconds.}
+#' \item{acc}{1 if stim == resp, 0 otherwise.}
+#' \item{fix_dur}{Duration of the presentation of the fixation cross before stimulus in milliseconds.}
+## \item{stim}{Direction of the moving dots stimulus.}
+#' \item{resp}{Button pressed}
+#' \item{trial}{Trial number in the entire experimental session.}
+#' \item{block}{The number of the trial block.}
+#' \item{block_trial}{Trial number within the trial block.}
+#' \item{bias}{Direction of eventual manipulated bias: left, right or no bias.}
+#' }
+#' @references
+#' \insertAllCited{}
+"df_dots"

@@ -69,8 +69,8 @@ GET("https://osf.io/q7dsk//?action=download",
     write_disk("data-raw/data_repos/public_noun_data.txt", overwrite = TRUE),
     progress()
     )
-GET("https://osf.io/acu4r///?action=download",
-    write_disk("data-raw/data_repos/Stimuli.zip", overwrite = TRUE),
+get("https://osf.io/acu4r///?action=download",
+    write_disk("data-raw/data_repos/stimuli.zip", overwrite = true),
     progress()
     )
 
@@ -83,8 +83,8 @@ df_eeg_complete <- read.csv("data-raw/data_repos/public_noun_data.txt", sep = "\
          subj = subject)
 
 
-cloze_xlsx <- unzip("data-raw/data_repos/Stimuli.zip",
-                    files = "Stimuli/Sentence Materials/REPLICATION_ITEMS.xlsx", exdir = tempdir())
+cloze_xlsx <- unzip("data-raw/data_repos/stimuli.zip",
+                    files = "stimuli/sentence materials/replication_items.xlsx", exdir = tempdir())
 
 cloze_n <- read_xlsx(cloze_xlsx) %>%
     {
@@ -178,6 +178,19 @@ df_sbi <- df_sbi_complete %>%
   filter(target_type == "Match", dep_type == "nonagreement") %>%
   select(publication, effect, SE)
 
+GET("https://osf.io/ktmhu/////?action=download",
+    write_disk("data-raw/data_repos/moving_dots.csv", overwrite = TRUE),
+    progress()
+)
+
+df_dots <- read.csv("data-raw/data_repos/moving_dots.csv") %>%
+  mutate(diff = ifelse(ease == 1, "hard", "easy"),
+         emphasis = ifelse(sa == 1, "speed", "accuracy"),
+         rt = rt * 1000, fix.dur = fix.dur * 1000) %>%
+  select(subj = pp, diff, emphasis, rt, acc = correct, fix_dur = fix.dur, stim, resp,  trial, block, block_trial = block.trial, bias) %>%
+  as_tibble()
+
+
 usethis::use_data(df_pupil,
                   df_pupil_complete,
                   df_pupil_pilot,
@@ -189,6 +202,7 @@ usethis::use_data(df_pupil,
                   df_stroop_complete,
                   df_sbi_complete,
                   df_sbi,
+                  df_dots,
                   overwrite = TRUE)
 
 
