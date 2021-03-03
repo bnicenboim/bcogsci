@@ -9,7 +9,7 @@ A data frame with 9 rows and 3 variables:
 \describe{
   \item{time}{Time in milliseconds}
   \item{p_size}{Pupil size}
-  \item{att_load}{Load condition}
+  \item{load}{Load condition}
 }
 }
 \usage{

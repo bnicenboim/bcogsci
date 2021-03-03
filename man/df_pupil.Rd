@@ -10,7 +10,7 @@ A data frame with 31 rows and 4 variables:
   \item{subj}{Subject id.}
   \item{trial}{Trial number.}
   \item{p_size}{Pupil size.}
-  \item{att_load}{Load condition.}
+  \item{load}{Load condition.}
 }
 }
 \usage{

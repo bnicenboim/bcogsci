@@ -29,7 +29,7 @@
 #' \describe{
 #'   \item{time}{Time in milliseconds}
 #'   \item{p_size}{Pupil size}
-#'   \item{att_load}{Load condition}
+#'   \item{load}{Load condition}
 #' }
 #' @references
 #' \insertAllCited{}
@@ -63,7 +63,7 @@
 #'   \item{subj}{Subject id.}
 #'   \item{trial}{Trial number.}
 #'   \item{p_size}{Pupil size.}
-#'   \item{att_load}{Load condition.}
+#'   \item{load}{Load condition.}
 #' }
 #' @references
 #' \insertAllCited{}

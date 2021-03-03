@@ -17,15 +17,16 @@ df_pupil_full_control <- read.csv("data-raw/data_repos/PLOS_raw_pupildata_contro
 # "Pilot" data
 df_pupil_pilot <- df_pupil_full_control %>%
   filter(Subnum==701, load ==0,time < 100, trial == 5) %>%
-  select(time, p_size, att_load = load)
+  select(time, p_size)
 
 # Averaged by trial data
 df_pupil_complete <- df_pupil_full_control %>%
   filter(time > 100) %>%
-  rename(subj = Subnum, att_load = load)   %>%
-  group_by(subj, trial, att_load) %>%
+  rename(subj = Subnum)   %>%
+  group_by(subj, trial, load) %>%
   summarize(p_size = mean(p_size, na.rm= TRUE)) %>%
-  filter(!is.na(subj))
+  filter(!is.na(subj)) %>%
+  ungroup()
 
 df_pupil   <- filter(df_pupil_complete, subj==701)
 
@@ -204,5 +205,3 @@ usethis::use_data(df_pupil,
                   df_sbi,
                   df_dots,
                   overwrite = TRUE)
-
-
