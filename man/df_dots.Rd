@@ -10,9 +10,9 @@ A data frame with 56,097 rows and 12 variables:
 \item{subj}{}
 \item{diff}{Difficulty of the trial (easy or hard).}
 \item{emphasis}{Whether the instructions emphasize 'speed' or 'accuracy'.}
-\item{rt}{Response time.}
+\item{rt}{Response time in milliseconds.}
 \item{acc}{1 if stim == resp, 0 otherwise.}
-\item{fix_dur}{Duration of the presentation of the fixation cross before stimulus.}
+\item{fix_dur}{Duration of the presentation of the fixation cross before stimulus in milliseconds.}
 \item{resp}{Button pressed}
 \item{trial}{Trial number in the entire experimental session.}
 \item{block}{The number of the trial block.}
