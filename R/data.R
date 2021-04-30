@@ -737,8 +737,10 @@
 #' \item{attractor}{A factor with two levels, match and mismatch.}
 #' \item{interference}{A factor with two levels, interference and no interference.}
 #' \item{rating}{A Likert scale rating of the acceptability of the sentence.}
+#' \item{rating}{A Likert scale rating of the acceptability of the sentence.}
 #' \item{accuracy}{Question response accuracy.}
+#' \item{Sentence}{The sentence that the subject was shown.}
 #' }
 #' @references
 #' \insertAllCited{}
-"df_discreteagmrt"
+"df_discreteagrmt"
