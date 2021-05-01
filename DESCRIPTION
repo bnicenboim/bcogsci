@@ -10,13 +10,13 @@ Authors@R:
       person(given = "Daniel",
            family = "Schad",
            role = c("aut"),
-           email = "d.schad@tilburguniversity.edu",
-           comment = c(ORCID = "ORCID-ID")),
+           email = "danieljschad@gmail.com",
+           comment = c(ORCID = "0000-0003-2586-6823")),
            person(given = "Shravan",
            family = "Vasishth",
            role = c("aut"),
-           email = "vasishth@uni-potsdam.de",
-           comment = c(ORCID = "ORCID-ID"))
+           email = "vasishth.1@osu.edu",
+           comment = c(ORCID = "0000-0003-2027-1994"))
            )
 Description: Datasets and models included in the book "An Introduction to Bayesian Data Analysis for Cognitive Science".
 License: MIT + file LICENSE
