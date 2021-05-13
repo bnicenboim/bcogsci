@@ -744,3 +744,26 @@
 #' @references
 #' \insertAllCited{}
 "df_discreteagrmt"
+
+#' Reading times at the critical regions of the self-paced reading experiment 1 conducted by  \insertCite{SafaviEtAlFrontiers2016;textual}{bcogsci}.
+#'
+#' Reading times at the critical region of sentences of Experiment 1 of \insertCite{SafaviEtAlFrontiers2016;textual}{bcogsci}.
+#'
+#'
+#' The experiment examined sentences with four conditions: particle-verb constructions were created with either 
+#' short or long distance between the particle and verb, and with the particle being either predictable or unpredictable.
+#'
+#' All the data are available at https://github.com/vasishth/SafaviEtAl2016.
+#'
+#' @format A data frame with 1,512 rows and 5 variables:
+#' \describe{
+#'  \item{subj}{Subject id, ranging from 4 to 45.}
+#'  \item{item}{Item id, ranging from 1 to 36.}
+#' \item{rt}{Reading times in milliseconds}
+#' \item{distance}{The factor distance, with levels short and long.}
+#' \item{predability}{The factor predictability, with levels predictable and unpredictable.}
+#' }
+#'
+#' @references
+#' \insertAllCited{}
+"df_persianE1"
