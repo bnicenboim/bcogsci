@@ -767,3 +767,26 @@
 #' @references
 #' \insertAllCited{}
 "df_persianE1"
+
+#' Reading times at the critical regions of an eyetracking experiment conducted by  \insertCite{VBLD07;textual}{bcogsci}.
+#'
+#' Reading times at the critical region of sentences of the experiment reported in \insertCite{VBLD07;textual}{bcogsci}.
+#'
+#'
+#' The experiment examined sentences with six conditions: three conditions with negative polarity items (one grammatical, two ungrammatical), 
+#' and three with positive polarity items (one grammatical, two ungrammatical). 
+#'
+#' The data and associated code are available at https://github.com/vasishth/ProcessingPolarity.
+#'
+#' @format A data frame with 8,823 rows and 5 variables:
+#' \describe{
+#'  \item{subject}{Subject id, ranging from 1 to 48.}
+#'  \item{item}{Item id, ranging from 1 to 36.}
+#' \item{condition}{The conditions labels, ranging from a to f.}
+#' \item{times}{The different dependent measures from the eyetracking study.}
+#' \item{value}{The dependent measure (milliseconds).}
+#' }
+#'
+#' @references
+#' \insertAllCited{}
+"df_polarity"
