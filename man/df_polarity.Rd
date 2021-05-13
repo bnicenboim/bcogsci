@@ -22,7 +22,7 @@ Reading times at the critical region of sentences of the experiment reported in 
 }
 \details{
 The experiment examined sentences with six conditions: three conditions with negative polarity items (one grammatical, two ungrammatical), 
-and three with positive polarity items (one grammatical, two ungrammatical). 
+and three with positive polarity items (two grammatical, one ungrammatical). 
 
 The data and associated code are available at https://github.com/vasishth/ProcessingPolarity.
 }
