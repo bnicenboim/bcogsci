@@ -774,7 +774,7 @@
 #'
 #'
 #' The experiment examined sentences with six conditions: three conditions with negative polarity items (one grammatical, two ungrammatical), 
-#' and three with positive polarity items (one grammatical, two ungrammatical). 
+#' and three with positive polarity items (two grammatical, one ungrammatical). 
 #'
 #' The data and associated code are available at https://github.com/vasishth/ProcessingPolarity.
 #'
@@ -790,3 +790,28 @@
 #' @references
 #' \insertAllCited{}
 "df_polarity"
+
+#' Reading times at the critical regions of an eyetracking experiment conducted by  \insertCite{aegerMertzenVanDykeVasishth2019;textual}{bcogsci}.
+#'
+#' Reading times at the critical region of sentences of the experiment reported in \insertCite{aegerMertzenVanDykeVasishth2019;textual}{bcogsci}.
+#'
+#'
+#' The experiment, which is a replication attempt of Dillon et al. 2013, examined sentences with eight conditions. 
+#'
+#' The data and associated code are available at https://osf.io/reavs/.
+#'
+#' @format A data frame with 8,628 rows and 8 variables:
+#' \describe{
+#'  \item{subj}{Subject id.}
+#'  \item{item}{Item id.}
+#' \item{cond}{The conditions labels, ranging from a to h.}
+#' \item{acc}{Question-response accuracy.}
+#' \item{roi}{The region of interest.}
+#' \item{FPRT}{First-pass reading time.}
+#' \item{TFT}{Total fixation time.}
+#' \item{FPR}{First-pass regression.}
+#' }
+#'
+#' @references
+#' \insertAllCited{}
+"df_dillonrep"
