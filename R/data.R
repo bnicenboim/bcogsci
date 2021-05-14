@@ -791,9 +791,9 @@
 #' \insertAllCited{}
 "df_polarity"
 
-#' Reading times at the critical regions of an eyetracking experiment conducted by  \insertCite{aegerMertzenVanDykeVasishth2019;textual}{bcogsci}.
+#' Reading times at the critical regions of an eyetracking experiment conducted by  \insertCite{JaegerMertzenVanDykeVasishth2019;textual}{bcogsci}.
 #'
-#' Reading times at the critical region of sentences of the experiment reported in \insertCite{aegerMertzenVanDykeVasishth2019;textual}{bcogsci}.
+#' Reading times at the critical region of sentences of the experiment reported in \insertCite{JaegerMertzenVanDykeVasishth2019;textual}{bcogsci}.
 #'
 #'
 #' The experiment, which is a replication attempt of Dillon et al. 2013, examined sentences with eight conditions. 
@@ -815,3 +815,26 @@
 #' @references
 #' \insertAllCited{}
 "df_dillonrep"
+
+#' Voice onset times (VOTs) from a Mandarin experiment conducted by  \insertCite{li2013effect;textual}{bcogsci}.
+#'
+#' Voice onset times from Mandarin speakers in an experiment reported in \insertCite{li2013effect;textual}{bcogsci}.
+#'
+#'
+#' The experiment has mean voice onset times and their standard errors, along with mean vowel durations and their standard error. 
+#'
+#' The data and associated code are available at https://osf.io/g4zpv/.
+#'
+#' @format A data frame with 20 rows and 6 variables:
+#' \describe{
+#'  \item{subject}{Subject id, 10 female speakers and 10 male speakers.}
+#'  \item{meanVOT}{Mean voice onset time for each speaker.}
+#' \item{meanvdur}{Mean vowel duration for each speaker.}
+#' \item{sevdur}{Standard error of the mean vowel duration.}
+#' \item{sevot}{Standard error of the mean voice onset time.}
+#' \item{c_meanvdur}{Centered mean vowel duration.}
+#' }
+#'
+#' @references
+#' \insertAllCited{}
+"df_mandarin"
