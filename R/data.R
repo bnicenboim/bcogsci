@@ -753,7 +753,7 @@
 #' The experiment examined sentences with four conditions: particle-verb constructions were created with either 
 #' short or long distance between the particle and verb, and with the particle being either predictable or unpredictable.
 #'
-#' All the data are available at https://github.com/vasishth/SafaviEtAl2016.
+#' All the data are available from https://github.com/vasishth/SafaviEtAl2016.
 #'
 #' @format A data frame with 1,512 rows and 5 variables:
 #' \describe{
@@ -776,7 +776,7 @@
 #' The experiment examined sentences with six conditions: three conditions with negative polarity items (one grammatical, two ungrammatical), 
 #' and three with positive polarity items (two grammatical, one ungrammatical). 
 #'
-#' The data and associated code are available at https://github.com/vasishth/ProcessingPolarity.
+#' The data and associated code are available from https://github.com/vasishth/ProcessingPolarity.
 #'
 #' @format A data frame with 8,823 rows and 5 variables:
 #' \describe{
@@ -798,7 +798,7 @@
 #'
 #' The experiment, which is a replication attempt of Dillon et al. 2013, examined sentences with eight conditions. 
 #'
-#' The data and associated code are available at https://osf.io/reavs/.
+#' The data and associated code are available from https://osf.io/reavs/.
 #'
 #' @format A data frame with 8,628 rows and 8 variables:
 #' \describe{
@@ -823,18 +823,63 @@
 #'
 #' The experiment has mean voice onset times and their standard errors, along with mean vowel durations and their standard error. 
 #'
-#' The data and associated code are available at https://osf.io/g4zpv/.
+#' The data and associated code are available from https://osf.io/g4zpv/.
 #'
 #' @format A data frame with 20 rows and 6 variables:
 #' \describe{
 #'  \item{subject}{Subject id, 10 female speakers and 10 male speakers.}
-#'  \item{meanVOT}{Mean voice onset time for each speaker.}
-#' \item{meanvdur}{Mean vowel duration for each speaker.}
-#' \item{sevdur}{Standard error of the mean vowel duration.}
-#' \item{sevot}{Standard error of the mean voice onset time.}
+#'  \item{meanVOT}{Mean voice onset time for each speaker in milliseconds.}
+#' \item{meanvdur}{Mean vowel duration for each speaker in milliseconds.}
+#' \item{sevdur}{Standard error of the mean vowel duration in milliseconds.}
+#' \item{sevot}{Standard error of the mean voice onset time in milliseconds.}
 #' \item{c_meanvdur}{Centered mean vowel duration.}
 #' }
 #'
 #' @references
 #' \insertAllCited{}
-"df_mandarin"
+"df_VOTmandarin"
+
+#' Voice onset times (VOTs) from an English experiment conducted by  \insertCite{li2013effect;textual}{bcogsci}.
+#'
+#' Voice onset times from English speakers in an experiment reported in \insertCite{li2013effect;textual}{bcogsci}.
+#'
+#'
+#' The experiment has mean voice onset times and their standard errors, along with mean vowel durations and their standard error. 
+#'
+#' The data and associated code are available from https://osf.io/g4zpv/.
+#'
+#' @format A data frame with 20 rows and 6 variables:
+#' \describe{
+#' \item{subject}{Subject id, 10 female speakers and 10 male speakers.}
+#' \item{meanVOT}{Mean voice onset time for each speaker in milliseconds.}
+#' \item{seVOT}{Standard error of the mean voice onset time in milliseconds.}
+#' \item{meanvdur}{Mean vowel duration for each speaker in milliseconds.}
+#' \item{sevdur}{Standard error of the mean vowel duration in milliseconds.}
+#' }
+#'
+#' @references
+#' \insertAllCited{}
+"df_VOTenglish"
+
+
+#' Estimates (mean effect and their standard error) reported in a study on the picture-word interference paradigm \insertCite{BuerkiEtAl2020;textual}{bcogsci}.
+#'
+#' Data from a meta-analysis by \insertCite{BuerkiEtAl2020;textual}{bcogsci}.
+#'
+#' The data provide, for each individual study that investigated the picture-word
+#'  interference phenomenon, the estimated interference effect and its 
+#'  standard error in milliseconds. 
+#'
+#' The data and associated code are available from https://osf.io/k6f4c/.
+#'
+#' @format A data frame with 162 rows and 4 variables:
+#' \describe{
+#' \item{study}{The publication and experiment details of each study.}
+#' \item{d}{The interference effect in milliseconds.}
+#' \item{se}{Standard error of the effect in milliseconds.}
+#' \item{study_id}{A numerical id for each study.}
+#' }
+#'
+#' @references
+#' \insertAllCited{}
+"df_buerki"
