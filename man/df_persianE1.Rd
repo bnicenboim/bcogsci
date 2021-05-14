@@ -24,7 +24,7 @@ Reading times at the critical region of sentences of Experiment 1 of \insertCite
 The experiment examined sentences with four conditions: particle-verb constructions were created with either 
 short or long distance between the particle and verb, and with the particle being either predictable or unpredictable.
 
-All the data are available at https://github.com/vasishth/SafaviEtAl2016.
+All the data are available from https://github.com/vasishth/SafaviEtAl2016.
 }
 \references{
 \insertAllCited{}
