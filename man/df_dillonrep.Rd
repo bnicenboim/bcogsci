@@ -26,7 +26,7 @@ Reading times at the critical region of sentences of the experiment reported in 
 \details{
 The experiment, which is a replication attempt of Dillon et al. 2013, examined sentences with eight conditions. 
 
-The data and associated code are available at https://osf.io/reavs/.
+The data and associated code are available from https://osf.io/reavs/.
 }
 \references{
 \insertAllCited{}
