@@ -3,7 +3,7 @@
 \docType{data}
 \name{df_dillonrep}
 \alias{df_dillonrep}
-\title{Reading times at the critical regions of an eyetracking experiment conducted by  \insertCite{aegerMertzenVanDykeVasishth2019;textual}{bcogsci}.}
+\title{Reading times at the critical regions of an eyetracking experiment conducted by  \insertCite{JaegerMertzenVanDykeVasishth2019;textual}{bcogsci}.}
 \format{
 A data frame with 8,628 rows and 8 variables:
 \describe{
@@ -21,7 +21,7 @@ A data frame with 8,628 rows and 8 variables:
 df_dillonrep
 }
 \description{
-Reading times at the critical region of sentences of the experiment reported in \insertCite{aegerMertzenVanDykeVasishth2019;textual}{bcogsci}.
+Reading times at the critical region of sentences of the experiment reported in \insertCite{JaegerMertzenVanDykeVasishth2019;textual}{bcogsci}.
 }
 \details{
 The experiment, which is a replication attempt of Dillon et al. 2013, examined sentences with eight conditions. 
