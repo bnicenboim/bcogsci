@@ -65,7 +65,7 @@ NULL
 #'
 #' @examples
 #' # The file can be located as follows:
-#' normal <- system.file("stan_models", "rema.stan", package = "bcogsci")
+#' rema <- system.file("stan_models", "rema.stan", package = "bcogsci")
 #' # See the model code:
 #' file.show(rema)
 #' @name stan-rema
