@@ -979,7 +979,7 @@
 #' \insertAllCited{}
 "df_powerpose"
 
-#' Data from an experiment on the effect of fertility status on the color of clothing worn by women, originally reported by \insertCite{beall2013womenr;textual}{bcogsci}
+#' Data from an experiment on the effect of fertility status on the color of clothing worn by women, originally reported by \insertCite{beall2013women;textual}{bcogsci}
 #'
 #' The dataset is from a study by \insertCite{beall2013women;textual}{bcogsci}, and contains information 
 #' about the color of the clothing worn (red, pink, or redorpink) when the participant (female) is at risk of becoming pregnant (is ovulating, self-reported).  
