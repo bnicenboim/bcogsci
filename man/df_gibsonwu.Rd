@@ -3,7 +3,7 @@
 \docType{data}
 \name{df_gibsonwu}
 \alias{df_gibsonwu}
-\title{Data from a self-paced reading experiment that records reading times in milliseconds of subject and object relative clauses in Chinese. \insertCite{gibsonwu;textual}{lingpsych}}
+\title{Data from a self-paced reading experiment that records reading times in milliseconds of subject and object relative clauses in Chinese. \insertCite{gibsonwu;textual}{bcogsci}}
 \format{
 A data frame with 547 rows and 4 variables:
 \describe{
@@ -17,7 +17,7 @@ A data frame with 547 rows and 4 variables:
 df_gibsonwu
 }
 \description{
-The dataset is from an experiment reported in \insertCite{gibsonwu;textual}{lingpsych}, and contains reading times from a self-paced reading experiment on subject and object relative clauses in Chinese. There are 37 subjects who read 15 items in a Latin square design. The data are from the relative clause head noun, which is the critical region of interest.
+The dataset is from an experiment reported in \insertCite{gibsonwu;textual}{bcogsci}, and contains reading times from a self-paced reading experiment on subject and object relative clauses in Chinese. There are 37 subjects who read 15 items in a Latin square design. The data are from the relative clause head noun, which is the critical region of interest.
 }
 \references{
 \insertAllCited{}
