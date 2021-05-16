@@ -884,9 +884,9 @@
 #' \insertAllCited{}
 "df_buerki"
 
-#' Data from a self-paced reading experiment that records reading times in milliseconds of subject and object relative clauses in Chinese. \insertCite{gibsonwu;textual}{lingpsych}
+#' Data from a self-paced reading experiment that records reading times in milliseconds of subject and object relative clauses in Chinese. \insertCite{gibsonwu;textual}{bcogsci}
 #'
-#' The dataset is from an experiment reported in \insertCite{gibsonwu;textual}{lingpsych}, and contains reading times from a self-paced reading experiment on subject and object relative clauses in Chinese. There are 37 subjects who read 15 items in a Latin square design. The data are from the relative clause head noun, which is the critical region of interest.
+#' The dataset is from an experiment reported in \insertCite{gibsonwu;textual}{bcogsci}, and contains reading times from a self-paced reading experiment on subject and object relative clauses in Chinese. There are 37 subjects who read 15 items in a Latin square design. The data are from the relative clause head noun, which is the critical region of interest.
 #'
 #' @format A data frame with 547 rows and 4 variables:
 #' \describe{
@@ -899,9 +899,9 @@
 #' \insertAllCited{}
 "df_gibsonwu"
 
-#' Data from a self-paced reading experiment that records reading times in milliseconds of subject and object relative clauses in Chinese. \insertCite{VasishthetalPLoSOne2013;textual}{lingpsych}
+#' Data from a self-paced reading experiment that records reading times in milliseconds of subject and object relative clauses in Chinese. \insertCite{VasishthetalPLoSOne2013;textual}{bcogsci}
 #'
-#' The dataset is from a replication attempt of experiment by \insertCite{gibsonwu;textual}{lingpsych}; the replication attempt was reported in \insertCite{VasishthetalPLoSOne2013;textual}{lingpsych}, and contains reading times from a self-paced reading experiment on subject and object relative clauses in Chinese. There are 40 subjects who read 15 items in a Latin square design. The data are from the relative clause head noun, which is the critical region of interest.
+#' The dataset is from a replication attempt of experiment by \insertCite{gibsonwu;textual}{bcogsci}; the replication attempt was reported in \insertCite{VasishthetalPLoSOne2013;textual}{lingpsych}, and contains reading times from a self-paced reading experiment on subject and object relative clauses in Chinese. There are 40 subjects who read 15 items in a Latin square design. The data are from the relative clause head noun, which is the critical region of interest.
 #'
 #' @format A data frame with 595 rows and 6 variables:
 #' \describe{
@@ -915,3 +915,50 @@
 #' @references
 #' \insertAllCited{}
 "df_gibsonwu2"
+
+#' Data from an eyetracking reading experiment that records total reading times in milliseconds at an auxiliary verb in so-called low and high interference conditions. \insertCite{DillonEtAl2013;textual}{bcogsci}
+#'
+#' The dataset is from an eyetracking experiment by \insertCite{DillonEtAl2013;textual}{bcogsci}, and contains reading times (total reading times) from a design that orginally had eight conditions. There are 40 subjects who read 48 items in a Latin square design. The data shown here focus on two conditions from the experiment, high and low interference conditions in a subject-verb number agreement configuration in ungrammatical sentences.
+#'
+#' @format A data frame with 2,855 rows and 5 variables:
+#' \describe{
+#' \item{subj}{The subject id, ranging from 1 to 40.}
+#' \item{item}{The item id, ranging from 1 to 48. Each item id is prefixed by dillonE1.}
+#' \item{rt}{The total reading times at the critical region (auxiliary verb) in milliseconds.}
+#' \item{int}{The two levels of the interference manipulation, low and high.}
+#' \item{expt}{The experiment id.}
+
+#' }
+#' @references
+#' \insertAllCited{}
+"df_dillonE1"
+
+#' Data from a self-paced reading experiment that records log reading times in log milliseconds of grammatical and ungrammatical double center embeddings in English. \insertCite{VSLK08;textual}{bcogsci}
+#'
+#' The dataset is from a self-paced reading study by \insertCite{VSLK08;textual}{bcogsci}, and contains reading times from a design that had two conditions, grammatical and ungrammatical double center embeddings in English. There are 48 subjects who read 16 items in a Latin square design. The data shown here focus on log reading times at the noun phrase following the final verb in a double center embedding.
+#'
+#' @format A data frame with 768 rows and 4 variables:
+#' \describe{
+#' \item{subject}{The subject id, ranging from 1 to 49.}
+#' \item{item}{The item id, ranging from 1 to 16.}
+#' \item{condition}{Grammatical conditions are coded as +1, and ungrammatical conditions as -1.}
+#' \item{NP1}{The log reading times at the noun phase following the final verb in a double center embedding.}
+#' }
+#' @references
+#' \insertAllCited{}
+"df_english"
+
+#' Data from a self-paced reading experiment that records log reading times in log milliseconds of grammatical and ungrammatical double center embeddings in Dutch. \insertCite{FrankEtAl2015;textual}{bcogsci}
+#'
+#' The dataset is from a self-paced reading study by \insertCite{FrankEtAl2015;textual}{bcogsci}, and contains reading times from a design that had two conditions, grammatical and ungrammatical double center embeddings in Dutch. There are 24 subjects who read 16 items in a Latin square design. The data shown here focus on log reading times at the noun phrase following the final verb in a double center embedding.
+#'
+#' @format A data frame with 372 rows and 4 variables:
+#' \describe{
+#' \item{subject}{The subject id, ranging from 1 to 24. Each subject id is preceded by an s.}
+#' \item{item}{The item id, ranging from 1 to 16. Each subject id is preceded by an i.}
+#' \item{condition}{Grammatical conditions are coded as +1, and ungrammatical conditions as -1.}
+#' \item{NP1}{The log reading times at the noun phase following the final verb in a double center embedding.}
+#' }
+#' @references
+#' \insertAllCited{}
+"df_dutch"
