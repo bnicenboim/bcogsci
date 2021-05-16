@@ -3,7 +3,7 @@
 \docType{data}
 \name{df_red}
 \alias{df_red}
-\title{Data from an experiment on the effect of fertility status on the color of clothing worn by women, originally reported by \insertCite{beall2013womenr;textual}{bcogsci}}
+\title{Data from an experiment on the effect of fertility status on the color of clothing worn by women, originally reported by \insertCite{beall2013women;textual}{bcogsci}}
 \format{
 A data frame with 124 rows and 5 variables:
 \describe{
