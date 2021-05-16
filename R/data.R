@@ -883,3 +883,35 @@
 #' @references
 #' \insertAllCited{}
 "df_buerki"
+
+#' Data from a self-paced reading experiment that records reading times in milliseconds of subject and object relative clauses in Chinese. \insertCite{gibsonwu;textual}{lingpsych}
+#'
+#' The dataset is from an experiment reported in \insertCite{gibsonwu;textual}{lingpsych}, and contains reading times from a self-paced reading experiment on subject and object relative clauses in Chinese. There are 37 subjects who read 15 items in a Latin square design. The data are from the relative clause head noun, which is the critical region of interest.
+#'
+#' @format A data frame with 547 rows and 4 variables:
+#' \describe{
+#' \item{subj}{The subject id, ranging from 1 to 40.}
+#' \item{item}{The item id, ranging from 1 to 16.}
+#' \item{type}{Condition labels; obj-ext represents object relatives, and subj-ext represents subject relatives.}
+#' \item{rt}{The reading times at the critical region (the relative clause head noun) in milliseconds.}
+#' }
+#' @references
+#' \insertAllCited{}
+"df_gibsonwu"
+
+#' Data from a self-paced reading experiment that records reading times in milliseconds of subject and object relative clauses in Chinese. \insertCite{VasishthetalPLoSOne2013;textual}{lingpsych}
+#'
+#' The dataset is from a replication attempt of experiment by \insertCite{gibsonwu;textual}{lingpsych}; the replication attempt was reported in \insertCite{VasishthetalPLoSOne2013;textual}{lingpsych}, and contains reading times from a self-paced reading experiment on subject and object relative clauses in Chinese. There are 40 subjects who read 15 items in a Latin square design. The data are from the relative clause head noun, which is the critical region of interest.
+#'
+#' @format A data frame with 595 rows and 6 variables:
+#' \describe{
+#' \item{subj}{The subject id, ranging from 1 to 40.}
+#' \item{item}{The item id, ranging from 1 to 16.}
+#' \item{condition}{Condition labels; obj-ext represents object relatives, and subj-ext represents subject relatives.}
+#' \item{pos}{The word position of the critical region in the sentence.}
+#' \item{rt}{The reading times at the critical region (the relative clause head noun) in milliseconds.}
+#' \item{region}{The label for the critical region (head noun) in the sentence.}
+#' }
+#' @references
+#' \insertAllCited{}
+"df_gibsonwu2"
