@@ -962,3 +962,37 @@
 #' @references
 #' \insertAllCited{}
 "df_dutch"
+
+#' Data from an experiment on the effect of power posing on testosterone levels, originally reported by \insertCite{carney2010power;textual}{bcogsci}
+#'
+#' The dataset is from a study by \insertCite{carney2010power;textual}{bcogsci}, and contains testosterone measurements before and after treatement (which can be either high or low power posing). There is one set of measurements (before and after) from each subject. 
+#'
+#' @format A data frame with 39 rows and 4 variables:
+#' \describe{
+#' \item{id}{Subject id.}
+#' \item{item}{The item id, ranging from 1 to 16. Each subject id is preceded by an i.}
+#' \item{hptreat}{Power pose treatment; high power pose or low power pose.}
+#' \item{testm1}{Testosterone level before treatment.}
+#' \item{testm1}{Testosterone level after treatment.}
+#' }
+#' @references
+#' \insertAllCited{}
+"df_powerpose"
+
+#' Data from an experiment on the effect of fertility status on the color of clothing worn by women, originally reported by \insertCite{beall2013womenr;textual}{bcogsci}
+#'
+#' The dataset is from a study by \insertCite{beall2013women;textual}{bcogsci}, and contains information 
+#' about the color of the clothing worn (red, pink, or redorpink) when the participant (female) is at risk of becoming pregnant (is ovulating, self-reported).  
+#'
+#' @format A data frame with 124 rows and 5 variables:
+#' \describe{
+#' \item{risk}{A 0,1 variable indicating whether the participant is at risk of pregnancy or not.}
+#' \item{age}{The age of the participant in years.}
+#' \item{red}{A 0,1 coded variable indicating whether the participant reported wearing red.}
+#' \item{pink}{A 0,1 coded variable indicating whether the participant reported wearing pink.}
+#' \item{redorpink}{A 0,1 coded variable indicating whether the participant reported wearing either red or pink.}
+#' }
+#' @references
+#' \insertAllCited{}
+"df_red"
+
