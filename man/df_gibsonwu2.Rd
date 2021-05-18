@@ -19,7 +19,7 @@ A data frame with 595 rows and 6 variables:
 df_gibsonwu2
 }
 \description{
-The dataset is from a replication attempt of experiment by \insertCite{gibsonwu;textual}{bcogsci}; the replication attempt was reported in \insertCite{VasishthetalPLoSOne2013;textual}{lingpsych}, and contains reading times from a self-paced reading experiment on subject and object relative clauses in Chinese. There are 40 subjects who read 15 items in a Latin square design. The data are from the relative clause head noun, which is the critical region of interest.
+The dataset is from a replication attempt of experiment by \insertCite{gibsonwu;textual}{bcogsci}; the replication attempt was reported in \insertCite{VasishthetalPLoSOne2013;textual}{bcogsci}, and contains reading times from a self-paced reading experiment on subject and object relative clauses in Chinese. There are 40 subjects who read 15 items in a Latin square design. The data are from the relative clause head noun, which is the critical region of interest.
 }
 \references{
 \insertAllCited{}
