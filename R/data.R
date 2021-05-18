@@ -901,7 +901,7 @@
 
 #' Data from a self-paced reading experiment that records reading times in milliseconds of subject and object relative clauses in Chinese. \insertCite{VasishthetalPLoSOne2013;textual}{bcogsci}
 #'
-#' The dataset is from a replication attempt of experiment by \insertCite{gibsonwu;textual}{bcogsci}; the replication attempt was reported in \insertCite{VasishthetalPLoSOne2013;textual}{lingpsych}, and contains reading times from a self-paced reading experiment on subject and object relative clauses in Chinese. There are 40 subjects who read 15 items in a Latin square design. The data are from the relative clause head noun, which is the critical region of interest.
+#' The dataset is from a replication attempt of experiment by \insertCite{gibsonwu;textual}{bcogsci}; the replication attempt was reported in \insertCite{VasishthetalPLoSOne2013;textual}{bcogsci}, and contains reading times from a self-paced reading experiment on subject and object relative clauses in Chinese. There are 40 subjects who read 15 items in a Latin square design. The data are from the relative clause head noun, which is the critical region of interest.
 #'
 #' @format A data frame with 595 rows and 6 variables:
 #' \describe{
@@ -916,9 +916,9 @@
 #' \insertAllCited{}
 "df_gibsonwu2"
 
-#' Data from an eyetracking reading experiment that records total reading times in milliseconds at an auxiliary verb in so-called low and high interference conditions. \insertCite{DillonEtAl2013;textual}{bcogsci}
+#' Data from an eyetracking reading experiment that records total reading times in milliseconds at an auxiliary verb in so-called low and high interference conditions. \insertCite{Dillon-EtAl-2013;textual}{bcogsci}
 #'
-#' The dataset is from an eyetracking experiment by \insertCite{DillonEtAl2013;textual}{bcogsci}, and contains reading times (total reading times) from a design that orginally had eight conditions. There are 40 subjects who read 48 items in a Latin square design. The data shown here focus on two conditions from the experiment, high and low interference conditions in a subject-verb number agreement configuration in ungrammatical sentences.
+#' The dataset is from an eyetracking experiment by \insertCite{Dillon-EtAl-2013;textual}{bcogsci}, and contains reading times (total reading times) from a design that orginally had eight conditions. There are 40 subjects who read 48 items in a Latin square design. The data shown here focus on two conditions from the experiment, high and low interference conditions in a subject-verb number agreement configuration in ungrammatical sentences.
 #'
 #' @format A data frame with 2,855 rows and 5 variables:
 #' \describe{
