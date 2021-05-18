@@ -3,7 +3,7 @@
 \docType{data}
 \name{df_dillonE1}
 \alias{df_dillonE1}
-\title{Data from an eyetracking reading experiment that records total reading times in milliseconds at an auxiliary verb in so-called low and high interference conditions. \insertCite{DillonEtAl2013;textual}{bcogsci}}
+\title{Data from an eyetracking reading experiment that records total reading times in milliseconds at an auxiliary verb in so-called low and high interference conditions. \insertCite{Dillon-EtAl-2013;textual}{bcogsci}}
 \format{
 A data frame with 2,855 rows and 5 variables:
 \describe{
@@ -18,7 +18,7 @@ A data frame with 2,855 rows and 5 variables:
 df_dillonE1
 }
 \description{
-The dataset is from an eyetracking experiment by \insertCite{DillonEtAl2013;textual}{bcogsci}, and contains reading times (total reading times) from a design that orginally had eight conditions. There are 40 subjects who read 48 items in a Latin square design. The data shown here focus on two conditions from the experiment, high and low interference conditions in a subject-verb number agreement configuration in ungrammatical sentences.
+The dataset is from an eyetracking experiment by \insertCite{Dillon-EtAl-2013;textual}{bcogsci}, and contains reading times (total reading times) from a design that orginally had eight conditions. There are 40 subjects who read 48 items in a Latin square design. The data shown here focus on two conditions from the experiment, high and low interference conditions in a subject-verb number agreement configuration in ungrammatical sentences.
 }
 \references{
 \insertAllCited{}
