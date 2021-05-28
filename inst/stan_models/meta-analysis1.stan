@@ -14,7 +14,7 @@ transformed parameters {
 }
 model {
   target += normal_lpdf(effect| zeta_n, SE);
-  target += normal_lpdf(z | 0, 1);
+  target += std_normal_lpdf(z);
   target += normal_lpdf(zeta | 0, 100);
   target += normal_lpdf(tau | 0, 100)
     - normal_lccdf(0 | 0, 100);
