@@ -996,3 +996,48 @@
 #' \insertAllCited{}
 "df_red"
 
+#' Data from replication of Experiment 2 of Raymond, Shapiro, and Arnell (1992), The Attentional Blink by \insertCite{grassi_two_2021;textual}{bcogsci}
+#'
+#' The dataset is from the UK participants of the replication of Experiment 2 of  \insertCite{raymond1992temporary}{bcogsci}. This data set contains the experimental condition of this experiment: A fast stream of black letters except for a white one (the target). In the experimental condition, the stream includes the letter "X" (the probe). The probe can appear in the target position or lag up to eight relative serial positions after the target. In the control condition, the participants are asked to detect the probe (i.e., the letter "X"). This subset includes trials where the participants reported correctly the identity of the target and then indicate the presence or absence of the probe (see Raymond et al. 1992, Fig. 1). For this experiment, the refresh rate of the screen was 60Hz.
+#'
+#' Original data set can be found in https://figshare.com/articles/dataset/Two_replications_of_Raymond_Shapiro_and_Arnell_1992_The_Attentional_Blink/6834353
+#'
+#' @format A data frame with 10,800 rows and 14 variables:
+#' \describe{
+#' \item{subj}{Subject index.}
+#' \item{gender}{Subject gender.}
+#' \item{age}{Subject age.}
+#' \item{condition}{Condition of the experiment (either experimental or control).}
+#' \item{trial}{Trial number}
+#' \item{probe_presence}{A logical value. It is equal to 1 if in the trial the probe is presented, 0 is in the trial the probe is not presented.}
+#' \item{lag}{Lag of the trial. When the probe is absent, lag is equal to "NA".}
+#' \item{target_correct}{Response accuracy on the target letter, 1 correct, 0 incorrect. The value 999 informs that the trial did not ask for a response for the target letter (i.e., all control trials).}
+#' \item{probe_correct}{Response accuracy on the probe (i.e., the letter X). 1Ó correct, 0 incorrect.}
+#' \item{target_position}{The serial position of the target within the stimulus string.}
+#' \item{target_letter}{The target letter.}
+#' \item{target_letter_response}{The actual response given by the participant for the target letter.}
+#' \item{probe_response}{The actual response given by the participant for the probe. It can be either 1 (detected the probe) or 0 (did not detect the probe).}
+#' \item{string}{The stimulus string.}
+#' }
+#' @references
+#' \insertAllCited{}
+"df_ab_complete"
+
+
+#' Experimental condition where the target was detected from the replication of Experiment 2 of Raymond, Shapiro, and Arnell (1992), The Attentional Blink by \insertCite{grassi_two_2021;textual}{bcogsci}
+#'
+#' The dataset is from the UK participants of the replication of Experiment 2 of  \insertCite{raymond1992temporary}{bcogsci}. In this experiment, participants are presented with a fast stream of letters. Letters are black except for a white one (the target). In half of the trials, the stream includes the letter "X" (the probe). The probe can appear in the target position or lag up to eight relative serial positions after the target. In the control condition, the participants are asked to detect the probe (i.e., the letter "X"). In the experimental condition, the participants first have to report the identity of the target and then indicate the presence or absence of the probe (see Raymond et al. 1992, Fig. 1). For this experiment, the refresh rate of the screen was 60Hz.
+#'
+#'
+#' Complete dataset can be found in [df_ab_complete].Original data set can be found in https://figshare.com/articles/dataset/Two_replications_of_Raymond_Shapiro_and_Arnell_1992_The_Attentional_Blink/6834353
+#'
+#' @format A data frame with 2,101 rows and 4 variables:
+#' \describe{
+#' \item{subj}{Subject index.}
+#' \item{trial}{Trial number}
+#' \item{lag}{Lag of the trial. When the probe is absent, lag is equal to "NA".}
+#' \item{probe_correct}{Response accuracy on the probe (i.e., the letter X). 1Ó correct, Ò0Ó incorrect.}
+#' }
+#' @references
+#' \insertAllCited{}
+"df_ab"

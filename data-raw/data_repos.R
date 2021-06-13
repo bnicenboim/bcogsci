@@ -191,6 +191,39 @@ df_dots <- read.csv("data-raw/data_repos/moving_dots.csv") %>%
   select(subj = pp, diff, emphasis, rt, acc = correct, fix_dur = fix.dur, stim, resp,  trial, block, block_trial = block.trial, bias) %>%
   as_tibble()
 
+####
+####
+GET("https://ndownloader.figshare.com/articles/6834353/versions/1?action=download",
+    write_disk("data-raw/data_repos/6834353.zip", overwrite = TRUE),
+    progress()
+)
+
+df_ab_txt <- unzip("data-raw/data_repos/6834353.zip",
+                    files = "ab dataset UK.txt", exdir = tempdir())
+
+
+df_ab_complete <- read.table(df_ab_txt, header=TRUE,dec = ".")
+
+
+df_ab_complete <- df_ab_complete %>% select(subj = nsub,
+                                            gender = subsex,
+                                            age = subage,
+                 condition,
+                 trial,
+                 lag,
+                 probe_presence,
+                 probe_correct = rispAC_probe,
+                 target_correct = rispAC_target,
+                 target_position,
+                 target_letter,
+                 target_letter_response = rispSE_target,
+                 probe_response = rispSE_probe,
+                 string) %>% as_tibble()
+
+df_ab <- df_ab_complete %>%
+  filter(probe_presence == 1, condition == "experimental", target_correct == 1) %>%
+  select(subj, probe_correct, trial, lag)
+
 
 usethis::use_data(df_pupil,
                   df_pupil_complete,
@@ -204,4 +237,7 @@ usethis::use_data(df_pupil,
                   df_sbi_complete,
                   df_sbi,
                   df_dots,
+                  df_ab,
+                  df_ab_complete,
+
                   overwrite = TRUE)
