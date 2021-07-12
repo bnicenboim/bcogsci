@@ -26,8 +26,10 @@ model {
 generated quantities{
   real log_lik[N];
   for (n in 1:N){
-    log_lik[n] = normal_lpdf(p_size[n] | c_load[n] * beta1 + alpha + c_trial[n] * beta2 +
-                             c_load[n] * c_trial[n] * beta3, sigma);
+    log_lik[n] = normal_lpdf(p_size[n] | alpha + c_load[n] * beta1
+                                         + c_trial[n] * beta2
+                                         + c_load[n] * c_trial[n] * beta3,
+                             sigma);
 
   }
 }
