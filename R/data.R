@@ -1036,8 +1036,28 @@
 #' \item{subj}{Subject index.}
 #' \item{trial}{Trial number}
 #' \item{lag}{Lag of the trial. When the probe is absent, lag is equal to "NA".}
-#' \item{probe_correct}{Response accuracy on the probe (i.e., the letter X). 1Ó correct, Ò0Ó incorrect.}
+#' \item{probe_correct}{Response accuracy on the probe (i.e., the letter X). 1 correct, 0 incorrect.}
 #' }
 #' @references
 #' \insertAllCited{}
 "df_ab"
+
+#' Response frequencies of 128 participants who took part in a source-monitoring experiment in \insertCite{wickelmaier2018using;textual}{bcogsci}.
+#'
+#' This dataset is from a source-monitoring experiment and was originally provided by the psychotools package \insertCite{psychotools}{bcogsci}. In this version the format of the original data frame was modified for ease of use with Stan.
+#'
+#' In this type of experiment, subjects study items from (at least) two different sources, A and B. After the presentation of the study items, subjects are required to classify each item as coming from source A, B, or as new: N (that is, a distractor). In the version of the experiment from \insertCite{wickelmaier2018using;textual}{bcogsci}, participants had to read items either quietly (think) or aloud (say). In the recall task, they wrote them down (write) or read them aloud (say).
+
+
+#' @format A data frame with 384 rows and 8 variables:
+#' \describe{
+#' \item{experiment}{ write-say or think-say}
+#' \item{age}{ Age of the respondent in years.}
+#' \item{gender}{ Gender of the respondent.}
+#' \item{subj}{ Subject id.}
+#' \item{source}{ Item source, a, b or b (new)}
+#' \item{a`, `b`, `N}{ Number of responses for each type of stimuli}
+#' }
+#' @references
+#' \insertAllCited{}
+"df_source_monitoring"

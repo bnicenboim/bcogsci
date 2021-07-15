@@ -224,6 +224,18 @@ df_ab <- df_ab_complete %>%
   filter(probe_presence == 1, condition == "experimental", target_correct == 1) %>%
   select(subj, probe_correct, trial, lag)
 
+##
+##
+##
+data("SourceMonitoring", package = "psychotools")
+
+df_source_monitoring <-
+  SourceMonitoring %>%
+  rename(experiment = sources) %>%
+  mutate(subj = 1:n()) %>%
+  pivot_longer( c(-experiment, -age, -gender, -subj)) %>%
+  separate(col = "name", into = c("source", "response")) %>%
+  pivot_wider(names_from = "response" , values_from = value )
 
 usethis::use_data(df_pupil,
                   df_pupil_complete,

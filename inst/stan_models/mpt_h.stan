@@ -40,7 +40,7 @@ model {
   target += normal_lpdf(alpha_f | 0, 2);
   target += normal_lpdf(beta_f | 0, 2);
   target += normal_lpdf(u_a | 0, tau_u_a);
-  target += normal_lpdf(tau_u_a | 0, 1) - normal_lccdf(0, 0, 1);
+  target += normal_lpdf(tau_u_a | 0, 1) - normal_lccdf(0 | 0, 1);
   for(n in 1:N_obs)
     target +=  categorical_lpmf(w_ans[n] | theta[n]);
 }
