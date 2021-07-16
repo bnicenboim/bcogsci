@@ -1,6 +1,6 @@
 data {
   int<lower = 1> N_obs;
-  int<lower = 1,upper = 5> w_ans[N_obs];
+  int<lower = 1, upper = 5> w_ans[N_obs];
   real complexity[N_obs];
   int<lower = 1> N_subj;
   int<lower = 1, upper = N_subj> subj[N_obs];
