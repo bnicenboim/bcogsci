@@ -948,6 +948,23 @@
 #' \insertAllCited{}
 "df_dillonE1"
 
+#' Data from a self-paced reading experiment that records reading times in milliseconds at the post-critical region. \insertCite{swets2008underspecification;textual}{bcogsci}
+#'
+#' The dataset is from a self-paced reading experiment by \insertCite{swets2008underspecification;textual}{bcogsci}, and contains reading times from a 3x3 design. 
+#' 
+#' @format A data frame with 5,184 rows and 6 variables:
+#' \describe{
+#' \item{subj}{The subject id.}
+#' \item{item}{The item id.}
+#' \item{resp.RT}{Response times to questions.}
+#' \item{qtype}{The three levels of the between-subjects factor, question type.}
+#' \item{attachment}{The three levels of the within-subjects factor, attachment type.}
+#' \item{RT}{Reading times at the post-critical region.}
+#' }
+#' @references
+#' \insertAllCited{}
+"df_swets08"
+
 #' Data from a self-paced reading experiment that records log reading times in log milliseconds of grammatical and ungrammatical double center embeddings in English. \insertCite{VSLK08;textual}{bcogsci}
 #'
 #' The dataset is from a self-paced reading study by \insertCite{VSLK08;textual}{bcogsci}, and contains reading times from a design that had two conditions, grammatical and ungrammatical double center embeddings in English. There are 48 subjects who read 16 items in a Latin square design. The data shown here focus on log reading times at the noun phrase following the final verb in a double center embedding.
