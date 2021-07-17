@@ -916,6 +916,21 @@
 #' \insertAllCited{}
 "df_gibsonwu2"
 
+#' Data from reading studies that list the difference in reading times in milliseconds object vs. subject relative clauses in Chinese. \insertCite{VasishthMScStatistics;textual}{bcogsci}
+#'
+#' The data-set is from a meta-analysis reported in \insertCite{VasishthMScStatistics;textual}{bcogsci}; the replication attempt was reported in \insertCite{VasishthMScStatistics;textual}{bcogsci}, and contains reading times from a self-paced reading experiment on subject and object relative clauses in Chinese. There are 40 subjects who read 15 items in a Latin square design. The estimates are from the relative clause head noun, which is the critical region of interest.
+#'
+#' @format A data frame with 13 rows and 4 variables:
+#' \describe{
+#' \item{study.id}{The study id.}
+#' \item{study}{The study name.}
+#' \item{y}{The difference in object vs. subject reading times at the critical region (the relative clause head noun) in milliseconds.}
+#' \item{se}{The standard error of the difference in means between object vs. subject relative clauses.}
+#' }
+#' @references
+#' \insertAllCited{}
+"df_chineseRCs"
+
 #' Data from an eyetracking reading experiment that records total reading times in milliseconds at an auxiliary verb in so-called low and high interference conditions. \insertCite{Dillon-EtAl-2013;textual}{bcogsci}
 #'
 #' The dataset is from an eyetracking experiment by \insertCite{Dillon-EtAl-2013;textual}{bcogsci}, and contains reading times (total reading times) from a design that orginally had eight conditions. There are 40 subjects who read 48 items in a Latin square design. The data shown here focus on two conditions from the experiment, high and low interference conditions in a subject-verb number agreement configuration in ungrammatical sentences.
