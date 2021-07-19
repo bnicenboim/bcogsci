@@ -50,7 +50,7 @@ model {
                                          x[n] * (beta + u[subj[n], 2]), sigma) +
                           bernoulli_lpmf(acc[n] | p_correct),
                           log1m_inv_logit(lodds_task) +
-                          lognormal_lpdf(rt[n] | gamma + u[subj[n], 3], sigma) +
+                          lognormal_lpdf(rt[n] | gamma + u[subj[n], 3], sigma2) +
                           bernoulli_lpmf(acc[n] |.5));
   }
 }
