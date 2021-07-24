@@ -970,7 +970,7 @@
 
 #' Data from reading studies that list the difference in reading times in milliseconds object vs. subject relative clauses in Chinese. \insertCite{VasishthMScStatistics;textual}{bcogsci}
 #'
-#' The data-set is from a meta-analysis reported in \insertCite{VasishthMScStatistics;textual}{bcogsci}; the replication attempt was reported in \insertCite{VasishthMScStatistics;textual}{bcogsci}, and contains reading times from a self-paced reading experiment on subject and object relative clauses in Chinese. There are 40 subjects who read 15 items in a Latin square design. The estimates are from the relative clause head noun, which is the critical region of interest.
+#' The data set is from a meta-analysis reported in \insertCite{VasishthMScStatistics;textual}{bcogsci}; the replication attempt was reported in \insertCite{VasishthMScStatistics;textual}{bcogsci}, and contains reading times from a self-paced reading experiment on subject and object relative clauses in Chinese. There are 40 subjects who read 15 items in a Latin square design. The estimates are from the relative clause head noun, which is the critical region of interest.
 #'
 #' @format A data frame with 13 rows and 4 variables:
 #' \describe{
@@ -985,7 +985,7 @@
 
 #' Data from an eyetracking reading experiment that records total reading times in milliseconds at an auxiliary verb in so-called low and high interference conditions. \insertCite{Dillon-EtAl-2013;textual}{bcogsci}
 #'
-#' The dataset is from an eyetracking experiment by \insertCite{Dillon-EtAl-2013;textual}{bcogsci}, and contains reading times (total reading times) from a design that orginally had eight conditions. There are 40 subjects who read 48 items in a Latin square design. The data shown here focus on two conditions from the experiment, high and low interference conditions in a subject-verb number agreement configuration in ungrammatical sentences.
+#' The data set is from an eyetracking experiment by \insertCite{Dillon-EtAl-2013;textual}{bcogsci}, and contains reading times (total reading times) from a design that orginally had eight conditions. There are 40 subjects who read 48 items in a Latin square design. The data shown here focus on two conditions from the experiment, high and low interference conditions in a subject-verb number agreement configuration in ungrammatical sentences.
 #'
 #' @format A data frame with 2,855 rows and 5 variables:
 #' \describe{
@@ -1002,7 +1002,7 @@
 
 #' Data from a self-paced reading experiment that records reading times in milliseconds at the post-critical region. \insertCite{swets2008underspecification;textual}{bcogsci}
 #'
-#' The dataset is from a self-paced reading experiment by \insertCite{swets2008underspecification;textual}{bcogsci}, and contains reading times from a 3x3 design. 
+#' The data set is from a self-paced reading experiment by \insertCite{swets2008underspecification;textual}{bcogsci}, and contains reading times from a 3x3 design. 
 #' 
 #' @format A data frame with 5,184 rows and 6 variables:
 #' \describe{
@@ -1019,7 +1019,7 @@
 
 #' Data from a self-paced reading experiment that records log reading times in log milliseconds of grammatical and ungrammatical double center embeddings in English. \insertCite{VSLK08;textual}{bcogsci}
 #'
-#' The dataset is from a self-paced reading study by \insertCite{VSLK08;textual}{bcogsci}, and contains reading times from a design that had two conditions, grammatical and ungrammatical double center embeddings in English. There are 48 subjects who read 16 items in a Latin square design. The data shown here focus on log reading times at the noun phrase following the final verb in a double center embedding.
+#' The data set is from a self-paced reading study by \insertCite{VSLK08;textual}{bcogsci}, and contains reading times from a design that had two conditions, grammatical and ungrammatical double center embeddings in English. There are 48 subjects who read 16 items in a Latin square design. The data shown here focus on log reading times at the noun phrase following the final verb in a double center embedding.
 #'
 #' @format A data frame with 768 rows and 4 variables:
 #' \describe{
@@ -1034,7 +1034,7 @@
 
 #' Data from a self-paced reading experiment that records log reading times in log milliseconds of grammatical and ungrammatical double center embeddings in Dutch. \insertCite{FrankEtAl2015;textual}{bcogsci}
 #'
-#' The dataset is from a self-paced reading study by \insertCite{FrankEtAl2015;textual}{bcogsci}, and contains reading times from a design that had two conditions, grammatical and ungrammatical double center embeddings in Dutch. There are 24 subjects who read 16 items in a Latin square design. The data shown here focus on log reading times at the noun phrase following the final verb in a double center embedding.
+#' The data set is from a self-paced reading study by \insertCite{FrankEtAl2015;textual}{bcogsci}, and contains reading times from a design that had two conditions, grammatical and ungrammatical double center embeddings in Dutch. There are 24 subjects who read 16 items in a Latin square design. The data shown here focus on log reading times at the noun phrase following the final verb in a double center embedding.
 #'
 #' @format A data frame with 372 rows and 4 variables:
 #' \describe{
@@ -1049,7 +1049,7 @@
 
 #' Data from an experiment on the effect of power posing on testosterone levels, originally reported by \insertCite{carney2010power;textual}{bcogsci}
 #'
-#' The dataset is from a study by \insertCite{carney2010power;textual}{bcogsci}, and contains testosterone measurements before and after treatement (which can be either high or low power posing). There is one set of measurements (before and after) from each subject. 
+#' The data set is from a study by \insertCite{carney2010power;textual}{bcogsci}, and contains testosterone measurements before and after treatement (which can be either high or low power posing). There is one set of measurements (before and after) from each subject. 
 #'
 #' @format A data frame with 39 rows and 4 variables:
 #' \describe{
@@ -1065,7 +1065,7 @@
 
 #' Data from an experiment on the effect of fertility status on the color of clothing worn by women, originally reported by \insertCite{beall2013women;textual}{bcogsci}
 #'
-#' The dataset is from a study by \insertCite{beall2013women;textual}{bcogsci}, and contains information 
+#' The data set is from a study by \insertCite{beall2013women;textual}{bcogsci}, and contains information 
 #' about the color of the clothing worn (red, pink, or redorpink) when the participant (female) is at risk of becoming pregnant (is ovulating, self-reported).  
 #'
 #' @format A data frame with 124 rows and 5 variables:
@@ -1082,7 +1082,7 @@
 
 #' Data from replication of Experiment 2 of Raymond, Shapiro, and Arnell (1992), The Attentional Blink by \insertCite{grassi_two_2021;textual}{bcogsci}
 #'
-#' The dataset is from the UK participants of the replication of Experiment 2 of  \insertCite{raymond1992temporary}{bcogsci}. This data set contains the experimental condition of this experiment: A fast stream of black letters except for a white one (the target). In the experimental condition, the stream includes the letter "X" (the probe). The probe can appear in the target position or lag up to eight relative serial positions after the target. In the control condition, the participants are asked to detect the probe (i.e., the letter "X"). This subset includes trials where the participants reported correctly the identity of the target and then indicate the presence or absence of the probe (see Raymond et al. 1992, Fig. 1). For this experiment, the refresh rate of the screen was 60Hz.
+#' The data set is from the UK participants of the replication of Experiment 2 of  \insertCite{raymond1992temporary}{bcogsci}. This data set contains the experimental condition of this experiment: A fast stream of black letters except for a white one (the target). In the experimental condition, the stream includes the letter "X" (the probe). The probe can appear in the target position or lag up to eight relative serial positions after the target. In the control condition, the participants are asked to detect the probe (i.e., the letter "X"). This subset includes trials where the participants reported correctly the identity of the target and then indicate the presence or absence of the probe (see Raymond et al. 1992, Fig. 1). For this experiment, the refresh rate of the screen was 60Hz.
 #'
 #' Original data set can be found in https://figshare.com/articles/dataset/Two_replications_of_Raymond_Shapiro_and_Arnell_1992_The_Attentional_Blink/6834353
 #'
