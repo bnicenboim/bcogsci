@@ -7,13 +7,15 @@ data {
   int<lower = 1> N_subj;
   int<lower = 1, upper = N_subj> subj[N];
 }
+transformed data{
+  real p_correct = 1;
+}
 parameters {
   real alpha;
   real beta;
   real<lower = 0> sigma;
   real<upper = alpha> gamma; //guessing
   real<lower = 0> sigma2;
-  real<lower = 0, upper = 1> p_correct;
   real<lower = 0, upper = 1> p_btask;
   real beta_task;
   vector<lower = 0>[3]  tau_u;   

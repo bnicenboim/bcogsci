@@ -7,13 +7,15 @@ data {
   int<lower = 1> N_subj;
   int<lower = 1, upper = N_subj> subj[N];
 }
+transformed data {
+  real p_correct = 1;
+}
 parameters {
   real alpha;
   real beta;
   real<lower = 0> sigma;
   real<upper = alpha> gamma; //guessing
   real<lower = 0> sigma2;
-  real<lower = 0, upper = 1> p_correct;
   real<lower = 0, upper = 1> p_btask;
   real beta_task;
   vector<lower = 0>[3]  tau_u;   
@@ -38,7 +40,6 @@ model {
   target += normal_lpdf(tau_u | 0, .5)
     - 3* normal_lccdf(0 | 0, .5);
   target += normal_lpdf(beta_task | 0, 1);
-  target += beta_lpdf(p_correct | 995, 5);
   target += beta_lpdf(p_btask | 8, 2);
   target += lkj_corr_cholesky_lpdf(L_u | 2);
   target += std_normal_lpdf(to_vector(z_u));
@@ -50,7 +51,7 @@ model {
                                          x[n] * (beta + u[subj[n], 2]), sigma) +
                           bernoulli_lpmf(acc[n] | p_correct),
                           log1m_inv_logit(lodds_task) +
-                          lognormal_lpdf(rt[n] | gamma + u[subj[n], 3], sigma) +
+                          lognormal_lpdf(rt[n] | gamma + u[subj[n], 3], sigma2) +
                           bernoulli_lpmf(acc[n] |.5));
   }
 }
