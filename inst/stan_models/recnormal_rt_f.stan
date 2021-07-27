@@ -1,9 +1,9 @@
 functions {
-  vector recnormal_lpdf(vector RT | real mu, real sigma){
+  real recnormal_lpdf(vector RT, real mu, real sigma){
     real lpdf;
-    lpdf = normal_lpdf(1.0 ./ RT | mu, sigma)
-    - normal_lccdf(0 | mu, sigma)
-    - 2 * log(RT);
+    lpdf = normal_lpdf(1 ./ RT | mu, sigma)
+    - num_elements(RT) * normal_lccdf(0 | mu, sigma)
+    - sum(2 * log(RT));
     return lpdf;
   }
   real recnormal_rng(real mu, real sigma){
@@ -33,5 +33,5 @@ model {
 generated quantities {
   real rt_pred[N];
   for (n in 1:N)
-    rt_pred = recnormal_rng(mu, sigma);
+    rt_pred[n] = recnormal_rng(mu, sigma);
 }
