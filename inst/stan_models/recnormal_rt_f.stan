@@ -27,7 +27,7 @@ transformed parameters {
 }
 model {
   target += normal_lpdf(mu_s | 2, 2);
-  target += normal_lpdf(sigma_s | .5, .5);
+  target += lognormal_lpdf(sigma_s | log(.5), 1);
   target += recnormal_lpdf(RT | mu, sigma);
 }
 generated quantities {

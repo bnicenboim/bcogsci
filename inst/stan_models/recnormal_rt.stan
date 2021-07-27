@@ -12,7 +12,7 @@ transformed parameters {
 }
 model {
   target += normal_lpdf(mu_s | 2, 2);
-  target += normal_lpdf(sigma_s | .5, .5);
+  target += lognormal_lpdf(sigma_s | log(.5), 1);
   target += normal_lpdf(1 ./ RT | mu, sigma)
      - N * normal_lccdf(0 | mu, sigma)
     - sum(2 * log(RT));
