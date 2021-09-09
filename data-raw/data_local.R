@@ -51,4 +51,8 @@ df_gg05_rc <- df_gg05_complete %>%
 
 df_fallacy <- read.csv("data-raw/datasets/conj_fallacy.csv", header = TRUE) %>% as_tibble()
 
-usethis::use_data(df_spacebar, df_contrasts1, df_contrasts2, df_contrasts3, df_contrasts4, df_contrasts5, df_contrasts6, df_contrasts7, df_BF, df_gg05_complete, df_gg05_rc, df_fallacy, overwrite = TRUE)
+df_schizophrenia <- read.csv("data-raw/datasets/BelinRubin1990.csv") %>%
+  tidyr::pivot_longer(cols = starts_with("rt"), names_to = "trial", values_to = "rt") %>%
+  mutate(trial = stringr::str_remove(trial, "rt_"))
+
+usethis::use_data(df_spacebar, df_contrasts1, df_contrasts2, df_contrasts3, df_contrasts4, df_contrasts5, df_contrasts6, df_contrasts7, df_BF, df_gg05_complete, df_gg05_rc, df_fallacy, df_schizophrenia, overwrite = TRUE)
