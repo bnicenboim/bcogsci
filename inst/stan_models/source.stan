@@ -11,16 +11,16 @@ transformed data {
   int N_p = 5; //Number of latent parameters
 }
 parameters {
-  real D1_alpha;
-  real D2_alpha;
-  real d_alpha;
-  real b_alpha;
-  real g_alpha;
-  vector[K] D1_beta;
-  vector[K] D2_beta;
-  vector[K] d_beta;
-  vector[K] b_beta;
-  vector[K] g_beta;
+  real alpha_D1;
+  real alpha_D2;
+  real alpha_d;
+  real alpha_b;
+  real alpha_g;
+  vector[K] beta_D1;
+  vector[K] beta_D2;
+  vector[K] beta_d;
+  vector[K] beta_b;
+  vector[K] beta_g;
   vector<lower = 0>[N_p] tau_u; // 5 parameters
   matrix[N_p, N_subj] z_u;
   cholesky_factor_corr[N_p] L_u;
@@ -63,7 +63,7 @@ transformed parameters {
   }
 }
 model {
-  target += normal_lpdf(D1_alpha | 0, 3);
+  // priors:
   (...)
 
   // for the intercept adjustment:
