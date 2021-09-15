@@ -1144,7 +1144,7 @@
 #' \insertAllCited{}
 "df_source_monitoring"
 
-#' Reading times at the critical region of sentences of experiment 1 reported in \insertCite{VasishthMertzenJaegerGelman2018;textual}{bcogsci}.
+#' Reading times at the critical region of sentences of experiment 1 reported in \insertCite{VasishthMertzenJaegerGelman2019;textual}{bcogsci}.
 #'
 #' The experiment examined sentences with four conditions (a 2x2 design). 
 #' This eyetracking experiment examined sentences with four conditions (a 2x2 design). 
@@ -1170,7 +1170,7 @@
 #' \insertAllCited{}
 "df_VMJG18E1"
 
-#' Reading times at the critical region of sentences of experiment 2 reported in \insertCite{VasishthMertzenJaegerGelman2018;textual}{bcogsci}.
+#' Reading times at the critical region of sentences of experiment 2 reported in \insertCite{VasishthMertzenJaegerGelman2019;textual}{bcogsci}.
 #'
 #' The experiment examined sentences with four conditions (a 2x2 design). 
 #' This eyetracking experiment examined sentences with four conditions (a 2x2 design). 
@@ -1196,7 +1196,7 @@
 #' \insertAllCited{}
 "df_VMJG18E2"
 
-#' Reading times at the critical region of sentences of experiment 3 reported in \insertCite{VasishthMertzenJaegerGelman2018;textual}{bcogsci}.
+#' Reading times at the critical region of sentences of experiment 3 reported in \insertCite{VasishthMertzenJaegerGelman2019;textual}{bcogsci}.
 #'
 #' The experiment examined sentences with four conditions (a 2x2 design). 
 #' This eyetracking experiment examined sentences with four conditions (a 2x2 design). 
@@ -1222,7 +1222,7 @@
 #' \insertAllCited{}
 "df_VMJG18E3"
 
-#' Reading times at the critical region of sentences of experiment 4 reported in \insertCite{VasishthMertzenJaegerGelman2018;textual}{bcogsci}.
+#' Reading times at the critical region of sentences of experiment 4 reported in \insertCite{VasishthMertzenJaegerGelman2019;textual}{bcogsci}.
 #'
 #' The experiment examined sentences with four conditions (a 2x2 design). 
 #' This eyetracking experiment examined sentences with four conditions (a 2x2 design). 
@@ -1248,7 +1248,7 @@
 #' \insertAllCited{}
 "df_VMJG18E4"
 
-#' Reading times at the critical region of sentences of experiment 5 reported in \insertCite{VasishthMertzenJaegerGelman2018;textual}{bcogsci}.
+#' Reading times at the critical region of sentences of experiment 5 reported in \insertCite{VasishthMertzenJaegerGelman2019;textual}{bcogsci}.
 #'
 #' The experiment examined sentences with four conditions (a 2x2 design). 
 #' This eyetracking experiment examined sentences with four conditions (a 2x2 design). 
@@ -1275,7 +1275,7 @@
 #' \insertAllCited{}
 "df_VMJG18E5"
 
-#' Reading times at the critical region of sentences of experiment 6 reported in \insertCite{VasishthMertzenJaegerGelman2018;textual}{bcogsci}.
+#' Reading times at the critical region of sentences of experiment 6 reported in \insertCite{VasishthMertzenJaegerGelman2019;textual}{bcogsci}.
 #'
 #' The experiment examined sentences with four conditions (a 2x2 design). 
 #' This eyetracking experiment examined sentences with four conditions (a 2x2 design). 
@@ -1301,7 +1301,7 @@
 #' \insertAllCited{}
 "df_VMJG18E6"
 
-#' Reading times at the critical region of sentences of experiment 7 reported in \insertCite{VasishthMertzenJaegerGelman2018;textual}{bcogsci}.
+#' Reading times at the critical region of sentences of experiment 7 reported in \insertCite{VasishthMertzenJaegerGelman2019;textual}{bcogsci}.
 #'
 #' The experiment examined sentences with four conditions (a 2x2 design). 
 #' This eyetracking experiment examined sentences with four conditions (a 2x2 design). 
