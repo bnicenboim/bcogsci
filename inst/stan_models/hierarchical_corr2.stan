@@ -35,5 +35,5 @@ generated quantities {
   corr_matrix[2] rho_u= L_u * L_u';
   vector[N_subj] effect_by_subj;
   for(i in 1:N_subj)
-    effect_by_subj[i] = beta + u[i,2];
+    effect_by_subj[i] = beta + u[i, 2];
 }

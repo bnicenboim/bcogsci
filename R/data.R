@@ -1326,3 +1326,21 @@
 #' @references
 #' \insertAllCited{}
 "df_VMJG18E7"
+
+
+
+#' Data from a simple visual tracking experiment for schizophrenic patients and controls from \insertCite{belin1990analysis;textual}{bcogsci}
+#'
+#' Reaction times (in milliseconds) for 11 non-schizophrenics and 6
+#' schizophrenics (30 measurements for each person) doing a simple visual tracking experiment from \insertCite{belin1990analysis;textual}{bcogsci}.
+#'
+#' @format A data frame with 372 rows and 4 variables:
+#' \describe{
+#' \item{subj}{The subject id.}
+#' \item{trial}{Trial number}
+#' \item{patient}{Indicates whether the it is a schizophrenic patient (1) or not (0).}
+#' \item{rt}{Reaction times in milliseconds.}
+#' }
+#' @references
+#' \insertAllCited{}
+"df_schizophrenia"
