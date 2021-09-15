@@ -17,7 +17,7 @@ A data frame with 13 rows and 4 variables:
 df_chineseRCs
 }
 \description{
-The data-set is from a meta-analysis reported in \insertCite{VasishthMScStatistics;textual}{bcogsci}; the replication attempt was reported in \insertCite{VasishthMScStatistics;textual}{bcogsci}, and contains reading times from a self-paced reading experiment on subject and object relative clauses in Chinese. There are 40 subjects who read 15 items in a Latin square design. The estimates are from the relative clause head noun, which is the critical region of interest.
+The data set is from a meta-analysis reported in \insertCite{VasishthMScStatistics;textual}{bcogsci}; the replication attempt was reported in \insertCite{VasishthMScStatistics;textual}{bcogsci}, and contains reading times from a self-paced reading experiment on subject and object relative clauses in Chinese. There are 40 subjects who read 15 items in a Latin square design. The estimates are from the relative clause head noun, which is the critical region of interest.
 }
 \references{
 \insertAllCited{}

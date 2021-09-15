@@ -3,7 +3,7 @@
 \docType{data}
 \name{df_smithE2}
 \alias{df_smithE2}
-\title{Reading times at the critical region (verb) of a self-paced reading experiment conducted by  \insertCite{smith2021encoding;textual}{lingpsych}.}
+\title{Reading times at the critical region of sentences of experiment 2 reported in \insertCite{smith2021encoding;textual}{bcogsci}.}
 \format{
 A data frame with 3,459 rows and 6 variables:
 \describe{
@@ -19,15 +19,13 @@ A data frame with 3,459 rows and 6 variables:
 df_smithE2
 }
 \description{
-Reading times at the critical region of sentences of experiment 2 reported in \insertCite{smith2021encoding;textual}{lingpsych}.
-}
-\details{
 The experiment examined sentences with eight conditions (a 2x2x2 design). 
 One factor, labeled SemFactor, is semantic similarity of a noun 2 with the subject of the sentence (noun 1); the levels are labeled SemSim (semantically similar) and SemDissim 
 (semantically dissimilar). The second factor, labeled N2Factor, marks whether the 
 second noun phrase was singular (N2sg) or plural (N2pl) marked. The third factor
 is VerbFactor, which marks whether the verb is singular (Vsg) or plural (Vpl) marked.
-
+}
+\details{
 The data and associated code are available from https://osf.io/hjrkn/.
 }
 \references{

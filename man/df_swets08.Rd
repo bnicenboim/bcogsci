@@ -19,7 +19,7 @@ A data frame with 5,184 rows and 6 variables:
 df_swets08
 }
 \description{
-The dataset is from a self-paced reading experiment by \insertCite{swets2008underspecification;textual}{bcogsci}, and contains reading times from a 3x3 design.
+The data set is from a self-paced reading experiment by \insertCite{swets2008underspecification;textual}{bcogsci}, and contains reading times from a 3x3 design.
 }
 \references{
 \insertAllCited{}

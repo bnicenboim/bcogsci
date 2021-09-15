@@ -17,7 +17,7 @@ A data frame with 372 rows and 4 variables:
 df_dutch
 }
 \description{
-The dataset is from a self-paced reading study by \insertCite{FrankEtAl2015;textual}{bcogsci}, and contains reading times from a design that had two conditions, grammatical and ungrammatical double center embeddings in Dutch. There are 24 subjects who read 16 items in a Latin square design. The data shown here focus on log reading times at the noun phrase following the final verb in a double center embedding.
+The data set is from a self-paced reading study by \insertCite{FrankEtAl2015;textual}{bcogsci}, and contains reading times from a design that had two conditions, grammatical and ungrammatical double center embeddings in Dutch. There are 24 subjects who read 16 items in a Latin square design. The data shown here focus on log reading times at the noun phrase following the final verb in a double center embedding.
 }
 \references{
 \insertAllCited{}

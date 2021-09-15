@@ -18,7 +18,7 @@ A data frame with 39 rows and 4 variables:
 df_powerpose
 }
 \description{
-The dataset is from a study by \insertCite{carney2010power;textual}{bcogsci}, and contains testosterone measurements before and after treatement (which can be either high or low power posing). There is one set of measurements (before and after) from each subject.
+The data set is from a study by \insertCite{carney2010power;textual}{bcogsci}, and contains testosterone measurements before and after treatement (which can be either high or low power posing). There is one set of measurements (before and after) from each subject.
 }
 \references{
 \insertAllCited{}

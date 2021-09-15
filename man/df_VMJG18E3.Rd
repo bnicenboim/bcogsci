@@ -3,7 +3,7 @@
 \docType{data}
 \name{df_VMJG18E3}
 \alias{df_VMJG18E3}
-\title{Reading times at the critical region (verb) of a self-paced reading experiment conducted by  \insertCite{VasishthMertzenJaegerGelman2018}{lingpsych}.}
+\title{Reading times at the critical region of sentences of experiment 3 reported in \insertCite{VasishthMertzenJaegerGelman2018;textual}{bcogsci}.}
 \format{
 A data frame with 672 rows and 4 variables:
 \describe{
@@ -17,14 +17,12 @@ A data frame with 672 rows and 4 variables:
 df_VMJG18E3
 }
 \description{
-Reading times at the critical region of sentences of experiment 3 reported in \insertCite{VasishthMertzenJaegerGelman2018;textual}{lingpsych}.
-}
-\details{
 The experiment examined sentences with four conditions (a 2x2 design). 
 This eyetracking experiment examined sentences with four conditions (a 2x2 design). 
 One factor is whether a dative phrase is in the main or subordinate clause;
 another factor is whether an adjunct phrase is in the main or subordinate clause.
-
+}
+\details{
 The conditions (simplified) are:
 a. Nachdem der Lehrer [ADJ zur Ahndung] [DAT dem Sohn] ... hat der Mitschuler, der den Fussball versteckt hat, ...
 b. Nachdem der Lehrer [               ] [DAT dem Sohn] ... hat der Mitschuler, der [ADJ zur Ahndung] den Fussball versteckt hat, ...
