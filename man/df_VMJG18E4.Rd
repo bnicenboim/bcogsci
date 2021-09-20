@@ -3,7 +3,7 @@
 \docType{data}
 \name{df_VMJG18E4}
 \alias{df_VMJG18E4}
-\title{Reading times at the critical region of sentences of experiment 4 reported in \insertCite{VasishthMertzenJaegerGelman2019;textual}{bcogsci}.}
+\title{Reading times at the critical region of sentences of experiment 4 reported in \insertCite{VasishthMertzenJaegerGelman2018;textual}{bcogsci}.}
 \format{
 A data frame with 655 rows and 4 variables:
 \describe{
