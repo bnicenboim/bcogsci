@@ -1344,3 +1344,25 @@
 #' @references
 #' \insertAllCited{}
 "df_schizophrenia"
+
+
+#' Data from the lexical decision task of 40 participants of the British Lexicon project \insertCite{keuleers2012british}{bcogsci}
+#'
+#' Reaction times (in milliseconds) and accuracy for a subset of 40 participants in a lexical decision task of the British Lexicon project \insertCite{keuleers2012british}{bcogsci}.
+#'
+#' The column names are modified from the original dataset (see below). The freq column indicates the frequency according to the British National Corpus (BNC, available at http://www.natcorp.ox.ac.uk), with the following modifications: Non-words have a frequency of zero, and all words have a frequency of at least 1. The original data set can be found in http://crr.ugent.be/programs-data/lexicon-projects.
+#'
+#' @format A data frame with 372 rows and 4 variables:
+#' \describe{
+#' \item{subj}{The subject id.}
+#' \item{block}{Block number.}
+#' \item{lexicality}{Either word or non-word.}
+#' \item{trial}{Trial number.}
+#' \item{string}{String of letters.}
+#' \item{accuracy}{1 for correct, 0 for incorrect.}
+#' \item{rt}{Reaction times in milliseconds.}
+#' \item{freq}{Frequency, see details.}
+#' }
+#' @references
+#' \insertAllCited{}
+"df_blp"

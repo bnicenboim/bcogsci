@@ -237,6 +237,31 @@ df_source_monitoring <-
   separate(col = "name", into = c("source", "response")) %>%
   pivot_wider(names_from = "response" , values_from = value )
 
+
+#BLP
+GET("http://crr.ugent.be/blp/R/blp-trials.Rdata",
+    write_disk("data-raw/data_repos/blp-trials.Rdata", overwrite = TRUE),
+    progress()
+)
+GET("http://crr.ugent.be/blp/R/blp-stimuli.Rdata",
+    write_disk("data-raw/data_repos/blp-stimuli.Rdata", overwrite = TRUE),
+    progress()
+)
+
+load("data-raw/data_repos/blp-trials.Rdata")
+load("data-raw/data_repos/blp-stimuli.Rdata")
+
+df_blp <- blp.trials %>% as_tibble() %>%
+  select(subj = participant, block, lexicality, trial = order, string = spelling, accuracy, rt = rt.raw) %>% left_join(
+select(blp.stimuli, string = spelling, freq = bnc.frequency)) %>%
+  mutate(lexicality = ifelse(lexicality =="N", "non-word", "word"),
+         freq = ifelse(lexicality =="non-word", 0, freq) ) %>%
+  mutate(freq = ifelse(lexicality =="word" & freq==0, 1, freq),
+         subj = as.numeric(as.factor(subj))) %>%
+  filter(subj < 41)
+
+
+
 usethis::use_data(df_pupil,
                   df_pupil_complete,
                   df_pupil_pilot,
@@ -251,5 +276,5 @@ usethis::use_data(df_pupil,
                   df_dots,
                   df_ab,
                   df_ab_complete,
-
+                  df_blp,
                   overwrite = TRUE)
