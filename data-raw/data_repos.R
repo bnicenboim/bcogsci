@@ -252,13 +252,13 @@ load("data-raw/data_repos/blp-trials.Rdata")
 load("data-raw/data_repos/blp-stimuli.Rdata")
 
 df_blp <- blp.trials %>% as_tibble() %>%
-  select(subj = participant, block, lexicality, trial = order, string = spelling, accuracy, rt = rt.raw) %>% left_join(
+  select(subj = participant, block, lex = lexicality, trial = order, string = spelling, accuracy, rt = rt.raw) %>% left_join(
 select(blp.stimuli, string = spelling, freq = bnc.frequency)) %>%
-  mutate(lexicality = ifelse(lexicality =="N", "non-word", "word"),
-         freq = ifelse(lexicality =="non-word", 0, freq) ) %>%
-  mutate(freq = ifelse(lexicality =="word" & freq==0, 1, freq),
+  mutate(lex = ifelse(lex =="N", "non-word", "word"),
+         freq = ifelse(lex =="non-word", 0, freq) ) %>%
+  mutate(freq = ifelse(lex =="word" & freq==0, 1, freq),
          subj = as.numeric(as.factor(subj))) %>%
-  filter(subj < 41)
+  filter(subj < 41, rt > 0)
 
 
 

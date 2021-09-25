@@ -9,11 +9,11 @@ A data frame with 372 rows and 4 variables:
 \describe{
 \item{subj}{The subject id.}
 \item{block}{Block number.}
-\item{lexicality}{Either word or non-word.}
+\item{lex}{lexicality of the string: Either word or non-word.}
 \item{trial}{Trial number.}
 \item{string}{String of letters.}
 \item{accuracy}{1 for correct, 0 for incorrect.}
-\item{rt}{Reaction times in milliseconds.}
+\item{rt}{Raw reaction times of all strings in milliseconds. (Observations with zero reaction times are omited)}
 \item{freq}{Frequency, see details.}
 }
 }
