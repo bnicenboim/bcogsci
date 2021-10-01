@@ -3,6 +3,7 @@ library(httr)
 library(readxl)
 library(bcogsci)
 library(stringr)
+library(bcogsci)
 ### pupil data
 
 GET("https://osf.io/z43dz//?action=download",
@@ -251,15 +252,20 @@ GET("http://crr.ugent.be/blp/R/blp-stimuli.Rdata",
 load("data-raw/data_repos/blp-trials.Rdata")
 load("data-raw/data_repos/blp-stimuli.Rdata")
 
-df_blp <- blp.trials %>% as_tibble() %>%
+df_blp_complete <- blp.trials %>% as_tibble() %>%
   select(subj = participant, block, lex = lexicality, trial = order, string = spelling, accuracy, rt = rt.raw) %>% left_join(
 select(blp.stimuli, string = spelling, freq = bnc.frequency)) %>%
   mutate(lex = ifelse(lex =="N", "non-word", "word"),
          freq = ifelse(lex =="non-word", 0, freq) ) %>%
   mutate(freq = ifelse(lex =="word" & freq==0, 1, freq),
-         subj = as.numeric(as.factor(subj))) %>%
-  filter(subj < 41, rt > 0)
+         subj = as.numeric(as.factor(subj)))%>%
+  filter(rt > 0)
+df_blp <- df_blp_complete %>% filter(subj < 41) %>%
+  group_by(subj, lex) %>%
+  slice_sample(n =1000)
 
+
+df_blp %>% filter(subj ==1, lex =="non-word")
 
 
 usethis::use_data(df_pupil,
@@ -277,4 +283,5 @@ usethis::use_data(df_pupil,
                   df_ab,
                   df_ab_complete,
                   df_blp,
+                  df_blp_complete,
                   overwrite = TRUE)

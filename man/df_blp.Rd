@@ -3,7 +3,7 @@
 \docType{data}
 \name{df_blp}
 \alias{df_blp}
-\title{Data from the lexical decision task of 40 participants of the British Lexicon project \insertCite{keuleers2012british}{bcogsci}}
+\title{Subset of the data from the lexical decision task  of the British Lexicon project \insertCite{keuleers2012british}{bcogsci}}
 \format{
 A data frame with 372 rows and 4 variables:
 \describe{
@@ -14,17 +14,17 @@ A data frame with 372 rows and 4 variables:
 \item{string}{String of letters.}
 \item{accuracy}{1 for correct, 0 for incorrect.}
 \item{rt}{Raw reaction times of all strings in milliseconds. (Observations with zero reaction times are omited)}
-\item{freq}{Frequency, see details.}
+\item{freq}{Frequency per million words, see details.}
 }
 }
 \usage{
 df_blp
 }
 \description{
-Reaction times (in milliseconds) and accuracy for a subset of 40 participants in a lexical decision task of the British Lexicon project \insertCite{keuleers2012british}{bcogsci}.
+Reaction times (in milliseconds) and accuracy for a subset of 2000 observations of 40 participants in a lexical decision task of the British Lexicon project \insertCite{keuleers2012british}{bcogsci}.
 }
 \details{
-The column names are modified from the original dataset (see below). The freq column indicates the frequency according to the British National Corpus (BNC, available at http://www.natcorp.ox.ac.uk), with the following modifications: Non-words have a frequency of zero, and all words have a frequency of at least 1. The original data set can be found in http://crr.ugent.be/programs-data/lexicon-projects.
+The column names are modified from the original dataset (see below). The freq column indicates the frequency per million words according to the British National Corpus (BNC, available at http://www.natcorp.ox.ac.uk), with the following modifications: Non-words have a frequency of zero, and all words have a frequency of at least 0.01. The original data set can be found in http://crr.ugent.be/programs-data/lexicon-projects.
 }
 \references{
 \insertAllCited{}
