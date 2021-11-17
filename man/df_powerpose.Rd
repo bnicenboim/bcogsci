@@ -5,10 +5,11 @@
 \alias{df_powerpose}
 \title{Data from an experiment on the effect of power posing on testosterone levels, originally reported by \insertCite{carney2010power;textual}{bcogsci}}
 \format{
-A data frame with 39 rows and 4 variables:
+A data frame with 39 rows and 6 variables:
 \describe{
 \item{id}{Subject id.}
-\item{item}{The item id, ranging from 1 to 16. Each subject id is preceded by an i.}
+\item{female}{A binary variable marking gender.}
+\item{age}{A continuous variable, age in years.}
 \item{hptreat}{Power pose treatment; high power pose or low power pose.}
 \item{testm1}{Testosterone level before treatment.}
 \item{testm1}{Testosterone level after treatment.}
@@ -18,7 +19,7 @@ A data frame with 39 rows and 4 variables:
 df_powerpose
 }
 \description{
-The data set is from a study by \insertCite{carney2010power;textual}{bcogsci}, and contains testosterone measurements before and after treatement (which can be either high or low power posing). There is one set of measurements (before and after) from each subject.
+The data set is from a study by \insertCite{carney2010power;textual}{bcogsci}, and contains testosterone measurements before and after treatement (which can be either high or low power posing). There is one set of measurements (before and after) from each subject. The gender and age are of each subject are also provided.
 }
 \references{
 \insertAllCited{}

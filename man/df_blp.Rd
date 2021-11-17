@@ -5,14 +5,14 @@
 \alias{df_blp}
 \title{Subset of the data from the lexical decision task  of the British Lexicon project \insertCite{keuleers2012british}{bcogsci}}
 \format{
-A data frame with 372 rows and 4 variables:
+A data frame with 36000 rows and 8 variables:
 \describe{
 \item{subj}{The subject id.}
 \item{block}{Block number.}
 \item{lex}{lexicality of the string: Either word or non-word.}
 \item{trial}{Trial number.}
 \item{string}{String of letters.}
-\item{accuracy}{1 for correct, 0 for incorrect.}
+\item{acc}{1 for correct, 0 for incorrect.}
 \item{rt}{Raw reaction times of all strings in milliseconds. (Observations with zero reaction times are omited)}
 \item{freq}{Frequency per million words, see details.}
 }
