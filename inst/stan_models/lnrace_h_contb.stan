@@ -44,7 +44,7 @@ model {
   target += normal_lpdf(beta | 0, .5);
   target += normal_lpdf(sigma | .5, .2)
     - normal_lccdf(0 | .5, .2);
-  target += lognormal_lpdf(T_nd | log(150), .6);
+  target += normal_lpdf(lT_nd | log(200), .3);
   target += beta_lpdf(theta_c | .9, 70) -
     beta_lcdf(.1 | .9, 70);
   target += normal_lpdf(tau_u | .1, .1)
@@ -62,12 +62,11 @@ model {
                     lfreq[n] * (beta[4] + u[subj[n], 6])};
     log_lik[n] = log_sum_exp(
                   log(theta_c) + uniform_lpdf(rt[n] | min_rt, max_rt)
-                         + log(.5),//  + bernoulli_lpmf(nchoice[n] - 1 | theta_bias),
-                  log1m(theta_c) + lognormal_race2_lpdf(T | nchoice[n], mu, sigma));
+                         + log(.5),                  log1m(theta_c) + lognormal_race2_lpdf(T | nchoice[n], mu, sigma));
     } else {
-      // Observed time is smaller than the the non-decision time
+      // T < 0, observed time is smaller than the non-decision time
       log_lik[n] = log(theta_c) + uniform_lpdf(rt[n] | min_rt, max_rt)
-                   + log(.5); //  bernoulli_lpmf(nchoice[n] - 1 | theta_bias);
+                   + log(.5);
     }
   }
   target += sum(log_lik);

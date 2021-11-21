@@ -13,7 +13,6 @@ parameters {
 }
 model {
   vector[N] T = rt - T_nd;
-  // priors for the task component
   target += normal_lpdf(alpha | 6, 1);
   target += normal_lpdf(beta | 0, .5);
   target += normal_lpdf(sigma | .5, .2)

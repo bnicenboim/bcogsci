@@ -1,0 +1,48 @@
+data {
+  int<lower = 1> N;
+  int<lower = 1> N_subj;
+  vector[N] lfreq;
+  vector[N] c_lex;
+  vector[N] rt;
+  int nchoice[N];
+  int subj[N];
+}
+transformed data{
+  real min_rt = min(rt);
+  real max_rt = max(rt);
+  int N_re = 6;
+}
+parameters {
+  real alpha[2];
+  real beta[4];
+  real<lower = 0> sigma;
+  real<lower = 0> T_nd;
+  real<lower = 0, upper = .1> theta_c;
+  vector<lower = 0>[N_re] tau_u;
+  matrix[N_subj, N_re] u;
+}
+model {
+}
+generated quantities {
+  real rt_pred[N];
+  real nchoice_pred[N];
+  for(n in 1:N){
+    real T = rt[n] - T_nd;
+    real mu[2] = {alpha[1] + u[subj[n], 1] -
+                    c_lex[n] * (beta[1] + u[subj[n], 2]) -
+                    lfreq[n] * (beta[2] + u[subj[n], 3]),
+                    alpha[2] + u[subj[n], 4] -
+                    c_lex[n] * (beta[3] + u[subj[n], 5]) -
+                    lfreq[n] * (beta[4] + u[subj[n], 6])};
+    real cont = bernoulli_rng(theta_c);
+    if(cont == 1){
+      rt_pred[n] = uniform_rng(min_rt, max_rt);
+      nchoice_pred[n] = bernoulli_rng(0.5) + 1;
+    } else {
+      real accum1 = lognormal_rng(mu[1], sigma);
+      real accum2 = lognormal_rng(mu[2], sigma);
+      rt_pred[n] = fmin(accum1, accum2) + T_nd;
+      nchoice_pred[n] = (accum1 > accum2) + 1;
+    }
+  }
+}

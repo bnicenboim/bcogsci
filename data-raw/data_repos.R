@@ -262,8 +262,8 @@ select(blp.stimuli, string = spelling, freq = bnc.frequency.million)) %>%
   filter(rt > 0)%>%
   ungroup()
 
-set.seed(666)
-df_blp <- df_blp_complete %>% filter(subj < 35) %>%
+set.seed(5)
+df_blp <- df_blp_complete %>% filter(subj <= 21) %>%
   group_by(subj, lex) %>%
   slice_sample(n = 600) %>%
   ungroup()

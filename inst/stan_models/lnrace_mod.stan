@@ -23,9 +23,16 @@ parameters {
   real<lower = 0> sigma;
   real<lower = 0, upper = min(rt)> T_nd;
 }
-transformed parameters {
+model {
   real log_lik[N];
-  for(n in 1:N){
+    target += normal_lpdf(alpha | 6, 1);
+  target += normal_lpdf(beta | 0, .5);
+  target += normal_lpdf(sigma | .5, .2)
+    - normal_lccdf(0 | .5, .2);
+  target += normal_lpdf(T_nd | 150, 100)
+    - log_diff_exp(normal_lcdf(min(rt) | 150, 100),
+                   normal_lcdf(0 | 150, 100));
+for(n in 1:N){
     real T = rt[n] - T_nd;
     real mu[2] = {alpha[1]  -
                     c_lex[n] * beta[1]  -
@@ -35,15 +42,5 @@ transformed parameters {
                     lfreq[n] * beta[4]};
     log_lik[n] = lognormal_race2_lpdf(T | nchoice[n], mu, sigma);
   }
-}
-model {
-  // priors for the task component
-  target += normal_lpdf(alpha | 6, 1);
-  target += normal_lpdf(beta | 0, .5);
-  target += normal_lpdf(sigma | .5, .2)
-    - normal_lccdf(0 | .5, .2);
-  target += normal_lpdf(T_nd | 150, 100)
-    - log_diff_exp(normal_lcdf(min(rt) | 150, 100),
-                   normal_lcdf(0 | 150, 100));
   target += sum(log_lik);
 }
