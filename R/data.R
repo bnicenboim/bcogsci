@@ -1353,14 +1353,14 @@
 #'
 #' The column names are modified from the original dataset (see below). The freq column indicates the frequency per million words according to the British National Corpus (BNC, available at http://www.natcorp.ox.ac.uk), with the following modifications: Non-words have a frequency of zero, and all words have a frequency of at least 0.01. The original data set can be found in http://crr.ugent.be/programs-data/lexicon-projects.
 #'
-#' @format A data frame with 372 rows and 4 variables:
+#' @format A data frame with 36000 rows and 8 variables:
 #' \describe{
 #' \item{subj}{The subject id.}
 #' \item{block}{Block number.}
 #' \item{lex}{lexicality of the string: Either word or non-word.}
 #' \item{trial}{Trial number.}
 #' \item{string}{String of letters.}
-#' \item{accuracy}{1 for correct, 0 for incorrect.}
+#' \item{acc}{1 for correct, 0 for incorrect.}
 #' \item{rt}{Raw reaction times of all strings in milliseconds. (Observations with zero reaction times are omited)}
 #' \item{freq}{Frequency per million words, see details.}
 #' }
@@ -1375,14 +1375,14 @@
 #'
 #' The column names are modified from the original dataset (see below). The freq column indicates the frequency per million words according to the British National Corpus (BNC, available at http://www.natcorp.ox.ac.uk), with the following modifications: Non-words have a frequency of zero, and all words have a frequency of at least 0.01. The original data set can be found in http://crr.ugent.be/programs-data/lexicon-projects.
 #'
-#' @format A data frame with 372 rows and 4 variables:
+#' @format A data frame with 2240802 rows and 8 variables:
 #' \describe{
 #' \item{subj}{The subject id.}
 #' \item{block}{Block number.}
 #' \item{lex}{lexicality of the string: Either word or non-word.}
 #' \item{trial}{Trial number.}
 #' \item{string}{String of letters.}
-#' \item{accuracy}{1 for correct, 0 for incorrect.}
+#' \item{acc}{1 for correct, 0 for incorrect.}
 #' \item{rt}{Raw reaction times of all strings in milliseconds. (Observations with zero reaction times are omited)}
 #' \item{freq}{Frequency per million words, see details.}
 #' }
