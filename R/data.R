@@ -983,7 +983,7 @@
 
 #' Data from an eyetracking reading experiment that records total reading times in milliseconds at an auxiliary verb in so-called low and high interference conditions. \insertCite{Dillon-EtAl-2013;textual}{bcogsci}
 #'
-#' The data set is from an eyetracking experiment by \insertCite{Dillon-EtAl-2013;textual}{bcogsci}, and contains reading times (total reading times) from a design that orginally had eight conditions. There are 40 subjects who read 48 items in a Latin square design. The data shown here focus on two conditions from the experiment, high and low interference conditions in a subject-verb number agreement configuration in ungrammatical sentences.
+#' The data set is from an eyetracking experiment by \insertCite{Dillon-EtAl-2013;textual}{bcogsci}, and contains reading times (total reading times) from a design that originally had eight conditions. There are 40 subjects who read 48 items in a Latin square design. The data shown here focus on two conditions from the experiment, high and low interference conditions in a subject-verb number agreement configuration in ungrammatical sentences.
 #'
 #' @format A data frame with 2,855 rows and 5 variables:
 #' \describe{
@@ -1389,3 +1389,31 @@
 #' @references
 #' \insertAllCited{}
 "df_blp_complete"
+
+#' Data from a self-paced reading study on Spanish reported in \insertCite{lago2015agreement}{bcogsci}
+#'
+#' Reading times (in milliseconds) from a self-paced reading study on Spanish reported in \insertCite{lago2015agreement}{bcogsci}.
+#'
+#' The column names are modified from the original dataset. The reading times are from the post-critical word (en) in the sentences shown below.
+#' 
+#' -(a) Ungram , singular attractor (interference condition)
+#' La *nota* que la chica escribieron en la clase alegró a su amiga
+#' The note that the girl wrote-pl during class cheered her friend up
+#' -(b) Ungram , plural attractor (baseline condition)
+#' Las *notas* que la chica escribieron en la clase alegraron a su amiga
+#' The notes that the girl wrote-pl during class cheered her friend up
+#' 
+#' There are 32 subjects who read 48 items in a Latin square design. The data shown here focus on two conditions from the experiment, high and low interference conditions in a subject-verb number agreement configuration in ungrammatical sentences. The language under study is Spanish.
+#'
+#' @format A data frame with 768 rows and 6 variables:
+#' \describe{
+#' \item{subj}{The subject id.}
+#' \item{item}{The item id.}
+#' \item{rt}{Reading time at the post-critical word in the sentence.}
+#' \item{int}{The interference conditions (high and low).}
+#' \item{x}{Sum contrast coding of the interference conditions.}
+#' \item{expt}{The experiment id.}
+#' }
+#' @references
+#' \insertAllCited{}
+"df_lagoE1"
