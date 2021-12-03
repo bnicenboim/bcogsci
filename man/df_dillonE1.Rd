@@ -18,7 +18,7 @@ A data frame with 2,855 rows and 5 variables:
 df_dillonE1
 }
 \description{
-The data set is from an eyetracking experiment by \insertCite{Dillon-EtAl-2013;textual}{bcogsci}, and contains reading times (total reading times) from a design that orginally had eight conditions. There are 40 subjects who read 48 items in a Latin square design. The data shown here focus on two conditions from the experiment, high and low interference conditions in a subject-verb number agreement configuration in ungrammatical sentences.
+The data set is from an eyetracking experiment by \insertCite{Dillon-EtAl-2013;textual}{bcogsci}, and contains reading times (total reading times) from a design that originally had eight conditions. There are 40 subjects who read 48 items in a Latin square design. The data shown here focus on two conditions from the experiment, high and low interference conditions in a subject-verb number agreement configuration in ungrammatical sentences.
 }
 \references{
 \insertAllCited{}
