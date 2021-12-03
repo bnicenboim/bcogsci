@@ -61,7 +61,8 @@ model {
                     lfreq[n] * (beta[4] + u[subj[n], 6])};
     log_lik[n] = log_sum_exp(
                   log(theta_c) + uniform_lpdf(rt[n] | min_rt, max_rt)
-                         + log(.5),                  log1m(theta_c) + lognormal_race2_lpdf(T | nchoice[n], mu, sigma));
+                         + log(.5),
+                  log1m(theta_c) + lognormal_race2_lpdf(T | nchoice[n], mu, sigma));
     } else {
       // T < 0, observed time is smaller than the non-decision time
       log_lik[n] = log(theta_c) + uniform_lpdf(rt[n] | min_rt, max_rt)
