@@ -13,7 +13,7 @@ functions {
 data {
   int<lower = 1> N;
   int<lower = 1> N_subj;
-  vector[N] lfreq;
+  vector[N] c_lfreq;
   vector[N] c_lex;
   vector[N] rt;
   int nchoice[N];
@@ -54,10 +54,10 @@ model {
     real T = rt[n] - T_nd;
     real mu[2] = {alpha[1] + u[subj[n], 1] -
                     c_lex[n] * (beta[1] + u[subj[n], 2]) -
-                    lfreq[n] * (beta[2] + u[subj[n], 3]),
+                    c_lfreq[n] * (beta[2] + u[subj[n], 3]),
                     alpha[2] + u[subj[n], 4] -
                     c_lex[n] * (beta[3] + u[subj[n], 5]) -
-                    lfreq[n] * (beta[4] + u[subj[n], 6])};
+                    c_lfreq[n] * (beta[4] + u[subj[n], 6])};
      log_lik[n] = lognormal_race2_lpdf(T | nchoice[n], mu, sigma);
   }
   target += sum(log_lik);

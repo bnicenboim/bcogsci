@@ -1,6 +1,6 @@
 data {
   int<lower = 1> N;
-  vector[N] lfreq;
+  vector[N] c_lfreq;
   vector[N] c_lex;
   vector[N] rt;
   int nchoice[N];
@@ -24,16 +24,16 @@ model {
     if(nchoice[n] == 1)
       target += lognormal_lpdf(T[n] | alpha[1] -
                                c_lex[n] * beta[1] -
-                               lfreq[n] * beta[2], sigma)  +
+                               c_lfreq[n] * beta[2], sigma)  +
         lognormal_lccdf(T[n] | alpha[2] -
                         c_lex[n] * beta[3] -
-                        lfreq[n] * beta[4], sigma);
+                        c_lfreq[n] * beta[4], sigma);
     else
        target += lognormal_lpdf(T[n] | alpha[2] -
                                 c_lex[n] * beta[3] -
-                                lfreq[n] * beta[4], sigma) +
+                                c_lfreq[n] * beta[4], sigma) +
         lognormal_lccdf(T[n] | alpha[1] -
                         c_lex[n] * beta[1] -
-                        lfreq[n] * beta[2], sigma);
+                        c_lfreq[n] * beta[2], sigma);
   }
 }
