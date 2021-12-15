@@ -44,7 +44,7 @@ model {
   target += normal_lpdf(beta | 0, .5);
   target += normal_lpdf(sigma | .5, .2)
     - normal_lccdf(0 | .5, .2);
-  target += normal_lpdf(lT_nd | log(200), .3);
+  target += lognormal_lpdf(T_nd | log(200), .3);
   target += beta_lpdf(theta_c | .9, 70) -
     beta_lcdf(.1 | .9, 70);
   target += normal_lpdf(tau_u | .1, .1)
