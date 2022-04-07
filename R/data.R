@@ -750,7 +750,7 @@
 #' Reading times at the critical region of sentences of Experiment 1 of \insertCite{SafaviEtAlFrontiers2016;textual}{bcogsci}.
 #'
 #'
-#' The experiment examined sentences with four conditions: particle-verb constructions were created with either 
+#' The experiment examined sentences with four conditions: particle-verb constructions were created with either
 #' short or long distance between the particle and verb, and with the particle being either predictable or unpredictable.
 #'
 #' All the data are available from https://github.com/vasishth/SafaviEtAl2016.
@@ -773,8 +773,8 @@
 #' Reading times at the critical region of sentences of the experiment reported in \insertCite{VBLD07;textual}{bcogsci}.
 #'
 #'
-#' The experiment examined sentences with six conditions: three conditions with negative polarity items (one grammatical, two ungrammatical), 
-#' and three with positive polarity items (two grammatical, one ungrammatical). 
+#' The experiment examined sentences with six conditions: three conditions with negative polarity items (one grammatical, two ungrammatical),
+#' and three with positive polarity items (two grammatical, one ungrammatical).
 #'
 #' The data and associated code are available from https://github.com/vasishth/ProcessingPolarity.
 #'
@@ -796,7 +796,7 @@
 #' Reading times at the critical region of sentences of the experiment reported in \insertCite{JaegerMertzenVanDykeVasishth2019;textual}{bcogsci}.
 #'
 #'
-#' The experiment, which is a replication attempt of Dillon et al. 2013, examined sentences with eight conditions. 
+#' The experiment, which is a replication attempt of Dillon et al. 2013, examined sentences with eight conditions.
 #'
 #' The data and associated code are available from https://osf.io/reavs/.
 #'
@@ -821,7 +821,7 @@
 #' Voice onset times from Mandarin speakers in an experiment reported in \insertCite{li2013effect;textual}{bcogsci}.
 #'
 #'
-#' The experiment has mean voice onset times and their standard errors, along with mean vowel durations and their standard error. 
+#' The experiment has mean voice onset times and their standard errors, along with mean vowel durations and their standard error.
 #'
 #' The data and associated code are available from https://osf.io/g4zpv/.
 #'
@@ -844,7 +844,7 @@
 #' Voice onset times from English speakers in an experiment reported in \insertCite{li2013effect;textual}{bcogsci}.
 #'
 #'
-#' The experiment has mean voice onset times and their standard errors, along with mean vowel durations and their standard error. 
+#' The experiment has mean voice onset times and their standard errors, along with mean vowel durations and their standard error.
 #'
 #' The data and associated code are available from https://osf.io/g4zpv/.
 #'
@@ -867,8 +867,8 @@
 #' Data from a meta-analysis by \insertCite{BuerkiEtAl2020;textual}{bcogsci}.
 #'
 #' The data provide, for each individual study that investigated the picture-word
-#'  interference phenomenon, the estimated interference effect and its 
-#'  standard error in milliseconds. 
+#'  interference phenomenon, the estimated interference effect and its
+#'  standard error in milliseconds.
 #'
 #' The data and associated code are available from https://osf.io/k6f4c/.
 #'
@@ -889,9 +889,9 @@
 #' Reading times at the critical region of sentences of experiment 1 reported in \insertCite{smith2021encoding;textual}{bcogsci}.
 #'
 #'
-#' The experiment examined sentences with four conditions (a 2x2 design). 
-#' One factor, labeled SemFactor, is semantic similarity of a noun 2 with the subject of the sentence (noun 1); the levels are labeled SemSim (semantically similar) and SemDissim 
-#' (semantically dissimilar). The other factor, labeled N2Factor, marks whether the 
+#' The experiment examined sentences with four conditions (a 2x2 design).
+#' One factor, labeled SemFactor, is semantic similarity of a noun 2 with the subject of the sentence (noun 1); the levels are labeled SemSim (semantically similar) and SemDissim
+#' (semantically dissimilar). The other factor, labeled N2Factor, marks whether the
 #' second noun phrase was singular (N2sg) or plural (N2pl) marked.
 #'
 #' The data and associated code are available from https://osf.io/hjrkn/.
@@ -912,9 +912,9 @@
 #' Reading times at the critical region of sentences of experiment 2 reported in \insertCite{smith2021encoding;textual}{bcogsci}.
 #'
 #'
-#' The experiment examined sentences with eight conditions (a 2x2x2 design). 
-#' One factor, labeled SemFactor, is semantic similarity of a noun 2 with the subject of the sentence (noun 1); the levels are labeled SemSim (semantically similar) and SemDissim 
-#' (semantically dissimilar). The second factor, labeled N2Factor, marks whether the 
+#' The experiment examined sentences with eight conditions (a 2x2x2 design).
+#' One factor, labeled SemFactor, is semantic similarity of a noun 2 with the subject of the sentence (noun 1); the levels are labeled SemSim (semantically similar) and SemDissim
+#' (semantically dissimilar). The second factor, labeled N2Factor, marks whether the
 #' second noun phrase was singular (N2sg) or plural (N2pl) marked. The third factor
 #' is VerbFactor, which marks whether the verb is singular (Vsg) or plural (Vpl) marked.
 #'
@@ -1000,8 +1000,8 @@
 
 #' Data from a self-paced reading experiment that records reading times in milliseconds at the post-critical region. \insertCite{swets2008underspecification;textual}{bcogsci}
 #'
-#' The data set is from a self-paced reading experiment by \insertCite{swets2008underspecification;textual}{bcogsci}, and contains reading times from a 3x3 design. 
-#' 
+#' The data set is from a self-paced reading experiment by \insertCite{swets2008underspecification;textual}{bcogsci}, and contains reading times from a 3x3 design.
+#'
 #' @format A data frame with 5,184 rows and 6 variables:
 #' \describe{
 #' \item{subj}{The subject id.}
@@ -1064,8 +1064,8 @@
 
 #' Data from an experiment on the effect of fertility status on the color of clothing worn by women, originally reported by \insertCite{beall2013women;textual}{bcogsci}
 #'
-#' The data set is from a study by \insertCite{beall2013women;textual}{bcogsci}, and contains information 
-#' about the color of the clothing worn (red, pink, or redorpink) when the participant (female) is at risk of becoming pregnant (is ovulating, self-reported).  
+#' The data set is from a study by \insertCite{beall2013women;textual}{bcogsci}, and contains information
+#' about the color of the clothing worn (red, pink, or redorpink) when the participant (female) is at risk of becoming pregnant (is ovulating, self-reported).
 #'
 #' @format A data frame with 124 rows and 5 variables:
 #' \describe{
@@ -1147,16 +1147,16 @@
 
 #' Reading times at the critical region of sentences of experiment 1 reported in \insertCite{VasishthMertzenJaegerGelman2018;textual}{bcogsci}.
 #'
-#' The experiment examined sentences with four conditions (a 2x2 design). 
-#' This eyetracking experiment examined sentences with four conditions (a 2x2 design). 
+#' The experiment examined sentences with four conditions (a 2x2 design).
+#' This eyetracking experiment examined sentences with four conditions (a 2x2 design).
 #' One factor is whether a dative phrase is in the main or subordinate clause;
 #' another factor is whether an adjunct phrase is in the main or subordinate clause.
-#' 
+#'
 #' The conditions (simplified) are:
 #' a. Nachdem der Lehrer [ADJ zur Ahndung] [DAT dem Sohn] ... hat Hans Gerntner ... den Fussball versteckt und somit...
 #' b. Nachdem der Lehrer [               ] [DAT dem Sohn] ... hat Hans Gerntner ... [ADJ zur Ahndung] den Fussball versteckt...
 #' c. Nachdem der Lehrer [ADJ zur Ahndung] [            ] ... hat Hans Gerntner ... [DAT dem Sohn] den Fussball versteckt...
-#' d. Nachdem der Lehrer [               ] [            ] ... hat Hans Gerntner ... [ADJ zur Ahndung] [DAT dem Sohn] 
+#' d. Nachdem der Lehrer [               ] [            ] ... hat Hans Gerntner ... [ADJ zur Ahndung] [DAT dem Sohn]
 #' den Fussball versteckt...
 #'
 #' @format A data frame with 672 rows and 4 variables:
@@ -1173,16 +1173,16 @@
 
 #' Reading times at the critical region of sentences of experiment 2 reported in \insertCite{VasishthMertzenJaegerGelman2018;textual}{bcogsci}.
 #'
-#' The experiment examined sentences with four conditions (a 2x2 design). 
-#' This eyetracking experiment examined sentences with four conditions (a 2x2 design). 
+#' The experiment examined sentences with four conditions (a 2x2 design).
+#' This eyetracking experiment examined sentences with four conditions (a 2x2 design).
 #' One factor is whether a dative phrase is in the main or subordinate clause;
 #' another factor is whether an adjunct phrase is in the main or subordinate clause.
-#' 
+#'
 #' The conditions (simplified) are:
 #' a. Nachdem der Lehrer [ADJ zur Ahndung] [DAT dem Sohn] ... hat Hans Gerntner ... den Fussball versteckt und somit...
 #' b. Nachdem der Lehrer [               ] [DAT dem Sohn] ... hat Hans Gerntner ... [ADJ zur Ahndung] den Fussball versteckt...
 #' c. Nachdem der Lehrer [ADJ zur Ahndung] [            ] ... hat Hans Gerntner ... [DAT dem Sohn] den Fussball versteckt...
-#' d. Nachdem der Lehrer [               ] [            ] ... hat Hans Gerntner ... [ADJ zur Ahndung] [DAT dem Sohn] 
+#' d. Nachdem der Lehrer [               ] [            ] ... hat Hans Gerntner ... [ADJ zur Ahndung] [DAT dem Sohn]
 #' den Fussball versteckt...
 #'
 #' @format A data frame with 670 rows and 4 variables:
@@ -1199,16 +1199,16 @@
 
 #' Reading times at the critical region of sentences of experiment 3 reported in \insertCite{VasishthMertzenJaegerGelman2018;textual}{bcogsci}.
 #'
-#' The experiment examined sentences with four conditions (a 2x2 design). 
-#' This eyetracking experiment examined sentences with four conditions (a 2x2 design). 
+#' The experiment examined sentences with four conditions (a 2x2 design).
+#' This eyetracking experiment examined sentences with four conditions (a 2x2 design).
 #' One factor is whether a dative phrase is in the main or subordinate clause;
 #' another factor is whether an adjunct phrase is in the main or subordinate clause.
-#' 
+#'
 #' The conditions (simplified) are:
 #' a. Nachdem der Lehrer [ADJ zur Ahndung] [DAT dem Sohn] ... hat der Mitschuler, der den Fussball versteckt hat, ...
 #' b. Nachdem der Lehrer [               ] [DAT dem Sohn] ... hat der Mitschuler, der [ADJ zur Ahndung] den Fussball versteckt hat, ...
 #' c. Nachdem der Lehrer [ADJ zur Ahndung] [            ] ... hat der Mitschuler, der [DAT dem Sohn] den Fussball versteckt hat, ...
-#' d. Nachdem der Lehrer [               ] [            ] ... hat der Mitschuler, der [ADJ zur Ahndung] [DAT dem Sohn] 
+#' d. Nachdem der Lehrer [               ] [            ] ... hat der Mitschuler, der [ADJ zur Ahndung] [DAT dem Sohn]
 #' den Fussball versteckt hat, ...
 #'
 #' @format A data frame with 672 rows and 4 variables:
@@ -1225,16 +1225,16 @@
 
 #' Reading times at the critical region of sentences of experiment 4 reported in \insertCite{VasishthMertzenJaegerGelman2018;textual}{bcogsci}.
 #'
-#' The experiment examined sentences with four conditions (a 2x2 design). 
-#' This eyetracking experiment examined sentences with four conditions (a 2x2 design). 
+#' The experiment examined sentences with four conditions (a 2x2 design).
+#' This eyetracking experiment examined sentences with four conditions (a 2x2 design).
 #' One factor is whether a dative phrase is in the main or subordinate clause;
 #' another factor is whether an adjunct phrase is in the main or subordinate clause.
-#' 
+#'
 #' The conditions (simplified) are:
 #' a. Nachdem der Lehrer [ADJ zur Ahndung] [DAT dem Sohn] ... hat der Mitschuler, der den Fussball versteckt hat, ...
 #' b. Nachdem der Lehrer [               ] [DAT dem Sohn] ... hat der Mitschuler, der [ADJ zur Ahndung] den Fussball versteckt hat, ...
 #' c. Nachdem der Lehrer [ADJ zur Ahndung] [            ] ... hat der Mitschuler, der [DAT dem Sohn] den Fussball versteckt hat, ...
-#' d. Nachdem der Lehrer [               ] [            ] ... hat der Mitschuler, der [ADJ zur Ahndung] [DAT dem Sohn] 
+#' d. Nachdem der Lehrer [               ] [            ] ... hat der Mitschuler, der [ADJ zur Ahndung] [DAT dem Sohn]
 #' den Fussball versteckt hat, ...
 #'
 #' @format A data frame with 655 rows and 4 variables:
@@ -1251,16 +1251,16 @@
 
 #' Reading times at the critical region of sentences of experiment 5 reported in \insertCite{VasishthMertzenJaegerGelman2018;textual}{bcogsci}.
 #'
-#' The experiment examined sentences with four conditions (a 2x2 design). 
-#' This eyetracking experiment examined sentences with four conditions (a 2x2 design). 
+#' The experiment examined sentences with four conditions (a 2x2 design).
+#' This eyetracking experiment examined sentences with four conditions (a 2x2 design).
 #' One factor is whether a dative phrase is in the main or subordinate clause;
 #' another factor is whether an adjunct phrase is in the main or subordinate clause.
-#' 
+#'
 #' The conditions (simplified) are:
 #' a. Nachdem der Lehrer [ADJ zur Ahndung] [DAT dem Sohn] ... hat Hans Gerntner ... den Fussball versteckt und somit...
 #' b. Nachdem der Lehrer [               ] [DAT dem Sohn] ... hat Hans Gerntner ... [ADJ zur Ahndung] den Fussball versteckt...
 #' c. Nachdem der Lehrer [ADJ zur Ahndung] [            ] ... hat der Mitschuler, der [DAT dem Sohn] den Fussball versteckt hat, ...
-#' d. Nachdem der Lehrer [               ] [            ] ... hat der Mitschuler, der [ADJ zur Ahndung] [DAT dem Sohn] 
+#' d. Nachdem der Lehrer [               ] [            ] ... hat der Mitschuler, der [ADJ zur Ahndung] [DAT dem Sohn]
 #' den Fussball versteckt hat, ...
 #'
 #' @format A data frame with 672 rows and 4 variables:
@@ -1278,16 +1278,16 @@
 
 #' Reading times at the critical region of sentences of experiment 6 reported in \insertCite{VasishthMertzenJaegerGelman2018;textual}{bcogsci}.
 #'
-#' The experiment examined sentences with four conditions (a 2x2 design). 
-#' This eyetracking experiment examined sentences with four conditions (a 2x2 design). 
+#' The experiment examined sentences with four conditions (a 2x2 design).
+#' This eyetracking experiment examined sentences with four conditions (a 2x2 design).
 #' One factor is whether a dative phrase is in the main or subordinate clause;
 #' another factor is whether an adjunct phrase is in the main or subordinate clause.
-#' 
+#'
 #' The conditions (simplified) are:
 #' a. Nachdem der Lehrer [ADJ zur Ahndung] [DAT dem Sohn] ... hat Hans Gerntner ... den Fussball versteckt und somit...
 #' b. Nachdem der Lehrer [               ] [DAT dem Sohn] ... hat Hans Gerntner ... [ADJ zur Ahndung] den Fussball versteckt...
 #' c. Nachdem der Lehrer [ADJ zur Ahndung] [            ] ... hat der Mitschuler, der [DAT dem Sohn] den Fussball versteckt hat, ...
-#' d. Nachdem der Lehrer [               ] [            ] ... hat der Mitschuler, der [ADJ zur Ahndung] [DAT dem Sohn] 
+#' d. Nachdem der Lehrer [               ] [            ] ... hat der Mitschuler, der [ADJ zur Ahndung] [DAT dem Sohn]
 #' den Fussball versteckt hat, ...
 #'
 #' @format A data frame with 670 rows and 4 variables:
@@ -1304,16 +1304,16 @@
 
 #' Reading times at the critical region of sentences of experiment 7 reported in \insertCite{VasishthMertzenJaegerGelman2018;textual}{bcogsci}.
 #'
-#' The experiment examined sentences with four conditions (a 2x2 design). 
-#' This eyetracking experiment examined sentences with four conditions (a 2x2 design). 
+#' The experiment examined sentences with four conditions (a 2x2 design).
+#' This eyetracking experiment examined sentences with four conditions (a 2x2 design).
 #' One factor is whether a dative phrase is in the main or subordinate clause;
 #' another factor is whether an adjunct phrase is in the main or subordinate clause.
-#' 
+#'
 #' The conditions (simplified) are:
 #' a. Nachdem der Lehrer [ADJ zur Ahndung] [DAT dem Sohn] ... hat Hans Gerntner ... den Fussball versteckt und somit...
 #' b. Nachdem der Lehrer [               ] [DAT dem Sohn] ... hat Hans Gerntner ... [ADJ zur Ahndung] den Fussball versteckt...
 #' c. Nachdem der Lehrer [ADJ zur Ahndung] [            ] ... hat der Mitschuler, der [DAT dem Sohn] den Fussball versteckt hat, ...
-#' d. Nachdem der Lehrer [               ] [            ] ... hat der Mitschuler, der [ADJ zur Ahndung] [DAT dem Sohn] 
+#' d. Nachdem der Lehrer [               ] [            ] ... hat der Mitschuler, der [ADJ zur Ahndung] [DAT dem Sohn]
 #' den Fussball versteckt hat, ...
 #'
 #' @format A data frame with 2,384 rows and 4 variables:
@@ -1395,14 +1395,14 @@
 #' Reading times (in milliseconds) from a self-paced reading study on Spanish reported in \insertCite{lago2015agreement}{bcogsci}.
 #'
 #' The column names are modified from the original dataset. The reading times are from the post-critical word (en) in the sentences shown below.
-#' 
+#'
 #' -(a) Ungram , singular attractor (interference condition)
 #' La *nota* que la chica escribieron en la clase alegró a su amiga
 #' The note that the girl wrote-pl during class cheered her friend up
 #' -(b) Ungram , plural attractor (baseline condition)
 #' Las *notas* que la chica escribieron en la clase alegraron a su amiga
 #' The notes that the girl wrote-pl during class cheered her friend up
-#' 
+#'
 #' There are 32 subjects who read 48 items in a Latin square design. The data shown here focus on two conditions from the experiment, high and low interference conditions in a subject-verb number agreement configuration in ungrammatical sentences. The language under study is Spanish.
 #'
 #' @format A data frame with 768 rows and 6 variables:
@@ -1417,3 +1417,23 @@
 #' @references
 #' \insertAllCited{}
 "df_lagoE1"
+
+
+#' Working memory capacity scores and speed of the rapid automatized naming task from the exploratory data of \insertCite{NicenboimEtAlCogSci2018;textual}{bcogsci}
+#'
+#'Data from from the exploratory experiment  of \insertCite{NicenboimEtAlCogSci2018;textual}{bcogsci}.
+#'The data shows (1) partial-credit unit scores, which indicate the mean proportion of correctly recalled items within the sets of an operation span task, as an index of working memory capacity \insertCite{conway2005working}{bcogsci} together with their SE, and (2) the mean speeds in the rapid automatized naming task, RAN, \insertCite{DenklaRudel1976}{bcogsci} as a measure of reading fluency (in characters/second) together with their SE.
+#'
+#'
+#' @format A data frame with 82 rows and 5 variables:
+#' \describe{
+#' \item{subj}{The subject id.}
+#' \item{mean_rspeed}{Mean speed at the RAN.}
+#' \item{se_rspeed}{SE of the speed at the RAN.}
+#' \item{mean_pcu}{Mean pcu at the operation span task}
+#' \item{se_rspeed}{SE of the speed at the operation span task.}
+#' }
+#' @references
+#' \insertAllCited{}
+"df_indiv"
+

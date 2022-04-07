@@ -21,7 +21,7 @@ df_persianE1
 Reading times at the critical region of sentences of Experiment 1 of \insertCite{SafaviEtAlFrontiers2016;textual}{bcogsci}.
 }
 \details{
-The experiment examined sentences with four conditions: particle-verb constructions were created with either 
+The experiment examined sentences with four conditions: particle-verb constructions were created with either
 short or long distance between the particle and verb, and with the particle being either predictable or unpredictable.
 
 All the data are available from https://github.com/vasishth/SafaviEtAl2016.

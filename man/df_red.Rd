@@ -18,7 +18,7 @@ A data frame with 124 rows and 5 variables:
 df_red
 }
 \description{
-The data set is from a study by \insertCite{beall2013women;textual}{bcogsci}, and contains information 
+The data set is from a study by \insertCite{beall2013women;textual}{bcogsci}, and contains information
 about the color of the clothing worn (red, pink, or redorpink) when the participant (female) is at risk of becoming pregnant (is ovulating, self-reported).
 }
 \references{

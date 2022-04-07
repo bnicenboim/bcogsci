@@ -21,8 +21,8 @@ df_polarity
 Reading times at the critical region of sentences of the experiment reported in \insertCite{VBLD07;textual}{bcogsci}.
 }
 \details{
-The experiment examined sentences with six conditions: three conditions with negative polarity items (one grammatical, two ungrammatical), 
-and three with positive polarity items (two grammatical, one ungrammatical). 
+The experiment examined sentences with six conditions: three conditions with negative polarity items (one grammatical, two ungrammatical),
+and three with positive polarity items (two grammatical, one ungrammatical).
 
 The data and associated code are available from https://github.com/vasishth/ProcessingPolarity.
 }

@@ -17,8 +17,8 @@ A data frame with 672 rows and 4 variables:
 df_VMJG18E3
 }
 \description{
-The experiment examined sentences with four conditions (a 2x2 design). 
-This eyetracking experiment examined sentences with four conditions (a 2x2 design). 
+The experiment examined sentences with four conditions (a 2x2 design).
+This eyetracking experiment examined sentences with four conditions (a 2x2 design).
 One factor is whether a dative phrase is in the main or subordinate clause;
 another factor is whether an adjunct phrase is in the main or subordinate clause.
 }
@@ -27,7 +27,7 @@ The conditions (simplified) are:
 a. Nachdem der Lehrer [ADJ zur Ahndung] [DAT dem Sohn] ... hat der Mitschuler, der den Fussball versteckt hat, ...
 b. Nachdem der Lehrer [               ] [DAT dem Sohn] ... hat der Mitschuler, der [ADJ zur Ahndung] den Fussball versteckt hat, ...
 c. Nachdem der Lehrer [ADJ zur Ahndung] [            ] ... hat der Mitschuler, der [DAT dem Sohn] den Fussball versteckt hat, ...
-d. Nachdem der Lehrer [               ] [            ] ... hat der Mitschuler, der [ADJ zur Ahndung] [DAT dem Sohn] 
+d. Nachdem der Lehrer [               ] [            ] ... hat der Mitschuler, der [ADJ zur Ahndung] [DAT dem Sohn]
 den Fussball versteckt hat, ...
 }
 \references{

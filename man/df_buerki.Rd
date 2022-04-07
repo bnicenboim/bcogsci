@@ -21,8 +21,8 @@ Data from a meta-analysis by \insertCite{BuerkiEtAl2020;textual}{bcogsci}.
 }
 \details{
 The data provide, for each individual study that investigated the picture-word
- interference phenomenon, the estimated interference effect and its 
- standard error in milliseconds. 
+ interference phenomenon, the estimated interference effect and its
+ standard error in milliseconds.
 
 The data and associated code are available from https://osf.io/k6f4c/.
 }

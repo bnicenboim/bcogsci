@@ -22,7 +22,7 @@ df_VOTmandarin
 Voice onset times from Mandarin speakers in an experiment reported in \insertCite{li2013effect;textual}{bcogsci}.
 }
 \details{
-The experiment has mean voice onset times and their standard errors, along with mean vowel durations and their standard error. 
+The experiment has mean voice onset times and their standard errors, along with mean vowel durations and their standard error.
 
 The data and associated code are available from https://osf.io/g4zpv/.
 }

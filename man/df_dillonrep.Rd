@@ -24,7 +24,7 @@ df_dillonrep
 Reading times at the critical region of sentences of the experiment reported in \insertCite{JaegerMertzenVanDykeVasishth2019;textual}{bcogsci}.
 }
 \details{
-The experiment, which is a replication attempt of Dillon et al. 2013, examined sentences with eight conditions. 
+The experiment, which is a replication attempt of Dillon et al. 2013, examined sentences with eight conditions.
 
 The data and associated code are available from https://osf.io/reavs/.
 }

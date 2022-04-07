@@ -21,9 +21,9 @@ df_smithE1
 Reading times at the critical region of sentences of experiment 1 reported in \insertCite{smith2021encoding;textual}{bcogsci}.
 }
 \details{
-The experiment examined sentences with four conditions (a 2x2 design). 
-One factor, labeled SemFactor, is semantic similarity of a noun 2 with the subject of the sentence (noun 1); the levels are labeled SemSim (semantically similar) and SemDissim 
-(semantically dissimilar). The other factor, labeled N2Factor, marks whether the 
+The experiment examined sentences with four conditions (a 2x2 design).
+One factor, labeled SemFactor, is semantic similarity of a noun 2 with the subject of the sentence (noun 1); the levels are labeled SemSim (semantically similar) and SemDissim
+(semantically dissimilar). The other factor, labeled N2Factor, marks whether the
 second noun phrase was singular (N2sg) or plural (N2pl) marked.
 
 The data and associated code are available from https://osf.io/hjrkn/.
