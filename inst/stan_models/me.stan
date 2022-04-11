@@ -21,11 +21,11 @@ model {
   target += normal_lpdf(y | alpha + beta * x_true,
                         sqrt(square(SE_y) + square(sigma)));
   target += std_normal_lpdf(z);
-  target += normal_lpdf(alpha | 50, 50);
-  target += normal_lpdf(beta | 0, 10);
-  target += normal_lpdf(chi | 0, 10);
-  target += normal_lpdf(sigma| 0, 30)
-    - normal_lccdf(0 | 0, 30);
-  target += normal_lpdf(tau | 0, 30)
-    - normal_lccdf(0 | 0, 30);
+  target += normal_lpdf(alpha | 0, 0.5);
+  target += normal_lpdf(beta | 0, 0.5);
+  target += normal_lpdf(chi | 0, 0.5);
+  target += normal_lpdf(sigma| 0, 0.5)
+    - normal_lccdf(0 | 0, 0.5);
+  target += normal_lpdf(tau | 0, 0.5)
+    - normal_lccdf(0 | 0, 0.5);
 }

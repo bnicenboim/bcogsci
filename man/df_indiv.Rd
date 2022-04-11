@@ -3,7 +3,7 @@
 \docType{data}
 \name{df_indiv}
 \alias{df_indiv}
-\title{Working memory capacity scores and speed of the rapid automatized naming task from the exploratory data of \insertCite{NicenboimEtAlCogSci2018;textual}{bcogsci}}
+\title{Working memory capacity scores and speed of the rapid automatized naming task from the confirmatory data of \insertCite{NicenboimEtAlCogSci2018;textual}{bcogsci}}
 \format{
 A data frame with 82 rows and 5 variables:
 \describe{
@@ -18,7 +18,7 @@ A data frame with 82 rows and 5 variables:
 df_indiv
 }
 \description{
-Data from from the exploratory experiment  of \insertCite{NicenboimEtAlCogSci2018;textual}{bcogsci}.
+Data from from the confirmatory experiment  of \insertCite{NicenboimEtAlCogSci2018;textual}{bcogsci}.
 The data shows (1) partial-credit unit scores, which indicate the mean proportion of correctly recalled items within the sets of an operation span task, as an index of working memory capacity \insertCite{conway2005working}{bcogsci} together with their SE, and (2) the mean speeds in the rapid automatized naming task, RAN, \insertCite{DenklaRudel1976}{bcogsci} as a measure of reading fluency (in characters/second) together with their SE.
 }
 \references{

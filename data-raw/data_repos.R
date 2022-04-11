@@ -271,21 +271,21 @@ df_blp <- df_blp_complete %>% filter(subj <= 21) %>%
 
 #df_blp %>% filter(subj ==1, lex =="word")
 
-GET("https://osf.io/vgudp//?action=download",
-    write_disk("data-raw/data_repos/exp_subj.Rda", overwrite = TRUE),
+GET("https://osf.io/49q2t//?action=download",
+    write_disk("data-raw/data_repos/conf_subj.Rda", overwrite = TRUE),
     progress()
 )
 
-load("data-raw/data_repos/exp_subj.Rda")
-rs_expl <- summarise(group_by(subj_expl$ran,subj),
+load("data-raw/data_repos/conf_subj.Rda")
+rs <- summarise(group_by(subj_conf$ran,subj),
                                mean_rspeed = mean(1/rt),
                                se_rspeed = sd(1/rt)/sqrt(n()))
 
-pcu_expl <- summarise(group_by(subj_expl$ospan,subj),
+pcu <- summarise(group_by(subj_conf$ospan,subj),
                       mean_pcu= mean(memory / level),
                       se_pcu = sd(memory / level)/sqrt(n()))
 
-df_indiv <-  left_join(rs_expl, pcu_expl)
+df_indiv <-  left_join(rs, pcu)
 
 usethis::use_data(df_pupil,
                   df_pupil_complete,
