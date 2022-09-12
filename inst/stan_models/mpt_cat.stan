@@ -1,6 +1,6 @@
 data {
   int<lower=1> N_obs;
-  int<lower=1,upper=5> w_ans[N_obs];
+  array[N_obs] int<lower=1,upper=5> w_ans;
 }
 parameters {
   real<lower=0,upper=1> a;
@@ -9,7 +9,7 @@ parameters {
   real<lower=0,upper=1> c;
 }
 transformed parameters {
-  simplex[5] theta[N_obs];
+  array[N_obs] simplex[5] theta;
 
   for(n in 1:N_obs){
     //Pr_NR:
@@ -33,7 +33,7 @@ model {
     target += categorical_lpmf(w_ans[n] | theta[n]);
 }
 generated quantities{
-	int pred_w_ans[N_obs];
+	array[N_obs] int pred_w_ans;
   for(n in 1:N_obs)
     pred_w_ans[n] = categorical_rng(theta[n]);
 }

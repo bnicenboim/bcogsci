@@ -2,7 +2,7 @@ data {
   int<lower = 1> N;
   int<lower=0> K;   // number of predictors
   matrix[N, K] X;   // model matrix
-  int correct[N];
+  array[N] int correct;
 }
 parameters {
   real alpha;

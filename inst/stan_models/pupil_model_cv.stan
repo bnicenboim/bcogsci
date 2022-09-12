@@ -23,7 +23,7 @@ model {
                         c_load .* c_trial * beta3, sigma);
 }
 generated quantities{
-  real log_lik[N];
+  array[N] real log_lik;
   for (n in 1:N){
     log_lik[n] = normal_lpdf(p_size[n] | alpha + c_load[n] * beta1
                              + c_trial[n] * beta2

@@ -19,6 +19,6 @@ model {
     target += normal_lpdf(p_size | alpha + c_load * beta, sigma);
 }
 generated quantities {
-  real p_size_pred[N];
+  array[N] real p_size_pred;
   p_size_pred = normal_rng(alpha + c_load * beta, sigma);
 }

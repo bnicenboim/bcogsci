@@ -4,11 +4,11 @@ data {
   int<lower = 1> N_subj;
   vector[N] c_cloze;
   // The following line creates an array of integers;
-  int<lower = 1, upper = N_subj> subj[N]; 
+  array[N] int<lower = 1, upper = N_subj> subj;
 }
 parameters {
   real<lower = 0> sigma;
-  real<lower = 0>  tau_u;   
+  real<lower = 0>  tau_u;
   real alpha;
   real beta;
   vector[N_subj] u;

@@ -22,6 +22,7 @@ model {
   target += normal_lpdf(sigma2 | .5, .2)
     - normal_lccdf(0 | .5, .2);
   target += beta_lpdf(p_task | 1, 1);
+  // likelihood
   for(n in 1:N)
     target += log_sum_exp(log(p_task) +
                           lognormal_lpdf(rt[n] | alpha + x[n] * beta, sigma),

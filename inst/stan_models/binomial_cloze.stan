@@ -8,8 +8,8 @@ parameters {
 }
 model {
   // Prior on theta:
-  target += beta_lpdf(theta | 4, 4); 
+  target += beta_lpdf(theta | 4, 4);
   // Likelihood:
-  target += binomial_lpmf(k | N, theta); 
+  target += binomial_lpmf(k | N, theta);
 }
 

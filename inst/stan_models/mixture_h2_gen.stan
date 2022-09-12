@@ -2,10 +2,10 @@ data {
   int<lower = 1> N;
   vector[N] x;
   vector[N] rt;
-  int acc[N];
-  vector[N] x2; //speed or accuracy emphasis
+  array[N] int acc;
+  vector[N] x2;
   int<lower = 1> N_subj;
-  int<lower = 1, upper = N_subj> subj[N];
+  array[N] int<lower = 1, upper = N_subj> subj;
 }
 transformed data{
   real p_correct = 1;
@@ -18,15 +18,15 @@ parameters {
   real<lower = 0> sigma2;
   real<lower = 0, upper = 1> p_btask;
   real beta_task;
-  vector<lower = 0>[3]  tau_u;   
+  vector<lower = 0>[3]  tau_u;
   matrix[3, N_subj] z_u;
   cholesky_factor_corr[3] L_u;
   matrix[N_subj, 3] u;
 }
 generated quantities {
-  real rt_pred[N];
-  real acc_pred[N];
-  int z[N];
+  array[N] real rt_pred;
+  array[N] real acc_pred;
+  array[N] int z;
   for(n in 1:N){
     real lodds_task = logit(p_btask) + x2[n] * beta_task;
     z[n] = bernoulli_rng(inv_logit(lodds_task));

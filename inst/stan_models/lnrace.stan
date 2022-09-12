@@ -3,11 +3,11 @@ data {
   vector[N] c_lfreq;
   vector[N] c_lex;
   vector[N] rt;
-  int nchoice[N];
+  array[N] int nchoice;
 }
 parameters {
-  real alpha[2];
-  real beta[4];
+  array[2] real alpha;
+  array[4] real beta;
   real<lower = 0> sigma;
   real<lower = 0, upper = min(rt)> T_nd;
 }

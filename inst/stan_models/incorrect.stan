@@ -1,7 +1,7 @@
 data {
   int<lower = 1> N;
   vector[N] rt;
-  int correct[N];
+  array[N] int correct;
 }
 parameters {
   real<lower = 0> sigma;

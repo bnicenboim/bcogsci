@@ -32,7 +32,7 @@ model {
   target += recnormal_lpdf(RT | mu, sigma);
 }
 generated quantities {
-  real rt_pred[N];
+  array[N] real rt_pred;
   for (n in 1:N)
     rt_pred[n] = recnormal_rng(mu, sigma);
 }

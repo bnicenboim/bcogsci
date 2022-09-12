@@ -2,7 +2,7 @@ data {
   int<lower = 1> N;
   vector[N] x;
   vector[N] rt;
-  int acc[N];
+  array[N] int acc;
   vector[N] x2; //speed or accuracy emphasis
   int<lower = 0, upper = 1> onlyprior;
 }
@@ -10,19 +10,17 @@ parameters {
   real alpha;
   real beta;
   real<lower = 0> sigma;
-  real<upper = alpha> gamma; //guessing
+  real<upper = alpha> gamma;
   real<lower = 0> sigma2;
   real<lower = 0, upper = 1> p_correct;
   real<lower = 0, upper = 1> p_btask;
   real beta_task;
 }
 model {
-  // priors for the task component
   target += normal_lpdf(alpha | 6, 1);
   target += normal_lpdf(beta | 0, .1);
   target += normal_lpdf(sigma | .5, .2)
     - normal_lccdf(0 | .5, .2);
-  // priors for the guessing component
   target += normal_lpdf(gamma | 6, 1)-
   normal_lcdf(alpha | 6, 1);
   target += normal_lpdf(sigma2 | .5, .2)
@@ -42,9 +40,9 @@ model {
     }
 }
 generated quantities {
-  real rt_pred[N];
-  real acc_pred[N];
-  int z[N]; 
+  array[N] real rt_pred;
+  array[N] real acc_pred;
+  array[N] int z;
   for(n in 1:N){
     real lodds_task = logit(p_btask) + x2[n] * beta_task;
     z[n] = bernoulli_rng(inv_logit(lodds_task));

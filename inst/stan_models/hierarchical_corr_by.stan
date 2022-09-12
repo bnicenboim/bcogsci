@@ -4,13 +4,13 @@ data {
   int<lower = 1> N_subj;
   int<lower = 1> N_item;
   vector[N] c_cloze;
-  int<lower = 1, upper = N_subj> subj[N]; 
-  int<lower = 1, upper = N_item> item[N]; 
+  array[N] int<lower = 1, upper = N_subj> subj;
+  array[N] int<lower = 1, upper = N_item> item;
 }
 parameters {
   real<lower = 0> sigma;
-  vector<lower = 0>[2]  tau_u;   
-  vector<lower = 0>[2]  tau_w;   
+  vector<lower = 0>[2]  tau_u;
+  vector<lower = 0>[2]  tau_w;
   real alpha;
   real beta;
   matrix[2, N_subj] z_u;

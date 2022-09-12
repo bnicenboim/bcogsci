@@ -1,11 +1,11 @@
 data {
   int<lower = 1> N;
-  int<lower = 1, upper = 3> source[N];
-  int response[N, 3];
+  array[N] int<lower = 1, upper = 3> source;
+  array[N, 3] int response;
   int<lower = 0> K; // number of predictors
   matrix[N, K] X; // model matrix
   int<lower = 1> N_subj;
-  int<lower = 1, upper = N_subj> subj[N];
+  array[N] int<lower = 1, upper = N_subj> subj;
 }
 transformed data {
   int N_p = 5; //Number of latent parameters
@@ -26,7 +26,7 @@ parameters {
   cholesky_factor_corr[N_p] L_u;
 }
 transformed parameters {
-  simplex[3] theta[N]; // 3 possible responses
+  array[N] simplex[3] theta; // 3 possible responses
   matrix[N_subj, 5] u = (diag_pre_multiply(tau_u, L_u) * z_u)';
   vector[N_subj] D1_u = u[, 1];
   vector[N_subj] D2_u = u[, 2];

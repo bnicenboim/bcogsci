@@ -1,13 +1,13 @@
-data { 
+data {
   int<lower = 1> N_trials;
-  int<lower = 0, upper = N_trials> ans[5];
+  array[5] int<lower = 0, upper = N_trials> ans;
 }
 parameters {
   real<lower = 0, upper = 1> a;
   real<lower = 0, upper = 1> t;
   real<lower = 0, upper = 1> f;
   real<lower = 0, upper = 1> c;
-} 
+}
 transformed parameters {
   simplex[5] theta;
   theta[1] = 1 - a; //Pr_NR
@@ -24,6 +24,6 @@ model {
   target += multinomial_lpmf(ans | theta);
 }
 generated quantities{
-	int pred_ans[5];
+	array[5] int pred_ans;
   pred_ans = multinomial_rng(theta, 5);
 }

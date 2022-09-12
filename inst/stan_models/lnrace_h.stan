@@ -16,8 +16,8 @@ data {
   vector[N] c_lfreq;
   vector[N] c_lex;
   vector[N] rt;
-  int nchoice[N];
-  int subj[N];
+  array[N] int nchoice;
+  array[N] int subj;
 }
 transformed data{
   real min_rt = min(rt);
@@ -25,8 +25,8 @@ transformed data{
   int N_re = 6;
 }
 parameters {
-  real alpha[2];
-  real beta[4];
+  array[2] real alpha;
+  array[4] real beta;
   real<lower = 0> sigma;
   real<lower = 0, upper = min(rt)> T_nd;
   vector<lower = 0>[N_re] tau_u;
@@ -38,7 +38,7 @@ transformed parameters {
   u = (diag_pre_multiply(tau_u, L_u) * z_u)';
   }
 model {
-  real log_lik[N];
+  array[N] real log_lik;
   target += normal_lpdf(alpha | 6, 1);
   target += normal_lpdf(beta | 0, .5);
   target += normal_lpdf(sigma | .5, .2)

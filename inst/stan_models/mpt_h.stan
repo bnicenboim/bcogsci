@@ -1,9 +1,9 @@
 data {
   int<lower = 1> N_obs;
-  int<lower = 1, upper = 5> w_ans[N_obs];
-  real complexity[N_obs];
+  array[N_obs] int<lower = 1, upper = 5> w_ans;
+  array[N_obs] real complexity;
   int<lower = 1> N_subj;
-  int<lower = 1, upper = N_subj> subj[N_obs];
+  array[N_obs] int<lower = 1, upper = N_subj> subj;
 }
 parameters {
   real<lower = 0, upper = 1> t;
@@ -15,7 +15,7 @@ parameters {
   real beta_f;
 }
 transformed parameters {
-  simplex[5] theta[N_obs];
+  array[N_obs] simplex[5] theta;
   for (n in 1:N_obs){
     real a = inv_logit(alpha_a + u_a[subj[n]]);
     real f = inv_logit(alpha_f + complexity[n] * beta_f);
@@ -45,7 +45,7 @@ model {
     target +=  categorical_lpmf(w_ans[n] | theta[n]);
 }
 generated quantities{
-  int<lower = 1, upper = 5> pred_w_ans[N_obs];
+  array[N_obs] int<lower = 1, upper = 5> pred_w_ans;
   for(n in 1:N_obs)
     pred_w_ans[n] = categorical_rng(theta[n]);
 }

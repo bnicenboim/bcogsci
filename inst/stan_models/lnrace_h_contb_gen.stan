@@ -4,8 +4,8 @@ data {
   vector[N] c_lfreq;
   vector[N] c_lex;
   vector[N] rt;
-  int nchoice[N];
-  int subj[N];
+  array[N] int nchoice;
+  array[N] int subj;
 }
 transformed data{
   real min_rt = min(rt);
@@ -13,8 +13,8 @@ transformed data{
   int N_re = 6;
 }
 parameters {
-  real alpha[2];
-  real beta[4];
+  array[2] real alpha;
+  array[4] real beta;
   real<lower = 0> sigma;
   real<lower = 0> T_nd;
   real<lower = 0, upper = .1> theta_c;
@@ -24,8 +24,8 @@ parameters {
 model {
 }
 generated quantities {
-  real rt_pred[N];
-  real nchoice_pred[N];
+  array[N] real rt_pred;
+  array[N] real nchoice_pred;
   for(n in 1:N){
     real T = rt[n] - T_nd;
     real mu[2] = {alpha[1] + u[subj[n], 1] -

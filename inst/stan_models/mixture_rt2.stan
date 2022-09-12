@@ -7,17 +7,15 @@ parameters {
   real alpha;
   real beta;
   real<lower = 0> sigma;
-  real<upper = alpha> gamma; //guessing
+  real<upper = alpha> gamma;
   real<lower = 0> sigma2;
   real<lower = 0, upper = 1> p_task;
 }
 model {
-  // priors for the task component
   target += normal_lpdf(alpha | 6, 1);
   target += normal_lpdf(beta | 0, .3);
   target += normal_lpdf(sigma | .5, .2)
     - normal_lccdf(0 | .5, .2);
-  // priors for the guessing component
   target += normal_lpdf(gamma | 6, 1) -
     normal_lcdf(alpha | 6, 1);
   target += normal_lpdf(sigma2 | .5, .2)

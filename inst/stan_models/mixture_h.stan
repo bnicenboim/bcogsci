@@ -2,21 +2,21 @@ data {
   int<lower = 1> N;
   vector[N] x;
   vector[N] rt;
-  int acc[N];
-  vector[N] x2; //speed or accuracy emphasis
+  array[N] int acc;
+  vector[N] x2;
   int<lower = 1> N_subj;
-  int<lower = 1, upper = N_subj> subj[N];
+  array[N] int<lower = 1, upper = N_subj> subj;
 }
 parameters {
   real alpha;
   real beta;
   real<lower = 0> sigma;
-  real<upper = alpha> gamma; //guessing
+  real<upper = alpha> gamma;
   real<lower = 0> sigma2;
   real<lower = 0, upper = 1> p_correct;
   real<lower = 0, upper = 1> p_btask;
   real beta_task;
-  vector<lower = 0>[3]  tau_u;   
+  vector<lower = 0>[3]  tau_u;
   matrix[3, N_subj] z_u;
   cholesky_factor_corr[3] L_u;
 }
@@ -25,13 +25,11 @@ transformed parameters {
   u = (diag_pre_multiply(tau_u, L_u) * z_u)';
 }
 model {
-  // priors for the task component
   target += normal_lpdf(alpha | 6, 1);
   target += normal_lpdf(beta | 0, .1);
   target += normal_lpdf(sigma | .5, .2)
     - normal_lccdf(0 | .5, .2);
-  // priors for the guessing component
-  target += normal_lpdf(gamma | 6, 1) - 
+  target += normal_lpdf(gamma | 6, 1) -
     normal_lcdf(alpha | 6, 1);
   target += normal_lpdf(sigma2 | .5, .2)
     - normal_lccdf(0 | .5, .2);
@@ -42,7 +40,6 @@ model {
   target += beta_lpdf(p_btask | 8, 2);
   target += lkj_corr_cholesky_lpdf(L_u | 2);
   target += std_normal_lpdf(to_vector(z_u));
-
   for(n in 1:N){
     real lodds_task = logit(p_btask) + x2[n] * beta_task;
     target += log_sum_exp(log_inv_logit(lodds_task) +

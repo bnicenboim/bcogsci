@@ -1,8 +1,8 @@
 data {
   int<lower=1> N_obs;
-  int<lower=1,upper=5> w_ans[N_obs];
-  real complexity[N_obs];
-  int subj[N_obs];
+  array[N_obs] int<lower=1,upper=5> w_ans;
+  array[N_obs] real complexity;
+  array[N_obs] int subj;
   int N_subj;
 }
 parameters {
@@ -11,8 +11,8 @@ parameters {
   real f_alpha;
   real f_beta;
   real c_alpha;
-  vector[N_subj] z[5];
-  real<lower=0> tau[5];
+  array[5] vector[N_subj] z;
+  array[5] real<lower=0> tau;
   // real<lower=0> tau_f_alpha;
   // real<lower=0> tau_f_beta;
   // real<lower=0> tau_a_alpha;
@@ -20,7 +20,7 @@ parameters {
   // real<lower=0> tau_c_alpha;
 }
 transformed parameters {
-  simplex[5] theta[N_obs];
+  array[N_obs] simplex[5] theta;
   vector[N_subj] u_f_alpha = z[1] * tau[1];
   vector[N_subj] u_f_beta = z[2] * tau[2];
   vector[N_subj] u_a_alpha =...;
@@ -68,7 +68,7 @@ model {
     target += categorical_lpmf(w_ans[n] | theta[n]);
 }
 generated quantities{
-	int pred_w_ans[N_obs];
+	array[N_obs] int pred_w_ans;
   for(n in 1:N_obs)
     pred_w_ans[n] = categorical_rng(theta[n]);
 }
