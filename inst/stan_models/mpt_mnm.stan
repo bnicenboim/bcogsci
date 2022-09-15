@@ -25,5 +25,5 @@ model {
 }
 generated quantities{
 	array[5] int pred_ans;
-  pred_ans = multinomial_rng(theta, 5);
+  pred_ans = multinomial_rng(theta, N_trials);
 }

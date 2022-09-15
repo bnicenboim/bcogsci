@@ -10,6 +10,6 @@ model {
   target += multinomial_lpmf(ans | theta);
 }
 generated quantities{
-  array[5] int pred_ans = multinomial_rng(theta, 5);
+  array[5] int pred_ans = multinomial_rng(theta, N_trials);
 }
 
