@@ -36,9 +36,9 @@ transformed parameters {
 model {
   target += beta_lpdf(t | 2, 2);
   target += beta_lpdf(c | 2, 2);
-  target += normal_lpdf(alpha_a | 0, 2);
-  target += normal_lpdf(alpha_f | 0, 2);
-  target += normal_lpdf(beta_f | 0, 2);
+  target += normal_lpdf(alpha_a | 0, 1.5);
+  target += normal_lpdf(alpha_f | 0, 1.5);
+  target += normal_lpdf(beta_f | 0, 1);
   target += normal_lpdf(u_a | 0, tau_u_a);
   target += normal_lpdf(tau_u_a | 0, 1) - normal_lccdf(0 | 0, 1);
   for(n in 1:N_obs)

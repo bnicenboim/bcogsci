@@ -57,11 +57,11 @@ model {
     target += std_normal_lpdf(z[n])
 
   target += normal_lpdf(tau | 0 ,2);
-  // target += normal_lpdf(tau_f_alpha| 0 ,2) ;
-  // target += normal_lpdf(tau_f_beta| 0 ,2);
-  // target += normal_lpdf(tau_a_alpha| 0 ,2);
-  // target += normal_lpdf(tau_t_alpha| 0 ,2);
-  // target += normal_lpdf(tau_c_alpha| 0 ,2);
+  // target += normal_lpdf(tau_f_alpha| 0 ,1.5) ;
+  // target += normal_lpdf(tau_f_beta| 0 ,1);
+  // target += normal_lpdf(tau_a_alpha| 0 ,1.5);
+  // target += normal_lpdf(tau_t_alpha| 0 ,1.5);
+  // target += normal_lpdf(tau_c_alpha| 0 ,1.5);
   target += - 5 * normal_lccdf(0 | 0, 2);
 
   for(n in 1:N_obs)
