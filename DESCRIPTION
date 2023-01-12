@@ -30,6 +30,6 @@ Suggests:
     dplyr,
     Rdpack
 RdMacros: Rdpack
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.0
 Depends: 
     R (>= 3.0)

@@ -19,7 +19,8 @@ model {
   target += normal_lpdf(beta3 | 0, 100);
   target += normal_lpdf(sigma | 0, 1000)
     - normal_lccdf(0 | 0, 1000);
-  target += normal_lpdf(p_size | alpha + c_load * beta1 + c_trial * beta2 +
-                        c_load .* c_trial * beta3, sigma);
+  target += normal_lpdf(p_size | alpha + c_load * beta1 +
+                                 c_trial * beta2 +
+                                 c_load .* c_trial * beta3, sigma);
 }
 

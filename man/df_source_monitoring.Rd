@@ -11,8 +11,8 @@ A data frame with 384 rows and 8 variables:
 \item{age}{ Age of the respondent in years.}
 \item{gender}{ Gender of the respondent.}
 \item{subj}{ Subject id.}
-\item{source}{ Item source, a, b or b (new)}
-\item{a`, `b`, `N}{ Number of responses for each type of stimuli}
+\item{source}{ Item source, a, b or n (new)}
+\item{a, b, n}{ Number of responses for each type of stimuli}
 }
 }
 \usage{
