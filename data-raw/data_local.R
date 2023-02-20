@@ -2,7 +2,8 @@ library(dplyr)
 
 df_spacebar <- read.csv("data-raw/datasets/button_press.csv") %>%
   as_tibble() %>%
-  rename(trial = trialn)
+  rename(trial = trialn,
+         t = rt)
 
 df_contrasts1 <- read.csv("data-raw/datasets/contrasts1.csv") %>%
   as_tibble() %>% mutate(F = factor(F))

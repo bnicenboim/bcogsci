@@ -1,12 +1,11 @@
-#' Reaction times in milliseconds from a participant repeatedly pressing the space bar.
+#' Finger tapping times in milliseconds from a participant repeatedly pressing the space bar.
 #'
-#' Data from a participant (author) repeatedly pressing the space bar
-#' as fast as possible, without paying attention to any stimuli.
-#' The data are reaction times in milliseconds.
+#' Data from a participant (first author) repeatedly tapping the space bar
+#' as fast as possible. The data are finger tapping times in milliseconds and trial number.
 #'
 #' @format A data frame with 361 rows and 2 variables:
 #' \describe{
-#'   \item{rt}{Reaction time in milliseconds}
+#'   \item{t}{Finger tapping time in milliseconds}
 #'   \item{trial}{Trial number}
 #' }
 #' @source \url{}
