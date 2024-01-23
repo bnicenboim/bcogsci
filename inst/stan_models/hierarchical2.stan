@@ -13,8 +13,8 @@ parameters {
   matrix[N_subj, 2] u;
 }
 model {
-  target += normal_lpdf(alpha| 0,10);
-  target += normal_lpdf(beta | 0,10);
+  target += normal_lpdf(alpha| 0, 10);
+  target += normal_lpdf(beta | 0, 10);
   target += normal_lpdf(sigma | 0, 50)  -
     normal_lccdf(0 | 0, 50);
   target += normal_lpdf(tau_u[1] | 0, 20)  -

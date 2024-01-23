@@ -32,8 +32,6 @@ model {
                         c_cloze .* (beta + u[subj, 2]), sigma);
 }
 generated quantities {
-  corr_matrix[2] rho_u= L_u * L_u';
-  vector[N_subj] effect_by_subj;
-  for(i in 1:N_subj)
-    effect_by_subj[i] = beta + u[i, 2];
+  real rho_u = (L_u * L_u')[1, 2];
+  vector[N_subj] effect_by_subj = beta + u[subj, 2];
 }

@@ -18,8 +18,8 @@ transformed parameters {
   u[, 2] = z_u[, 2] * tau_u[2];
  }
 model {
-  target += normal_lpdf(alpha| 0,10);
-  target += normal_lpdf(beta | 0,10);
+  target += normal_lpdf(alpha| 0, 10);
+  target += normal_lpdf(beta | 0, 10);
   target += normal_lpdf(sigma | 0, 50)  -
     normal_lccdf(0 | 0, 50);
   target += normal_lpdf(tau_u[1] | 0, 20)  -

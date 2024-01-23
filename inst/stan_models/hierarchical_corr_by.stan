@@ -31,7 +31,7 @@ model {
     normal_lccdf(0 | 0, 50);
   target += normal_lpdf(tau_u | 0, 20) -
     2 * normal_lccdf(0 | 0, 20);
- target += normal_lpdf(tau_w | 0, 20) -
+  target += normal_lpdf(tau_w | 0, 20) -
     2* normal_lccdf(0 | 0, 20);
   target += lkj_corr_cholesky_lpdf(L_u | 2);
   target += lkj_corr_cholesky_lpdf(L_w | 2);
@@ -41,6 +41,6 @@ model {
                         c_cloze .* (beta + u[subj, 2] + w[item, 2]), sigma);
 }
 generated quantities {
-  corr_matrix[2] rho_u = L_u * L_u';
-  corr_matrix[2] rho_w = L_w * L_w';
+  real rho_u = (L_u * L_u')[1, 2];
+  real rho_w = (L_w * L_w')[1, 2];
 }

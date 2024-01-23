@@ -14,8 +14,8 @@ parameters {
   vector[N_subj] u;
 }
 model {
-  target += normal_lpdf(alpha| 0,10);
-  target += normal_lpdf(beta | 0,10);
+  target += normal_lpdf(alpha| 0, 10);
+  target += normal_lpdf(beta | 0, 10);
   target += normal_lpdf(sigma | 0, 50)  -
     normal_lccdf(0 | 0, 50);
   target += normal_lpdf(tau_u | 0, 20)  -
