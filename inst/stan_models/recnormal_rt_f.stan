@@ -15,7 +15,7 @@ functions {
 }
 data {
   int<lower = 1> N;
-  vector[N] RT;
+  vector[N]<lower = 0> RT;
 }
 parameters {
   real mu_s;
