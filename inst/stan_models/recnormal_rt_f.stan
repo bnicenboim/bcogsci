@@ -1,16 +1,16 @@
 functions {
-  real recnormal_lpdf(vector RT, real mu, real sigma){
+  real recnormal_lpdf(vector y, real mu, real sigma){
     real lpdf;
-    lpdf = normal_lpdf(1 ./ RT | mu, sigma)
-    - num_elements(RT) * normal_lccdf(0 | mu, sigma)
-    - sum(2 * log(RT));
+    lpdf = normal_lpdf(1 ./ y | mu, sigma)
+    - num_elements(y) * normal_lccdf(0 | mu, sigma)
+    - sum(2 * log(y));
     return lpdf;
   }
   real recnormal_rng(real mu, real sigma){
-    real pred_rt = 0;
-    while (pred_rt <= 0)
-      pred_rt = 1 / normal_rng(mu, sigma);
-    return pred_rt;
+    real y = 0;
+    while (y <= 0)
+      y = 1 / normal_rng(mu, sigma);
+    return y;
   }
 }
 data {
