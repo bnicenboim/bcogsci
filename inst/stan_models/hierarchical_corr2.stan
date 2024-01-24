@@ -33,5 +33,5 @@ model {
 }
 generated quantities {
   real rho_u = (L_u * L_u')[1, 2];
-  vector[N_subj] effect_by_subj = beta + u[subj, 2];
+  vector[N_subj] effect_by_subj = beta + u[ , 2];
 }
