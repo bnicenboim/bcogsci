@@ -1,6 +1,6 @@
 data {
-  int<lower=1> N_obs;
-  array[N_obs] int<lower=1,upper=5> w_ans;
+  int<lower = 1> N_obs;
+  array[N_obs] int<lower = 1, upper = 5> w_ans;
 }
 parameters {
   real<lower=0,upper=1> a;
@@ -15,9 +15,11 @@ transformed parameters {
     //Pr_NR:
     theta[n, 1] = 1 - a;
     //Pr_Neologism:
-    theta[n, 2] = a * (1 - t) * (1 - f) * (1 - c) + a * t * (1 - f) * (1 - c);
+    theta[n, 2] = a * (1 - t) * (1 - f) * (1 - c) +
+      a * t * (1 - f) * (1 - c);
     //Pr_Formal:
-    theta[n, 3] = a * (1 - t) * (1 - f) * c +  a * t * (1 - f) * c;
+    theta[n, 3] = a * (1 - t) * (1 - f) * c +
+      a * t * (1 - f) * c;
     //Pr_Mixed:
     theta[n, 4] = a * (1 - t) * f;
     //Pr_Correct:

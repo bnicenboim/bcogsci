@@ -37,8 +37,9 @@ model {
   target += lkj_corr_cholesky_lpdf(L_w | 2);
   target += std_normal_lpdf(to_vector(z_u));
   target += std_normal_lpdf(to_vector(z_w));
-  target += normal_lpdf(signal | alpha + u[subj, 1] + w[item, 1]+
-                        c_cloze .* (beta + u[subj, 2] + w[item, 2]), sigma);
+  target += normal_lpdf(signal | alpha + u[subj, 1] + w[item, 1] +
+                        c_cloze .* (beta + u[subj, 2] + w[item, 2]),
+                        sigma);
 }
 generated quantities {
   real rho_u = (L_u * L_u')[1, 2];

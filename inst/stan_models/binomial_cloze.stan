@@ -1,9 +1,11 @@
 data {
-  int<lower = 1> N; // Total number of answers
-  int<lower = 0, upper = N> k; // Number of times umbrella was answered
+  // Total number of answers
+  int<lower = 1> N;
+  // Number of times umbrella was answered:
+  int<lower = 0, upper = N> k;
 }
 parameters {
-  // theta is a probability, it has to be constrained between 0 and 1
+  // theta is a probability, must be constrained between 0 and 1
   real<lower = 0, upper = 1> theta;
 }
 model {

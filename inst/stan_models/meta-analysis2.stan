@@ -9,7 +9,8 @@ parameters {
   real<lower = 0> tau;
 }
 model {
-  target += normal_lpdf(effect| zeta, sqrt(square(SE) + square(tau)));
+  target += normal_lpdf(effect| zeta,
+                        sqrt(square(SE) + square(tau)));
   target += normal_lpdf(zeta | 0, 100);
   target += normal_lpdf(tau | 0, 100)
     - normal_lccdf(0 | 0, 100);

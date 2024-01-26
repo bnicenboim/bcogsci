@@ -11,8 +11,10 @@ parameters {
 transformed parameters {
   simplex[5] theta;
   theta[1] = 1 - a; //Pr_NR
-  theta[2] = a * (1 - t) * (1 - f) * (1 - c) + a * t * (1 - f) * (1 - c); //Pr_Neologism
-  theta[3] = a * (1 - t) * (1 - f) * c +  a * t * (1 - f) * c;  //Pr_Formal
+  theta[2] = a * (1 - t) * (1 - f) * (1 - c) +
+    a * t * (1 - f) * (1 - c); //Pr_Neologism
+  theta[3] = a * (1 - t) * (1 - f) * c
+    + a * t * (1 - f) * c;  //Pr_Formal
   theta[4] = a * (1 - t) * f; //Pr_Mixed
   theta[5] = a * t * f; //Pr_Correct
 }

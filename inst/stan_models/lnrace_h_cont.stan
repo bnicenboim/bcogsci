@@ -1,5 +1,6 @@
 functions {
-  real lognormal_race2_lpdf(real T, int nchoice, real[] mu, real sigma){
+  real lognormal_race2_lpdf(real T, int nchoice,
+                            real[] mu, real sigma){
     real lpdf;
     if(nchoice == 1)
         lpdf = lognormal_lpdf(T | mu[1] , sigma)  +
@@ -54,19 +55,22 @@ model {
     real T = rt[n] - T_nd;
     if(T > 0){
     real mu[2] = {alpha[1] + u[subj[n], 1] -
-                    c_lex[n] * (beta[1] + u[subj[n], 2]) -
-                    c_lfreq[n] * (beta[2] + u[subj[n], 3]),
-                    alpha[2] + u[subj[n], 4] -
-                    c_lex[n] * (beta[3] + u[subj[n], 5]) -
-                    c_lfreq[n] * (beta[4] + u[subj[n], 6])};
-    log_lik[n] = log_sum_exp(
-                  log(theta_c) + uniform_lpdf(rt[n] | min_rt, max_rt)
-                         + log(.5),
-                  log1m(theta_c) + lognormal_race2_lpdf(T | nchoice[n], mu, sigma));
+                  c_lex[n] * (beta[1] + u[subj[n], 2]) -
+                  c_lfreq[n] * (beta[2] + u[subj[n], 3]),
+                  alpha[2] + u[subj[n], 4] -
+                  c_lex[n] * (beta[3] + u[subj[n], 5]) -
+                  c_lfreq[n] * (beta[4] + u[subj[n], 6])};
+    log_lik[n] = log_sum_exp(log(theta_c) +
+                             uniform_lpdf(rt[n] | min_rt, max_rt) +
+                             log(.5),
+                             log1m(theta_c) +
+                             lognormal_race2_lpdf(T | nchoice[n],
+                                                  mu, sigma));
     } else {
       // T < 0, observed time is smaller than the non-decision time
-      log_lik[n] = log(theta_c) + uniform_lpdf(rt[n] | min_rt, max_rt)
-                   + log(.5);
+      log_lik[n] = log(theta_c) +
+        uniform_lpdf(rt[n] | min_rt, max_rt) +
+        log(.5);
     }
   }
   target += sum(log_lik);

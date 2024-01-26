@@ -32,7 +32,7 @@ generated quantities {
     z[n] = bernoulli_rng(inv_logit(lodds_task));
     if(z[n]==1){
       rt_pred[n] = lognormal_rng(alpha + u[subj[n],1] +
-                                 x[n] * (beta + u[subj[n], 2]), sigma);
+                               x[n] * (beta + u[subj[n], 2]), sigma);
       acc_pred[n] = bernoulli_rng(p_correct);
     } else{
       rt_pred[n] = lognormal_rng(gamma + u[subj[n], 3], sigma2);

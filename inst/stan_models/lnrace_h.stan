@@ -1,5 +1,6 @@
 functions {
-  real lognormal_race2_lpdf(real T, int nchoice, real[] mu, real sigma){
+  real lognormal_race2_lpdf(real T, int nchoice,
+                            real[] mu, real sigma){
     real lpdf;
     if(nchoice == 1)
         lpdf = lognormal_lpdf(T | mu[1] , sigma)  +
@@ -53,12 +54,12 @@ model {
   for(n in 1:N){
     real T = rt[n] - T_nd;
     real mu[2] = {alpha[1] + u[subj[n], 1] -
-                    c_lex[n] * (beta[1] + u[subj[n], 2]) -
-                    c_lfreq[n] * (beta[2] + u[subj[n], 3]),
-                    alpha[2] + u[subj[n], 4] -
-                    c_lex[n] * (beta[3] + u[subj[n], 5]) -
-                    c_lfreq[n] * (beta[4] + u[subj[n], 6])};
-     log_lik[n] = lognormal_race2_lpdf(T | nchoice[n], mu, sigma);
+                  c_lex[n] * (beta[1] + u[subj[n], 2]) -
+                  c_lfreq[n] * (beta[2] + u[subj[n], 3]),
+                  alpha[2] + u[subj[n], 4] -
+                  c_lex[n] * (beta[3] + u[subj[n], 5]) -
+                  c_lfreq[n] * (beta[4] + u[subj[n], 6])};
+    log_lik[n] = lognormal_race2_lpdf(T | nchoice[n], mu, sigma);
   }
   target += sum(log_lik);
 }
