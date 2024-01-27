@@ -23,8 +23,6 @@ generated quantities{
   array[N] real log_lik;
   for (n in 1:N){
     log_lik[n] = normal_lpdf(p_size[n] | alpha + c_trial[n] * beta2 +
-                                         c_load[n] * c_trial[n] * beta3,
-                                         sigma);
-
+                             c_load[n] * c_trial[n] * beta3, sigma);
   }
 }

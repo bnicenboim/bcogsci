@@ -33,11 +33,11 @@ model {
       real lodds_task = logit(p_btask) + x2[n] * beta_task;
       target +=
         log_sum_exp(log_inv_logit(lodds_task)+
-                  lognormal_lpdf(rt[n] | alpha + x[n] * beta, sigma) +
-                  bernoulli_lpmf(acc[n] | p_correct),
-                  log1m_inv_logit(lodds_task) +
-                  lognormal_lpdf(rt[n] | gamma, sigma2) +
-                  bernoulli_lpmf(acc[n] | .5));
+                 lognormal_lpdf(rt[n] | alpha + x[n] * beta, sigma) +
+                 bernoulli_lpmf(acc[n] | p_correct),
+                 log1m_inv_logit(lodds_task) +
+                 lognormal_lpdf(rt[n] | gamma, sigma2) +
+                 bernoulli_lpmf(acc[n] | .5));
     }
 }
 generated quantities {
