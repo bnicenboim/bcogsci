@@ -4,7 +4,7 @@ functions {
     return sum(lpdf);
   }
   real exp_icdf(real p, real lambda){
-    return - log(1 - p) / lambda;
+    return -log1m(p) / lambda;
   }
   real exp_rng(real lambda){
     real u = uniform_rng(0, 1);
@@ -13,7 +13,7 @@ functions {
 }
 data {
   int<lower = 1> N;
-  vector[N] RT;
+  vector<lower = 0>[N] RT;
 }
 parameters {
   real<lower = 0> lambda;
