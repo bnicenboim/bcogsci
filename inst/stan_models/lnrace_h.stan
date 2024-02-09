@@ -29,7 +29,7 @@ parameters {
   array[2] real alpha;
   array[4] real beta;
   real<lower = 0> sigma;
-  real<lower = 0, upper = min(rt)> T_nd;
+  real<lower = 0, upper = min(rt)> T_0;
   vector<lower = 0>[N_re] tau_u;
   matrix[N_re, N_subj] z_u;
   cholesky_factor_corr[N_re] L_u;
@@ -44,7 +44,7 @@ model {
   target += normal_lpdf(beta | 0, .5);
   target += normal_lpdf(sigma | .5, .2)
     - normal_lccdf(0 | .5, .2);
-  target += normal_lpdf(T_nd | 150, 100)
+  target += normal_lpdf(T_0 | 150, 100)
     - log_diff_exp(normal_lcdf(min(rt) | 150, 100),
                    normal_lcdf(0 | 150, 100));
   target += normal_lpdf(tau_u | .1, .1)
@@ -52,7 +52,7 @@ model {
   target += lkj_corr_cholesky_lpdf(L_u | 2);
   target += std_normal_lpdf(to_vector(z_u));
   for(n in 1:N){
-    real T = rt[n] - T_nd;
+    real T = rt[n] - T_0;
     real mu[2] = {alpha[1] + u[subj[n], 1] -
                   c_lex[n] * (beta[1] + u[subj[n], 2]) -
                   c_lfreq[n] * (beta[2] + u[subj[n], 3]),

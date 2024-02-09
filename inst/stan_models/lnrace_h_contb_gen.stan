@@ -16,7 +16,7 @@ parameters {
   array[2] real alpha;
   array[4] real beta;
   real<lower = 0> sigma;
-  real<lower = 0> T_nd;
+  real<lower = 0> T_0;
   real<lower = 0, upper = .1> theta_c;
   vector<lower = 0>[N_re] tau_u;
   matrix[N_subj, N_re] u;
@@ -27,7 +27,7 @@ generated quantities {
   array[N] real rt_pred;
   array[N] real nchoice_pred;
   for(n in 1:N){
-    real T = rt[n] - T_nd;
+    real T = rt[n] - T_0;
     real mu[2] = {alpha[1] + u[subj[n], 1] -
                     c_lex[n] * (beta[1] + u[subj[n], 2]) -
                     c_lfreq[n] * (beta[2] + u[subj[n], 3]),
@@ -41,7 +41,7 @@ generated quantities {
     } else {
       real accum1 = lognormal_rng(mu[1], sigma);
       real accum2 = lognormal_rng(mu[2], sigma);
-      rt_pred[n] = fmin(accum1, accum2) + T_nd;
+      rt_pred[n] = fmin(accum1, accum2) + T_0;
       nchoice_pred[n] = (accum1 > accum2) + 1;
     }
   }

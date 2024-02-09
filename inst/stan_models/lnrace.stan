@@ -9,15 +9,15 @@ parameters {
   array[2] real alpha;
   array[4] real beta;
   real<lower = 0> sigma;
-  real<lower = 0, upper = min(rt)> T_nd;
+  real<lower = 0, upper = min(rt)> T_0;
 }
 model {
-  vector[N] T = rt - T_nd;
+  vector[N] T = rt - T_0;
   target += normal_lpdf(alpha | 6, 1);
   target += normal_lpdf(beta | 0, .5);
   target += normal_lpdf(sigma | .5, .2)
     - normal_lccdf(0 | .5, .2);
-  target += normal_lpdf(T_nd | 150, 100)
+  target += normal_lpdf(T_0 | 150, 100)
     - log_diff_exp(normal_lcdf(min(rt) | 150, 100),
                    normal_lcdf(0 | 150, 100));
   for(n in 1:N){
