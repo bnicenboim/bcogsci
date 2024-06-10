@@ -3,7 +3,7 @@ data {
   vector[N] signal;
   int<lower = 1> N_subj;
   vector[N] c_cloze;
-  // The following line creates an array of integers;
+  // The following line defines an array of integers;
   array[N] int<lower = 1, upper = N_subj> subj;
 }
 parameters {
