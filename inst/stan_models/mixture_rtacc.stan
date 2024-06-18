@@ -24,7 +24,7 @@ model {
     - normal_lccdf(0 | .5, .2);
   target += beta_lpdf(p_correct | 995, 5);
   target += beta_lpdf(p_task | 8, 2);
-  for(n in 1:N)
+  for(n in 1:N){
     target +=
       log_sum_exp(log(p_task) +
                  lognormal_lpdf(rt[n] | alpha + x[n] * beta, sigma) +
@@ -32,4 +32,5 @@ model {
                  log1m(p_task) +
                  lognormal_lpdf(rt[n] | gamma, sigma2) +
                  bernoulli_lpmf(acc[n] | .5));
+  }
 }

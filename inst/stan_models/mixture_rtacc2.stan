@@ -47,7 +47,7 @@ generated quantities {
   for(n in 1:N){
     real lodds_task = logit(p_btask) + x2[n] * beta_task;
     z[n] = bernoulli_rng(inv_logit(lodds_task));
-    if(z[n]==1){
+    if(z[n] == 1){
       rt_pred[n] = lognormal_rng(alpha + x[n] * beta, sigma);
       acc_pred[n] = bernoulli_rng(p_correct);
     } else{
