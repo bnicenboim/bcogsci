@@ -1,5 +1,5 @@
 functions {
-  real lognormal_race2_lpdf(real T, int nchoice, real[] mu, real sigma){
+  real lognormal_race2_lpdf(real T, int nchoice, array[] real mu, real sigma){
     real lpdf;
     if(nchoice == 1)
         lpdf = lognormal_lpdf(T | mu[1] , sigma)  +
@@ -54,7 +54,7 @@ model {
   for(n in 1:N){
     real T = rt[n] - T_0;
     if(T > 0){
-    real mu[2] = {alpha[1] + u[subj[n], 1] -
+    array[2] real mu = {alpha[1] + u[subj[n], 1] -
                     c_lex[n] * (beta[1] + u[subj[n], 2]) -
                     c_lfreq[n] * (beta[2] + u[subj[n], 3]),
                     alpha[2] + u[subj[n], 4] -

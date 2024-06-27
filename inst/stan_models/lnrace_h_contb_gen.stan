@@ -28,7 +28,7 @@ generated quantities {
   array[N] real nchoice_pred;
   for(n in 1:N){
     real T = rt[n] - T_0;
-    real mu[2] = {alpha[1] + u[subj[n], 1] -
+    array[2] real mu = {alpha[1] + u[subj[n], 1] -
                     c_lex[n] * (beta[1] + u[subj[n], 2]) -
                     c_lfreq[n] * (beta[2] + u[subj[n], 3]),
                     alpha[2] + u[subj[n], 4] -
