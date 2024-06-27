@@ -72,5 +72,5 @@ model {
   target += sum(log_lik);
 }
 generated quantities {
-  corr_matrix[N_re] rho_u = L_u * L_u';
+  corr_matrix[N_re] R_u = L_u * L_u';
 }
