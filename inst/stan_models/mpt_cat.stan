@@ -10,7 +10,6 @@ parameters {
 }
 transformed parameters {
   array[N_obs] simplex[5] theta;
-
   for(n in 1:N_obs){
     //Pr_NR:
     theta[n, 1] = 1 - a;
