@@ -3,11 +3,11 @@
 \docType{data}
 \name{df_spacebar}
 \alias{df_spacebar}
-\title{Reaction times in milliseconds from a participant repeatedly pressing the space bar.}
+\title{Finger tapping times in milliseconds from a participant repeatedly pressing the space bar.}
 \format{
 A data frame with 361 rows and 2 variables:
 \describe{
-  \item{rt}{Reaction time in milliseconds}
+  \item{t}{Finger tapping time in milliseconds}
   \item{trial}{Trial number}
 }
 }
@@ -18,8 +18,7 @@ A data frame with 361 rows and 2 variables:
 df_spacebar
 }
 \description{
-Data from a participant (author) repeatedly pressing the space bar
-as fast as possible, without paying attention to any stimuli.
-The data are reaction times in milliseconds.
+Data from a participant (first author) repeatedly tapping the space bar
+as fast as possible. The data are finger tapping times in milliseconds and trial number.
 }
 \keyword{datasets}
