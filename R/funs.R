@@ -79,3 +79,48 @@ normal_predictive_distribution <- function(mu_samples, sigma_samples, N_obs) {
     # needs to be converted to a number
     dplyr::mutate(iter = as.numeric(iter))
 }
+
+
+
+#' Compute Mean and Standard Deviation of the Parent Distribution of a Truncated Distribution
+#'
+#' This function computes the mean and standard deviation of the parent distribution
+#' of a truncated distribution.
+#'
+#' @param a Lower bound of the truncated distribution. Default is `-Inf`.
+#' @param b Upper bound of the truncated distribution. Default is `Inf`.
+#' @param mean_trunc The mean of the truncated distribution.
+#' @param sd_trunc The standard deviation of the truncated distribution.
+#' @param startvals Starting values for the optimization algorithm. Default is c(1, 1).
+#'
+#' @return The location and scale parameters of the parent distribution.
+#' @examples
+#' \dontrun{
+#' compute_meansd_parent(a=0, b=1000, mean_trunc=500, sd_trunc=50)
+#' }
+#' @export
+compute_meansd_parent <- function(a = -Inf, b = Inf, mean_trunc = NULL, sd_trunc = NULL,
+                                  startvals = c(1, 1)) {
+  mu <- mean_trunc
+  sigma <- sd_trunc
+
+  model <- function(x) {
+    c(
+      F1 = mu - x[1] + x[2] * ((dnorm((b - x[1]) / x[2]) -
+                                  dnorm((a - x[1]) / x[2])) / (pnorm((b - x[1]) / x[2]) -
+                                                                 pnorm((a - x[1]) / x[2]))),
+      F2 = sigma - x[2] * sqrt((1 -
+                                  (((b - x[1]) / x[2]) * dnorm((b - x[1]) / x[2]) -
+                                     ((a - x[1]) / x[2]) * dnorm((a - x[1]) / x[2])) /
+                                  (pnorm((b - x[1]) / x[2]) - pnorm((a - x[1]) / x[2])) - ((dnorm((b - x[1]) / x[2]) -
+                                                                                              dnorm((a - x[1]) / x[2])) / (pnorm((b - x[1]) / x[2]) -
+                                                                                                                             pnorm((a - x[1]) / x[2])))
+                                ^2))
+    )
+  }
+  soln <- rootSolve::multiroot(f = model,
+                               positive = TRUE,
+                               maxiter = 1000,
+                               start = startvals)
+  list(location = soln$root[1], scale =  soln$root[2])
+}

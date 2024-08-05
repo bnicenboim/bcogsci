@@ -26,7 +26,8 @@ Imports:
     dplyr,
     magrittr,
     purrr,
-    Rdpack
+    Rdpack,
+    rootSolve
 Suggests:
     devtools,
     usethis,
