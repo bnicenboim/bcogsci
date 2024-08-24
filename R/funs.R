@@ -124,3 +124,28 @@ compute_meansd_parent <- function(a = -Inf, b = Inf, mean_trunc = NULL, sd_trunc
                                start = startvals)
   list(location = soln$root[1], scale =  soln$root[2])
 }
+
+#' Compute the Generalized Inverse with Nicely Formatted Output
+#'
+#' This function computes the generalized inverse of a matrix using the \code{\link[MASS]{ginv}} function from the \code{MASS} package. The output is nicely formatted with dimension names preserved and the matrix entries represented as fractions.
+#'
+#' @param x A numeric matrix for which the generalized inverse is to be computed.
+#'
+#' @return A matrix that is the generalized inverse of the input matrix \code{x}, with dimension names preserved and entries formatted as fractions.
+#'
+#' @examples
+#' \dontrun{
+#' A <- matrix(c(1, 2, 3, 4), 2, 2)
+#' rownames(A) <- c("a","b")
+#' colnames(A) <- c("c","d")
+#' ginv2(A)
+#' }
+#'
+#' @export
+ginv2 <- function(x) {
+  inv <- MASS::ginv(x)
+  if(!is.null(rownames(x)) & !is.null(colnames(x))) {
+    inv <- provideDimnames(inv, base = dimnames(x)[2:1])
+  }
+    MASS::fractions(inv)
+}

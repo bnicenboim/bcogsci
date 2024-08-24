@@ -2,6 +2,7 @@
 
 export("%>%")
 export(compute_meansd_parent)
+export(ginv2)
 export(normal_predictive_distribution)
 export(normal_predictive_distribution_slow)
 importFrom(Rdpack,reprompt)

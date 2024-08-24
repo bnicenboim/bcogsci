@@ -25,6 +25,7 @@ LazyData: true
 Imports: 
     dplyr,
     magrittr,
+    MASS,
     purrr,
     Rdpack,
     rootSolve
