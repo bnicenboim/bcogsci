@@ -18,6 +18,8 @@ This function computes the generalized inverse of a matrix using the \code{\link
 \examples{
 \dontrun{
 A <- matrix(c(1, 2, 3, 4), 2, 2)
+rownames(A) <- c("a","b")
+colnames(A) <- c("c","d")
 ginv2(A)
 }
 
