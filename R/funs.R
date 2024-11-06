@@ -149,3 +149,47 @@ ginv2 <- function(x) {
   }
     MASS::fractions(inv)
 }
+
+
+#' Quantile Probability Plot Data Preparation
+#'
+#' This function prepares data for a quantile probability plot, which visualizes the relationship
+#' between response times and accuracy across experimental conditions.
+#'
+#' @param df_grouped A data frame grouped by an experimental condition, containing columns
+#' `rt` (response time) and `acc` (accuracy, with `0` indicating incorrect responses and `1` indicating correct responses).
+#' @param quantiles A numeric vector specifying the quantiles to be calculated for the response time distribution.
+#' Default is `c(0.1, 0.3, 0.5, 0.7, 0.9)`.
+#'
+#' @return A data frame with columns for quantiles of response times (`rt_q`), probabilities of correct
+#' and incorrect responses (`p`), quantile labels (`q`), and response type (`response`), structured for plotting.
+#' The resulting data frame contains one row for each quantile for both correct and incorrect responses
+#' across the specified experimental conditions.
+#'
+#' @details The function calculates the specified quantiles of response times for correct and incorrect responses
+#' by each experimental condition. It also calculates the proportion of correct and incorrect responses by condition,
+#' repeating this proportion for each quantile to align with the quantile data. The resulting data structure is ideal
+#' for generating a quantile probability plot.
+#'
+#' @examples
+#' # Assuming `df_blp` is a data frame containing columns `lex` (condition), `rt` (response time), and `acc` (accuracy)
+#' df_blp_lex_q <- df_blp %>%
+#'   group_by(lex) %>%
+#'   qpf()
+#'
+#' @export
+qpf <- function(df_grouped,
+                quantiles = c(0.1, 0.3, 0.5, 0.7, 0.9)) {
+  df_grouped %>%
+    summarize(
+      rt_q = list(c(quantile(rt[acc == 0], quantiles),
+                    quantile(rt[acc == 1], quantiles))),
+      p = list(c(rep(mean(acc == 0), length(quantiles)),
+                 rep(mean(acc == 1), length(quantiles)))),
+      q = list(rep(quantiles, 2)),
+      response = list(c(rep("incorrect", length(quantiles)),
+                        rep("correct", length(quantiles))))
+    ) %>%
+    # Unnest columns to create a structured output for plotting
+    unnest(cols = c(rt_q, p, q, response))
+}
