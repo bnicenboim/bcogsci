@@ -36,7 +36,7 @@ generated quantities {
       acc_pred[n] = bernoulli_rng(p_correct);
     } else{
       rt_pred[n] = lognormal_rng(gamma + u[subj[n], 3], sigma2);
-      acc_pred[n] = bernoulli_rng(.5);
+      acc_pred[n] = bernoulli_rng(0.5);
     }
   }
 }
