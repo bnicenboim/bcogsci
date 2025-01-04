@@ -18,13 +18,13 @@ parameters {
 }
 model {
   target += normal_lpdf(alpha | 6, 1);
-  target += normal_lpdf(beta | 0, .1);
-  target += normal_lpdf(sigma | .5, .2)
-    - normal_lccdf(0 | .5, .2);
+  target += normal_lpdf(beta | 0, 0.1);
+  target += normal_lpdf(sigma | 0.5, 0.2)
+    - normal_lccdf(0 | 0.5, 0.2);
   target += normal_lpdf(gamma | 6, 1)-
   normal_lcdf(alpha | 6, 1);
-  target += normal_lpdf(sigma2 | .5, .2)
-    - normal_lccdf(0 | .5, .2);
+  target += normal_lpdf(sigma2 | 0.5, 0.2)
+    - normal_lccdf(0 | 0.5, 0.2);
   target += normal_lpdf(beta_task | 0, 1);
   target += beta_lpdf(p_correct | 995, 5);
   target += beta_lpdf(p_btask | 8, 2);
@@ -37,7 +37,7 @@ model {
                  bernoulli_lpmf(acc[n] | p_correct),
                  log1m_inv_logit(lodds_task) +
                  lognormal_lpdf(rt[n] | gamma, sigma2) +
-                 bernoulli_lpmf(acc[n] | .5));
+                 bernoulli_lpmf(acc[n] | 0.5));
     }
 }
 generated quantities {
@@ -52,8 +52,7 @@ generated quantities {
       acc_pred[n] = bernoulli_rng(p_correct);
     } else{
       rt_pred[n] = lognormal_rng(gamma, sigma2);
-      acc_pred[n] = bernoulli_rng(.5);
+      acc_pred[n] = bernoulli_rng(0.5);
     }
   }
 }
-
