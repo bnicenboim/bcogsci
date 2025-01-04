@@ -14,13 +14,13 @@ parameters {
 model {
   // priors for the task component
   target += normal_lpdf(alpha | 6, 1);
-  target += normal_lpdf(beta | 0, .1);
-  target += normal_lpdf(sigma | .5, .2)
-    - normal_lccdf(0 | .5, .2);
+  target += normal_lpdf(beta | 0, 0.1);
+  target += normal_lpdf(sigma | 0.5, 0.2)
+    - normal_lccdf(0 | 0.5, 0.2);
   // priors for the guessing component
   target += normal_lpdf(gamma | 6, 1);
-  target += normal_lpdf(sigma2 | .5, .2)
-    - normal_lccdf(0 | .5, .2);
+  target += normal_lpdf(sigma2 | 0.5, 0.2)
+    - normal_lccdf(0 | 0.5, 0.2);
   target += beta_lpdf(p_task | 1, 1);
   // likelihood
   for(n in 1:N)
