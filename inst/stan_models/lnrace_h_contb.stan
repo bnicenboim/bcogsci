@@ -29,7 +29,7 @@ parameters {
   array[4] real beta;
   real<lower = 0> sigma;
   real<lower = 0> T_0;
-  real<lower = 0, upper = .1> theta_c;
+  real<lower = 0, upper = 0.1> theta_c;
   vector<lower = 0>[N_re] tau_u;
   matrix[N_re, N_subj] z_u;
   cholesky_factor_corr[N_re] L_u;
@@ -41,14 +41,14 @@ transformed parameters {
 model {
   array[N] real log_lik;
   target += normal_lpdf(alpha | 6, 1);
-  target += normal_lpdf(beta | 0, .5);
-  target += normal_lpdf(sigma | .5, .2)
-    - normal_lccdf(0 | .5, .2);
-  target += lognormal_lpdf(T_0 | log(200), .3);
-  target += beta_lpdf(theta_c | .9, 70) -
-    beta_lcdf(.1 | .9, 70);
-  target += normal_lpdf(tau_u | .1, .1)
-    - N_re * normal_lccdf(0 | .1, .1);
+  target += normal_lpdf(beta | 0, 0.5);
+  target += normal_lpdf(sigma | 0.5, 0.2)
+    - normal_lccdf(0 | 0.5, 0.2);
+  target += lognormal_lpdf(T_0 | log(200), 0.3);
+  target += beta_lpdf(theta_c | 0.9, 70) -
+    beta_lcdf(0.1 | 0.9, 70);
+  target += normal_lpdf(tau_u | 0.1, 0.1)
+    - N_re * normal_lccdf(0 | 0.1, 0.1);
   target += lkj_corr_cholesky_lpdf(L_u | 2);
   target += std_normal_lpdf(to_vector(z_u));
   for(n in 1:N){
@@ -62,11 +62,11 @@ model {
                     c_lfreq[n] * (beta[4] + u[subj[n], 6])};
     log_lik[n] = log_sum_exp(
                   log(theta_c) + uniform_lpdf(rt[n] | min_rt, max_rt)
-                         + log(.5),                  log1m(theta_c) + lognormal_race2_lpdf(T | nchoice[n], mu, sigma));
+                         + log(0.5),                  log1m(theta_c) + lognormal_race2_lpdf(T | nchoice[n], mu, sigma));
     } else {
       // T < 0, observed time is smaller than the non-decision time
       log_lik[n] = log(theta_c) + uniform_lpdf(rt[n] | min_rt, max_rt)
-                   + log(.5);
+                   + log(0.5);
     }
   }
   target += sum(log_lik);
