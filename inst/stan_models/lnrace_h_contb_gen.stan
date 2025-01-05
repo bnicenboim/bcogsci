@@ -17,7 +17,7 @@ parameters {
   array[4] real beta;
   real<lower = 0> sigma;
   real<lower = 0> T_0;
-  real<lower = 0, upper = .1> theta_c;
+  real<lower = 0, upper = 0.1> theta_c;
   vector<lower = 0>[N_re] tau_u;
   matrix[N_subj, N_re] u;
 }
