@@ -41,14 +41,14 @@ transformed parameters {
 model {
   array[N] real log_lik;
   target += normal_lpdf(alpha | 6, 1);
-  target += normal_lpdf(beta | 0, .5);
-  target += normal_lpdf(sigma | .5, .2)
-    - normal_lccdf(0 | .5, .2);
+  target += normal_lpdf(beta | 0, 0.5);
+  target += normal_lpdf(sigma | 0.5, 0.2)
+    - normal_lccdf(0 | 0.5, 0.2);
   target += normal_lpdf(T_0 | 150, 100)
     - log_diff_exp(normal_lcdf(min(rt) | 150, 100),
                    normal_lcdf(0 | 150, 100));
-  target += normal_lpdf(tau_u | .1, .1)
-    - N_re * normal_lccdf(0 | .1, .1);
+  target += normal_lpdf(tau_u | 0.1, 0.1)
+    - N_re * normal_lccdf(0 | 0.1, 0.1);
   target += lkj_corr_cholesky_lpdf(L_u | 2);
   target += std_normal_lpdf(to_vector(z_u));
   for(n in 1:N){
