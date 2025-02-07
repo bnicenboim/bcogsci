@@ -17,6 +17,6 @@ There is still no released version of bcogsci in CRAN. Install the
 development version from [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("bnicenboim/bcogsci")
+# install.packages("remotes")
+remotes::install_github("bnicenboim/bcogsci")
 ```
