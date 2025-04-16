@@ -4,7 +4,7 @@
 # bcogsci
 
 <!-- badges: start -->
-
+[![DOI](https://zenodo.org/badge/292789590.svg)](https://doi.org/10.5281/zenodo.15231704)
 <!-- badges: end -->
 
 Datasets and models included in the book [An Introduction to Bayesian
