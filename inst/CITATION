@@ -2,7 +2,7 @@ citHeader("Users are encouraged to cite not only the bcogsci package, but also t
 
 
 bibentry(bibtype = "Manual",
-         title = "{bcogsci}: {Datasets} and models for {Introduction} to {Bayesian} {Data} {Analysis} for {Cognitive} {Science}",
+         title = '{bcogsci}: {Datasets} and Models for the Book: "{Introduction} to {Bayesian} Data Analysis for {Cognitive} {Science}"',
          author = c(person("Bruno", "Nicenboim"),
                     person("Daniel", "Schad"),
                     person("Shravan", "Vasishth")),

@@ -31,10 +31,10 @@ citation("bcogsci")
 Users are encouraged to cite not only the bcogsci package, but also the
 accompanying book:
 
-Nicenboim B, Schad D, Vasishth S (2025). *bcogsci: Datasets and models
-for Introduction to Bayesian Data Analysis for Cognitive Science*.
-<doi:10.5281/zenodo.15231704> <https://doi.org/10.5281/zenodo.15231704>,
-R package version 1.0.0.
+Nicenboim B, Schad D, Vasishth S (2025). *bcogsci: Datasets and Models
+for the Book: “Introduction to Bayesian Data Analysis for Cognitive
+Science”*. <doi:10.5281/zenodo.15231704>
+<https://doi.org/10.5281/zenodo.15231704>, R package version 1.0.0.
 
 Nicenboim B, Schad D, Vasishth S (2025). *Introduction to Bayesian Data
 Analysis for Cognitive Science*. <doi:10.1201/9780429342646>
