@@ -1,0 +1,31 @@
+citHeader("Users are encouraged to cite not only the bcogsci package, but also the accompanying book:")
+
+
+bibentry(bibtype = "Manual",
+         title = "{bcogsci}: {Datasets} and models for {Introduction} to {Bayesian} {Data} {Analysis} for {Cognitive} {Science}",
+         author = c(person("Bruno", "Nicenboim"),
+                    person("Daniel", "Schad"),
+                    person("Shravan", "Vasishth")),
+         year = 2025,
+         note = "R package version 1.0.0",
+         doi = "10.5281/zenodo.15231704")
+
+textVersion = paste0(" Bruno Nicenboim, Daniel Schad, & Shravan Vasishth, (2025).",
+  " bcogsci: Datasets and models for Introduction to Bayesian Data Analysis for Cognitive Science. ",
+  "R package version 1.0.0.",
+  " https://doi.org/10.5281/zenodo.15231704")
+
+  bibentry(bibtype = "Manual",
+         title = "{Introduction} to {Bayesian} {Data} {Analysis} for {Cognitive} {Science}",
+         author = c(person("Bruno", "Nicenboim"),
+                    person("Daniel", "Schad"),
+                    person("Shravan", "Vasishth")),
+         year = 2025,
+         note = "1st edition. Chapman and Hall/CRC",
+         doi = "10.1201/9780429342646")
+
+textVersion = paste0(" Bruno Nicenboim, Daniel Schad, & Shravan Vasishth, (2025).",
+  " Introduction to Bayesian Data Analysis for Cognitive Science. ",
+  "1st edition. Chapman and Hall/CRC.",
+  " https://doi.org/10.1201/9780429342646")
+
