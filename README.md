@@ -10,7 +10,7 @@
 
 Datasets and models included in the book [Introduction to Bayesian Data
 Analysis for Cognitive
-Science](https://vasishth.github.io/bayescogsci/book/).
+Science](https://bruno.nicenboim.me/bayescogsci/).
 
 ## Installation
 
